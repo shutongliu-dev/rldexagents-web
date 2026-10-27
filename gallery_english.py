@@ -1,5 +1,6 @@
 """Apply the English gallery copy without rewriting embedded experiment data."""
 from pathlib import Path
+from site_assets import add_site_icons
 import json
 import re
 
@@ -23,7 +24,7 @@ def localize_gallery(path):
         if f'href="{sheet}"' not in page:
             page = page.replace('</head>', f'<link rel="stylesheet" href="{sheet}"></head>', 1)
     page = page.replace('placeholder="banana / mug / marker…"', 'placeholder="Search trajectory or object"')
-    path.write_text(page, encoding='utf-8', newline='\n')
+    path.write_text(add_site_icons(page), encoding='utf-8', newline='\n')
 
 
 if __name__ == '__main__':

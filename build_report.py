@@ -1,5 +1,6 @@
 """Assemble existing measured results into a portable offline HTML report."""
 from pathlib import Path
+from site_assets import add_site_icons
 import csv, json, re, shutil, html
 import numpy as np
 import matplotlib
@@ -166,6 +167,7 @@ body=f'''
 <section id="findings"><div class="section-title"><span>06</span><h2>结论、边界与原始数值</h2></div><div class="conclusions"><article><h3>手物关系分组更稳定</h3><p>Link-near＋distance 的重跑 ARI 为 0.997，高于 tip＋joint 的 0.444；其 silhouette 为 0.087。稳定分组仍不等于已验证的抓握语义。</p></article><article><h3>有选择的 Bank 改善覆盖</h3><p>K=24 时 Joint KMeans 的来源宏平均误差为 0.2263 rad，随机 Bank 为 0.2597 rad，改善约 12.9%。K=96/192 仍继续受益。</p></article><article><h3>Medoids 的价值是实际样本</h3><p>本轮 Medoids 没有超过 KMeans 的几何覆盖；两者最终都选真实姿态。执行性能还需任务与接触评测，不能从覆盖曲线直接推断。</p></article></div><p>历史 2026-10-18 PCA 报告与最新 E1 的采样、限位筛选和来源权重不同，数值不能混合成同一条趋势曲线。原始报告保留在 sources；本页最新数值由机器可读 summary/CSV 生成。</p><div class="downloads"><a href="data/manifold.json" download>3D 点云与全部标签 JSON</a><a href="data/final_cluster_assignments.csv" download>6,241 条最终分簇 CSV</a><a href="data/successful_demos_remapped.json" download>成功视频映射与来源</a><a href="data/medoids.json" download>五种方法的代表手形</a><a href="data/medoid_link_clearance.json" download>代表手形关节与 link 距离</a><a href="data/e1_summary.json" download>E1 完整数值 JSON</a><a href="data/e1_bank_metrics.csv" download>Bank 指标 CSV</a><a href="data/e1_source_generalization.csv" download>来源留出 CSV</a><a href="data/e1_pose_bank_entries.csv" download>Bank 姿态来源 CSV</a><a href="sources/pose_manifold_e1_20261027.md">E1 研究记录</a><a href="sources/full_hoi_link_contact_clustering_20261026.md">HOI 聚类研究记录</a><a href="sources/hand_pose_pca_20261018.md">历史 PCA 口径</a><a href="data/provenance.json">产物来源</a></div></section></main><footer>所有页面资源保存在本目录 · 无 CDN / 外部图片或视频依赖 · 2026-10-27</footer>
 '''
 (OUT/'index.html').write_text('<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hand Pose & HOI Manifold — Technical Report</title><link rel="stylesheet" href="assets/report.css"></head><body>'+body+'<script id="reportData" type="application/json">'+json.dumps(APP,ensure_ascii=False).replace('</','<\\/')+'</script><script src="assets/report.js"></script></body></html>')
+(OUT/'index.html').write_text(add_site_icons((OUT/'index.html').read_text(encoding='utf-8')),encoding='utf-8')
 shutil.copy2(OUT/'index.html',OUT/'pose_hoi_manifold.html')
 from gallery_english import localize_gallery
 localize_gallery(OUT/'pose_hoi_manifold.html')
