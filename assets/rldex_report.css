@@ -65,6 +65,15 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 .demo-pending{margin-top:22px;padding:30px 24px;border:1px solid #e0d5c1;border-radius:9px;background:#f7f2e8}
 .section .demo-pending p{margin:0;font:20px/1.7 var(--serif);color:#9a896d}
 .section .demo-rollout-caption{font:12px/1.7 system-ui,-apple-system,'Segoe UI',sans-serif;color:#8f7f65;margin:10px 0 0}
+.featured-demos .demo-group{margin-top:28px}
+.featured-demos .demo-group+.demo-group{margin-top:38px;padding-top:27px;border-top:1px solid #e1d7c6}
+.section .featured-demos .demo-group-title{font:700 25px/1.4 var(--serif);margin:0 0 20px;color:#5c503d}
+.demo-group .featured-demo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 22px}
+.demo-group .featured-demo-heading h4{font:700 20px/1.5 var(--serif);margin:0;color:#514737}
+.demo-group .featured-demo video{aspect-ratio:16/9;object-fit:contain;background:#252520}
+.demo-group .demo-pending{margin-top:0;padding:22px 24px}
+.section .demo-group .demo-pending p{font-size:17px}
+@media(max-width:650px){.demo-group .featured-demo-grid{grid-template-columns:1fr}.section .featured-demos .demo-group-title{font-size:23px}.demo-group .featured-demo-heading h4{font-size:19px}}
 .featured-demo-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}
 .section .featured-demo h3{display:flex;align-items:baseline;gap:9px;font:700 19px/1.4 var(--serif);margin:0;min-width:0}
 .featured-demo h3 span{font:10px/1.6 var(--mono);color:#9b8461;flex:none}

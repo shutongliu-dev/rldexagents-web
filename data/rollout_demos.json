@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "id": "apple",
+    "group": "real_world",
+    "title": "Apple transfer",
+    "video": "demos/苹果.mp4",
+    "poster": "assets/rollout_posters/apple.jpg",
+    "poster_time_s": 45.0,
+    "duration_s": 86.81941,
+    "width": 854,
+    "height": 480
+  },
+  {
+    "id": "box",
+    "group": "real_world",
+    "title": "Box handling",
+    "video": "demos/盒子.mp4",
+    "poster": "assets/rollout_posters/box.jpg",
+    "poster_time_s": 40.0,
+    "duration_s": 87.748209,
+    "width": 854,
+    "height": 480
+  },
+  {
+    "id": "brush",
+    "group": "real_world",
+    "title": "Brush handling",
+    "video": "demos/毛笔.mp4",
+    "poster": "assets/rollout_posters/brush.jpg",
+    "poster_time_s": 45.0,
+    "duration_s": 90.255964,
+    "width": 854,
+    "height": 480
+  },
+  {
+    "id": "multi-object",
+    "group": "real_world",
+    "title": "Multi-object grasping",
+    "video": "demos/20261027-170227.mp4",
+    "poster": "assets/rollout_posters/multi-object.jpg",
+    "poster_time_s": 49.5,
+    "duration_s": 109.933333,
+    "width": 960,
+    "height": 540
+  }
+]
