@@ -3,6 +3,7 @@ from pathlib import Path
 import html
 import json
 import re
+from PIL import Image
 from site_assets import add_site_icons
 
 
@@ -13,10 +14,19 @@ def build_viewer(root):
     method = data['methods']['link_near_and_distance_joint']
     sources = data['datasets']
     medoids = []
+    pose_dir = root / 'assets/representative-poses'
+    pose_dir.mkdir(exist_ok=True)
     for c in range(6):
         index = int(method['medoids'][str(c)])
         sample = data['metadata'][index]
         medoids.append({'index': index, 'key': sample[0], 'dataset': sample[1], 'frame': sample[4]})
+        image = Image.open(root / f'assets/poses/link_near_and_distance_joint/cluster_{c}.png').convert('RGB')
+        bbox = image.convert('L').point(lambda value: 255 if value < 235 else 0).getbbox()
+        if bbox:
+            x0, y0, x1, y1 = bbox
+            image = image.crop((max(0, x0-14), max(0, y0-14), min(image.width, x1+14), min(image.height, y1+14)))
+        image.thumbnail((320, 320), Image.Resampling.LANCZOS)
+        image.save(pose_dir / f'cluster_{c}.png')
     payload = {
         'coords': method['coords'], 'labels': method['labels'], 'datasets': sources,
         'colors': [annotations['source_palette'][source] for source in sources],
@@ -25,7 +35,7 @@ def build_viewer(root):
     positions = [(25, 80), (80, 20), (89, 52), (10, 52), (79, 80), (24, 20)]
     cards = ''.join(
         f'<button class="pose" style="left:{x}%;top:{y}%" aria-label="Show C{c} representative" aria-pressed="false">'
-        f'<img draggable="false" src="assets/poses/link_near_and_distance_joint/cluster_{c}.png" alt="">'
+        f'<img draggable="false" src="assets/representative-poses/cluster_{c}.png" alt="">'
         f'<strong>C{c}</strong></button>' for c, (x, y) in enumerate(positions)
     )
     legend = ''.join(
