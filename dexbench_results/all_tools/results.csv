@@ -1,0 +1,6 @@
+task,name,episode_id,outcome,confirmed_success,elapsed_sim_s,elapsed_wall_s,action_attempts,physics_valid,progress
+01,滑轮皮带装配,5bff1ee5f10246fa81130901a4aac909,infrastructure_error,False,16.440000000007036,1800.0012145049986,9,False,多次尝试夹持小带轮；首次抬升后带轮仍在台面，未完成带轮或皮带装配。
+02,样本瓶开盖与复盖,e2a0222334284bb1b80f13df2c8aaeaf,safety_stop,False,8.099999999998408,365.066804864,4,False,已接近岛台样本瓶；下降过程中环境 safety_stop，未开盖、复盖或归位。
+03,调味品与干货分类归位,0992adeaba014da1af409b2d17bcde0f,infrastructure_error,False,38.62000000000238,1750.435629898002,20,False,盐罐抓取失败并倒下；随后红椒粉罐被抓起，搬运途中环境终止，未完成分类。
+04,木质平面四连棋,76c7cbd8e8ae4d13a4ee6f383bd3d723,infrastructure_error,False,39.24000000000534,1800.045312008002,26,False,裁判确认黑棋、白棋各落子一次（commit_count=2）；第二枚黑棋未提交，无赢家。
+05,遥控电视开关机,8b5f615f90ba4389aaa971651e3dccae,infrastructure_error,False,28.85999999997809,1800.029405999001,17,False,图像显示按键后电视开机并倒计时，后续关闭；遥控器抬起后曾滑落，重新侧向夹持后再次抬起，未归位。

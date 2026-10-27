@@ -1,0 +1,14 @@
+{
+  "E1": {
+    "hold_mean_contact_fingers": 2.524019138755981,
+    "hold_interruptions": 0.9521531100478469,
+    "force_cv_active_mean": 0.1869597406513391,
+    "hold_thumb_other_s": 4.3057416267942585
+  },
+  "E2": {
+    "hold_mean_contact_fingers": 2.369792663476874,
+    "hold_interruptions": 1.215311004784689,
+    "force_cv_active_mean": 0.20661678838937486,
+    "hold_thumb_other_s": 4.0275917065390745
+  }
+}

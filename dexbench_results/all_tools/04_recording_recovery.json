@@ -1,0 +1,14 @@
+{
+  "task": "04",
+  "reason": "Storage relocation overlapped recording composition; original files preserved.",
+  "reconstructed_frames": [
+    "00000373.png",
+    "00000374.png",
+    "00000375.png",
+    "00000376.png",
+    "00000377.png"
+  ],
+  "source": "Corresponding original RGB from the same frame index; no image synthesis or interpolation.",
+  "duration_s": 1806.2554588220012,
+  "status": "encoded"
+}

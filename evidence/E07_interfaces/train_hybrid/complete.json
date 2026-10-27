@@ -1,0 +1,6 @@
+{
+  "updates": 300,
+  "elapsed_s": 793.9278242588043,
+  "checkpoint": "/mnt/cpfs/workspace/rq_ws/outputs/interface_students_20261027/train_hybrid/final/student.pt",
+  "complete": true
+}

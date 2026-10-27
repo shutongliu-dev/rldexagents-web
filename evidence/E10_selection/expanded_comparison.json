@@ -1,0 +1,1254 @@
+{
+  "dataset": {
+    "episodes": 2365,
+    "parents": 1721,
+    "excluded_episodes": 52,
+    "training_parents": 40,
+    "clusters": {
+      "5": 460,
+      "2": 584,
+      "4": 393,
+      "3": 287,
+      "1": 241,
+      "0": 400
+    },
+    "datasets": {
+      "DexYCB": 263,
+      "HOI Full": 2,
+      "HOT3D": 509,
+      "HRDexDB": 140,
+      "OakInk": 233,
+      "DexCanvas": 1034,
+      "DexterHand": 184
+    },
+    "historical_joint_success": 521,
+    "original_holdout_count": 14,
+    "scope": "student-training parent-disjoint; some candidates previously used for screening/selection; command taxonomy pretrained; objects may overlap",
+    "selection_fit_overlap": 32
+  },
+  "reset_state_comparison": {
+    "teacher": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    },
+    "random": {
+      "max_abs_difference": 1.9073486328125e-06,
+      "equal": false
+    },
+    "guided": {
+      "max_abs_difference": 1.9073486328125e-06,
+      "equal": false
+    },
+    "random_vs_guided": {
+      "max_abs_difference": 0.0,
+      "equal": true
+    }
+  },
+  "groups": {
+    "all": {
+      "episodes": 2365,
+      "parents": 1721,
+      "models": {
+        "teacher": {
+          "lift_success": 1330,
+          "grasp_hold_success": 560,
+          "strict_pose_success": 89,
+          "hold_pose_contact_success": 105,
+          "position_cm_mean": 27.582339523991365,
+          "angle_deg_mean": 43.62947504443074,
+          "joint_tracking_rmse_rad_mean": 0.4087051578253865,
+          "force20_mean": 0.0239192994028245,
+          "position_cm_median": 5.07381885282455,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.2825329884076963
+        },
+        "random": {
+          "lift_success": 680,
+          "grasp_hold_success": 354,
+          "strict_pose_success": 32,
+          "hold_pose_contact_success": 74,
+          "position_cm_mean": 14.156576832730044,
+          "angle_deg_mean": 48.724083142248496,
+          "joint_tracking_rmse_rad_mean": 0.5885974058315383,
+          "force20_mean": 0.01769175588052173,
+          "position_cm_median": 9.93509062801499,
+          "mean_position_over_1m_count": 2,
+          "grasp_hold_parent_macro": 0.1617659770214414
+        },
+        "guided": {
+          "lift_success": 667,
+          "grasp_hold_success": 343,
+          "strict_pose_success": 14,
+          "hold_pose_contact_success": 61,
+          "position_cm_mean": 11.591038768634785,
+          "angle_deg_mean": 46.81784131326025,
+          "joint_tracking_rmse_rad_mean": 0.5659082976422484,
+          "force20_mean": 0.01548517663251759,
+          "position_cm_median": 9.716644287109375,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.15835248890761522
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": -0.46511627906976744,
+          "parent_resample95_pp": [
+            -2.1250070202140705,
+            1.18849242128908
+          ],
+          "parent_macro_difference_pp": -0.34134881138262413,
+          "parent_macro95_pp": [
+            -2.1875275642434997,
+            1.5276553626502853
+          ],
+          "guided_only": 174,
+          "random_only": 185,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": -0.5496828752642706,
+          "parent_resample95_pp": [
+            -1.3859726053337413,
+            0.2522280838824315
+          ],
+          "parent_macro_difference_pp": -0.6326263800116212,
+          "parent_macro95_pp": [
+            -1.5652418651946542,
+            0.2905408677125701
+          ],
+          "guided_only": 40,
+          "random_only": 53,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    },
+    "historical_success": {
+      "episodes": 521,
+      "parents": 444,
+      "models": {
+        "teacher": {
+          "lift_success": 445,
+          "grasp_hold_success": 147,
+          "strict_pose_success": 60,
+          "hold_pose_contact_success": 69,
+          "position_cm_mean": 3.993651624888229,
+          "angle_deg_mean": 25.1741251905228,
+          "joint_tracking_rmse_rad_mean": 0.3861488720478241,
+          "force20_mean": 0.028490313322245837,
+          "position_cm_median": 2.4274935205298735,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.29842342342342343
+        },
+        "random": {
+          "lift_success": 225,
+          "grasp_hold_success": 106,
+          "strict_pose_success": 18,
+          "hold_pose_contact_success": 31,
+          "position_cm_mean": 8.509154969311602,
+          "angle_deg_mean": 35.90577102936725,
+          "joint_tracking_rmse_rad_mean": 0.5785986273462711,
+          "force20_mean": 0.021186771168762164,
+          "position_cm_median": 7.565162220939261,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.20345345345345345
+        },
+        "guided": {
+          "lift_success": 216,
+          "grasp_hold_success": 100,
+          "strict_pose_success": 8,
+          "hold_pose_contact_success": 18,
+          "position_cm_mean": 8.56670270347521,
+          "angle_deg_mean": 35.18293191715301,
+          "joint_tracking_rmse_rad_mean": 0.5449539642463407,
+          "force20_mean": 0.017741088707531202,
+          "position_cm_median": 7.463702217477267,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.19294294294294292
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": -1.1516314779270633,
+          "parent_resample95_pp": [
+            -5.29434046345811,
+            2.9017773144977324
+          ],
+          "parent_macro_difference_pp": -1.0510510510510511,
+          "parent_macro95_pp": [
+            -5.331268768768769,
+            3.1906906906906904
+          ],
+          "guided_only": 53,
+          "random_only": 59,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": -2.495201535508637,
+          "parent_resample95_pp": [
+            -4.743833017077799,
+            -0.3831234478363115
+          ],
+          "parent_macro_difference_pp": -2.1021021021021022,
+          "parent_macro95_pp": [
+            -4.355292792792793,
+            0.0750750750750751
+          ],
+          "guided_only": 10,
+          "random_only": 23,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    },
+    "teacher_current_success": {
+      "episodes": 560,
+      "parents": 501,
+      "models": {
+        "teacher": {
+          "lift_success": 560,
+          "grasp_hold_success": 560,
+          "strict_pose_success": 89,
+          "hold_pose_contact_success": 89,
+          "position_cm_mean": 3.585251233953138,
+          "angle_deg_mean": 30.26642265517457,
+          "joint_tracking_rmse_rad_mean": 0.456230896074254,
+          "force20_mean": 0.06499923202819802,
+          "position_cm_median": 2.950107306874144,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 1.0
+        },
+        "random": {
+          "lift_success": 237,
+          "grasp_hold_success": 196,
+          "strict_pose_success": 27,
+          "hold_pose_contact_success": 29,
+          "position_cm_mean": 11.461832568514874,
+          "angle_deg_mean": 42.572385495920635,
+          "joint_tracking_rmse_rad_mean": 0.5312745979308479,
+          "force20_mean": 0.030580082132224868,
+          "position_cm_median": 11.8825986650255,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.3253493013972056
+        },
+        "guided": {
+          "lift_success": 220,
+          "grasp_hold_success": 176,
+          "strict_pose_success": 12,
+          "hold_pose_contact_success": 13,
+          "position_cm_mean": 12.058418890099455,
+          "angle_deg_mean": 41.619309623599484,
+          "joint_tracking_rmse_rad_mean": 0.5239292915679915,
+          "force20_mean": 0.02166899888304933,
+          "position_cm_median": 12.065287187796871,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.30538922155688625
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": -3.571428571428571,
+          "parent_resample95_pp": [
+            -8.620689655172415,
+            1.4415064884378954
+          ],
+          "parent_macro_difference_pp": -1.996007984031936,
+          "parent_macro95_pp": [
+            -6.88622754491018,
+            2.8942115768463075
+          ],
+          "guided_only": 83,
+          "random_only": 103,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": -2.857142857142857,
+          "parent_resample95_pp": [
+            -4.856115107913669,
+            -0.8865248226950355
+          ],
+          "parent_macro_difference_pp": -2.5948103792415167,
+          "parent_macro95_pp": [
+            -4.69061876247505,
+            -0.499001996007984
+          ],
+          "guided_only": 8,
+          "random_only": 24,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    },
+    "other_contact_tasks": {
+      "episodes": 1844,
+      "parents": 1346,
+      "models": {
+        "teacher": {
+          "lift_success": 885,
+          "grasp_hold_success": 413,
+          "strict_pose_success": 29,
+          "hold_pose_contact_success": 36,
+          "position_cm_mean": 34.2470393045948,
+          "angle_deg_mean": 48.84381196085482,
+          "joint_tracking_rmse_rad_mean": 0.4150781648156848,
+          "force20_mean": 0.022627814450536802,
+          "position_cm_median": 6.214548587310176,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.26997440538290496
+        },
+        "random": {
+          "lift_success": 455,
+          "grasp_hold_success": 248,
+          "strict_pose_success": 14,
+          "hold_pose_contact_success": 43,
+          "position_cm_mean": 15.752187890669852,
+          "angle_deg_mean": 52.34574290949965,
+          "joint_tracking_rmse_rad_mean": 0.5914224403168008,
+          "force20_mean": 0.01670428138747766,
+          "position_cm_median": 10.53988113474094,
+          "mean_position_over_1m_count": 2,
+          "grasp_hold_parent_macro": 0.1488079666044914
+        },
+        "guided": {
+          "lift_success": 451,
+          "grasp_hold_success": 243,
+          "strict_pose_success": 6,
+          "hold_pose_contact_success": 43,
+          "position_cm_mean": 12.445528513725964,
+          "angle_deg_mean": 50.10514488992612,
+          "joint_tracking_rmse_rad_mean": 0.5718286922730875,
+          "force20_mean": 0.01484779583475073,
+          "position_cm_median": 10.474588126094806,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.1460404656339815
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": -0.27114967462039047,
+          "parent_resample95_pp": [
+            -2.0202158118597224,
+            1.4731609922331508
+          ],
+          "parent_macro_difference_pp": -0.27675009705098863,
+          "parent_macro95_pp": [
+            -2.2391166959991353,
+            1.7891197190519843
+          ],
+          "guided_only": 121,
+          "random_only": 126,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": 0.0,
+          "parent_resample95_pp": [
+            -0.8537294639098735,
+            0.8134600581669751
+          ],
+          "parent_macro_difference_pp": -0.12774914904155207,
+          "parent_macro95_pp": [
+            -1.0849318442877767,
+            0.81331078161719
+          ],
+          "guided_only": 30,
+          "random_only": 30,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    },
+    "original_holdout": {
+      "episodes": 14,
+      "parents": 14,
+      "models": {
+        "teacher": {
+          "lift_success": 13,
+          "grasp_hold_success": 9,
+          "strict_pose_success": 1,
+          "hold_pose_contact_success": 1,
+          "position_cm_mean": 5.182529916047588,
+          "angle_deg_mean": 30.891072328626603,
+          "joint_tracking_rmse_rad_mean": 0.45355097488761803,
+          "force20_mean": 0.014587768525932786,
+          "position_cm_median": 4.181539437857019,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.6428571428571429
+        },
+        "random": {
+          "lift_success": 6,
+          "grasp_hold_success": 5,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 0,
+          "position_cm_mean": 13.18086064063537,
+          "angle_deg_mean": 53.77737023985486,
+          "joint_tracking_rmse_rad_mean": 0.5481213309240115,
+          "force20_mean": 0.02982076204823888,
+          "position_cm_median": 13.595418194924875,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.35714285714285715
+        },
+        "guided": {
+          "lift_success": 7,
+          "grasp_hold_success": 7,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 0,
+          "position_cm_mean": 11.4308147134124,
+          "angle_deg_mean": 49.30429576897434,
+          "joint_tracking_rmse_rad_mean": 0.5352343191066666,
+          "force20_mean": 0.026347402162815076,
+          "position_cm_median": 8.469719886779785,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.5
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": 14.285714285714285,
+          "parent_resample95_pp": [
+            -21.428571428571427,
+            50.0
+          ],
+          "parent_macro_difference_pp": 14.285714285714285,
+          "parent_macro95_pp": [
+            -21.428571428571427,
+            50.0
+          ],
+          "guided_only": 4,
+          "random_only": 2,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": 0.0,
+          "parent_resample95_pp": [
+            0.0,
+            0.0
+          ],
+          "parent_macro_difference_pp": 0.0,
+          "parent_macro95_pp": [
+            0.0,
+            0.0
+          ],
+          "guided_only": 0,
+          "random_only": 0,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    },
+    "not_used_for_selection_fit": {
+      "episodes": 2333,
+      "parents": 1690,
+      "models": {
+        "teacher": {
+          "lift_success": 1299,
+          "grasp_hold_success": 532,
+          "strict_pose_success": 82,
+          "hold_pose_contact_success": 98,
+          "position_cm_mean": 27.913682908870584,
+          "angle_deg_mean": 43.91469591982834,
+          "joint_tracking_rmse_rad_mean": 0.40827913178246483,
+          "force20_mean": 0.02393395918233599,
+          "position_cm_median": 5.113266905148824,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.27173921482227537
+        },
+        "random": {
+          "lift_success": 666,
+          "grasp_hold_success": 342,
+          "strict_pose_success": 30,
+          "hold_pose_contact_success": 72,
+          "position_cm_mean": 14.216228864264354,
+          "angle_deg_mean": 48.95184766847961,
+          "joint_tracking_rmse_rad_mean": 0.5900779520148104,
+          "force20_mean": 0.017562327400135476,
+          "position_cm_median": 9.909067036193093,
+          "mean_position_over_1m_count": 2,
+          "grasp_hold_parent_macro": 0.15822440618574007
+        },
+        "guided": {
+          "lift_success": 653,
+          "grasp_hold_success": 335,
+          "strict_pose_success": 13,
+          "hold_pose_contact_success": 60,
+          "position_cm_mean": 11.60627467286342,
+          "angle_deg_mean": 47.040102276687634,
+          "joint_tracking_rmse_rad_mean": 0.5672516006438371,
+          "force20_mean": 0.015504146095407506,
+          "position_cm_median": 9.687813041136437,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.1565234517218969
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": -0.30004286326618085,
+          "parent_resample95_pp": [
+            -2.0094328234826313,
+            1.360582825638768
+          ],
+          "parent_macro_difference_pp": -0.17009544638431698,
+          "parent_macro95_pp": [
+            -2.0483493720886314,
+            1.6487463535233577
+          ],
+          "guided_only": 170,
+          "random_only": 177,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": -0.5143591941705958,
+          "parent_resample95_pp": [
+            -1.35257485721605,
+            0.3009881156973235
+          ],
+          "parent_macro_difference_pp": -0.5850591715976331,
+          "parent_macro95_pp": [
+            -1.5420734714003945,
+            0.3254561143984219
+          ],
+          "guided_only": 39,
+          "random_only": 51,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    },
+    "reference_lift_ge_2cm": {
+      "episodes": 2060,
+      "parents": 1619,
+      "models": {
+        "teacher": {
+          "lift_success": 1309,
+          "grasp_hold_success": 553,
+          "strict_pose_success": 89,
+          "hold_pose_contact_success": 101,
+          "position_cm_mean": 30.47416128745187,
+          "angle_deg_mean": 40.32612542962603,
+          "joint_tracking_rmse_rad_mean": 0.4140326061938885,
+          "force20_mean": 0.026311723083681297,
+          "position_cm_median": 4.75450657284449,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.30004189757123667
+        },
+        "random": {
+          "lift_success": 667,
+          "grasp_hold_success": 348,
+          "strict_pose_success": 32,
+          "hold_pose_contact_success": 67,
+          "position_cm_mean": 14.692622804151016,
+          "angle_deg_mean": 45.93367968042897,
+          "joint_tracking_rmse_rad_mean": 0.5839916913474716,
+          "force20_mean": 0.018274758139906595,
+          "position_cm_median": 10.262030758532175,
+          "mean_position_over_1m_count": 2,
+          "grasp_hold_parent_macro": 0.17165269361069238
+        },
+        "guided": {
+          "lift_success": 649,
+          "grasp_hold_success": 335,
+          "strict_pose_success": 14,
+          "hold_pose_contact_success": 50,
+          "position_cm_mean": 11.250466252570773,
+          "angle_deg_mean": 43.822284392824535,
+          "joint_tracking_rmse_rad_mean": 0.5581814086182859,
+          "force20_mean": 0.015573782462257562,
+          "position_cm_median": 10.071135426520058,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.1683574232369785
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": -0.6310679611650485,
+          "parent_resample95_pp": [
+            -2.582342044313879,
+            1.2646222233167508
+          ],
+          "parent_macro_difference_pp": -0.32952703737138567,
+          "parent_macro95_pp": [
+            -2.304380275890468,
+            1.6331127951727062
+          ],
+          "guided_only": 168,
+          "random_only": 181,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": -0.825242718446602,
+          "parent_resample95_pp": [
+            -1.6782666092528093,
+            0.0
+          ],
+          "parent_macro_difference_pp": -0.8300110431055459,
+          "parent_macro95_pp": [
+            -1.7526835682332904,
+            0.12229303535665384
+          ],
+          "guided_only": 33,
+          "random_only": 50,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    },
+    "reference_lift_lt_2cm": {
+      "episodes": 305,
+      "parents": 146,
+      "models": {
+        "teacher": {
+          "lift_success": 21,
+          "grasp_hold_success": 7,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 4,
+          "position_cm_mean": 8.0506908920942,
+          "angle_deg_mean": 65.94062326245597,
+          "joint_tracking_rmse_rad_mean": 0.37272304753320923,
+          "force20_mean": 0.007760634541955634,
+          "position_cm_median": 5.928925938076443,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.02835334315538698
+        },
+        "random": {
+          "lift_success": 13,
+          "grasp_hold_success": 6,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 7,
+          "position_cm_mean": 10.536069615919534,
+          "angle_deg_mean": 67.5707425892918,
+          "joint_tracking_rmse_rad_mean": 0.6197048544780204,
+          "force20_mean": 0.013754101276151827,
+          "position_cm_median": 7.736910184224446,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.01498084217277973
+        },
+        "guided": {
+          "lift_success": 18,
+          "grasp_hold_success": 8,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 11,
+          "position_cm_mean": 13.891299041067134,
+          "angle_deg_mean": 67.05012739882609,
+          "joint_tracking_rmse_rad_mean": 0.6180964661319617,
+          "force20_mean": 0.014886724143126301,
+          "position_cm_median": 7.398736476898193,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.03520265822388013
+        }
+      },
+      "guided_minus_random": {
+        "grasp_hold_success": {
+          "difference_pp": 0.6557377049180327,
+          "parent_resample95_pp": [
+            -1.0527010137480906,
+            2.721154609703803
+          ],
+          "parent_macro_difference_pp": 2.02218160511004,
+          "parent_macro95_pp": [
+            -0.7274066643678881,
+            5.381010481947757
+          ],
+          "guided_only": 6,
+          "random_only": 4,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        },
+        "hold_pose_contact_success": {
+          "difference_pp": 1.3114754098360655,
+          "parent_resample95_pp": [
+            -0.8164101706256274,
+            3.4485242969293415
+          ],
+          "parent_macro_difference_pp": 0.7376185458377238,
+          "parent_macro95_pp": [
+            -2.6870389884088515,
+            4.1622760800842995
+          ],
+          "guided_only": 7,
+          "random_only": 3,
+          "note": "5000 paired parent bootstrap draws; conditional on this training seed and evaluation run"
+        }
+      }
+    }
+  },
+  "by_cluster": {
+    "0": {
+      "episodes": 400,
+      "parents": 322,
+      "models": {
+        "teacher": {
+          "lift_success": 242,
+          "grasp_hold_success": 45,
+          "strict_pose_success": 7,
+          "hold_pose_contact_success": 13,
+          "position_cm_mean": 6.545568010725167,
+          "angle_deg_mean": 38.63991324542289,
+          "joint_tracking_rmse_rad_mean": 0.36996120695560303,
+          "force20_mean": 0.016399562696550376,
+          "position_cm_median": 3.6429463612912882,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.12665631469979297
+        },
+        "random": {
+          "lift_success": 135,
+          "grasp_hold_success": 41,
+          "strict_pose_success": 2,
+          "hold_pose_contact_success": 20,
+          "position_cm_mean": 9.83860997517052,
+          "angle_deg_mean": 45.09475668146742,
+          "joint_tracking_rmse_rad_mean": 0.5786983012183556,
+          "force20_mean": 0.012079250595702902,
+          "position_cm_median": 8.479020462730052,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.10662525879917183
+        },
+        "guided": {
+          "lift_success": 149,
+          "grasp_hold_success": 47,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 20,
+          "position_cm_mean": 9.346428057883578,
+          "angle_deg_mean": 44.61721383726002,
+          "joint_tracking_rmse_rad_mean": 0.5200187935385311,
+          "force20_mean": 0.011030346087412834,
+          "position_cm_median": 7.594850791169224,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.12681159420289853
+        }
+      }
+    },
+    "1": {
+      "episodes": 241,
+      "parents": 176,
+      "models": {
+        "teacher": {
+          "lift_success": 48,
+          "grasp_hold_success": 20,
+          "strict_pose_success": 2,
+          "hold_pose_contact_success": 6,
+          "position_cm_mean": 10.202845394691138,
+          "angle_deg_mean": 59.64016934913073,
+          "joint_tracking_rmse_rad_mean": 0.4094362436787952,
+          "force20_mean": 0.014344205282001648,
+          "position_cm_median": 8.359784020317925,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.09816919191919192
+        },
+        "random": {
+          "lift_success": 36,
+          "grasp_hold_success": 19,
+          "strict_pose_success": 1,
+          "hold_pose_contact_success": 7,
+          "position_cm_mean": 41.80003179270756,
+          "angle_deg_mean": 61.950863229327936,
+          "joint_tracking_rmse_rad_mean": 0.6495116385302369,
+          "force20_mean": 0.025365528865869087,
+          "position_cm_median": 10.238546966224588,
+          "mean_position_over_1m_count": 2,
+          "grasp_hold_parent_macro": 0.09359217171717171
+        },
+        "guided": {
+          "lift_success": 41,
+          "grasp_hold_success": 22,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 9,
+          "position_cm_mean": 11.531164259791119,
+          "angle_deg_mean": 59.79680482921918,
+          "joint_tracking_rmse_rad_mean": 0.6536290955279969,
+          "force20_mean": 0.027514248068717054,
+          "position_cm_median": 9.577051368919578,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.11079545454545454
+        }
+      }
+    },
+    "2": {
+      "episodes": 584,
+      "parents": 446,
+      "models": {
+        "teacher": {
+          "lift_success": 316,
+          "grasp_hold_success": 69,
+          "strict_pose_success": 8,
+          "hold_pose_contact_success": 12,
+          "position_cm_mean": 89.15336581701558,
+          "angle_deg_mean": 46.333174430977735,
+          "joint_tracking_rmse_rad_mean": 0.39124157674107646,
+          "force20_mean": 0.014818254255336737,
+          "position_cm_median": 5.3992259141170615,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.12819773649370061
+        },
+        "random": {
+          "lift_success": 206,
+          "grasp_hold_success": 67,
+          "strict_pose_success": 3,
+          "hold_pose_contact_success": 6,
+          "position_cm_mean": 10.616265977153526,
+          "angle_deg_mean": 49.668583527554375,
+          "joint_tracking_rmse_rad_mean": 0.613949115926023,
+          "force20_mean": 0.020358326848727046,
+          "position_cm_median": 8.671407604738821,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.12355327781336749
+        },
+        "guided": {
+          "lift_success": 167,
+          "grasp_hold_success": 67,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 10,
+          "position_cm_mean": 10.829209250154268,
+          "angle_deg_mean": 48.92540979554448,
+          "joint_tracking_rmse_rad_mean": 0.568208784759697,
+          "force20_mean": 0.015627250780978482,
+          "position_cm_median": 9.048407709402028,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.11637838992099082
+        }
+      }
+    },
+    "3": {
+      "episodes": 287,
+      "parents": 242,
+      "models": {
+        "teacher": {
+          "lift_success": 158,
+          "grasp_hold_success": 44,
+          "strict_pose_success": 8,
+          "hold_pose_contact_success": 10,
+          "position_cm_mean": 7.013743376641132,
+          "angle_deg_mean": 40.1347128472576,
+          "joint_tracking_rmse_rad_mean": 0.399508556835459,
+          "force20_mean": 0.02092542522161356,
+          "position_cm_median": 5.023442374335395,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.17630853994490356
+        },
+        "random": {
+          "lift_success": 48,
+          "grasp_hold_success": 26,
+          "strict_pose_success": 6,
+          "hold_pose_contact_success": 19,
+          "position_cm_mean": 10.63928363064146,
+          "angle_deg_mean": 45.24155175892563,
+          "joint_tracking_rmse_rad_mean": 0.6192472914001175,
+          "force20_mean": 0.010601394222454838,
+          "position_cm_median": 10.282981395721436,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.09710743801652892
+        },
+        "guided": {
+          "lift_success": 39,
+          "grasp_hold_success": 13,
+          "strict_pose_success": 1,
+          "hold_pose_contact_success": 8,
+          "position_cm_mean": 14.849840506540527,
+          "angle_deg_mean": 41.40245938848372,
+          "joint_tracking_rmse_rad_mean": 0.5956170334182807,
+          "force20_mean": 0.006297679061281626,
+          "position_cm_median": 10.278618854025137,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.05371900826446281
+        }
+      }
+    },
+    "4": {
+      "episodes": 393,
+      "parents": 298,
+      "models": {
+        "teacher": {
+          "lift_success": 213,
+          "grasp_hold_success": 83,
+          "strict_pose_success": 13,
+          "hold_pose_contact_success": 13,
+          "position_cm_mean": 7.495729545263828,
+          "angle_deg_mean": 48.76774730669871,
+          "joint_tracking_rmse_rad_mean": 0.4071076909841725,
+          "force20_mean": 0.0184746192879001,
+          "position_cm_median": 4.710650156779462,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.2602196461256864
+        },
+        "random": {
+          "lift_success": 91,
+          "grasp_hold_success": 58,
+          "strict_pose_success": 4,
+          "hold_pose_contact_success": 6,
+          "position_cm_mean": 12.11546697238901,
+          "angle_deg_mean": 53.131329137225855,
+          "joint_tracking_rmse_rad_mean": 0.5692324181230882,
+          "force20_mean": 0.00816312147251597,
+          "position_cm_median": 10.500399034414718,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.17536099247508644
+        },
+        "guided": {
+          "lift_success": 140,
+          "grasp_hold_success": 84,
+          "strict_pose_success": 5,
+          "hold_pose_contact_success": 6,
+          "position_cm_mean": 10.823219867540457,
+          "angle_deg_mean": 51.32626012670962,
+          "joint_tracking_rmse_rad_mean": 0.5956015263864703,
+          "force20_mean": 0.012923020031138814,
+          "position_cm_median": 8.709438559935265,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.24708992810058739
+        }
+      }
+    },
+    "5": {
+      "episodes": 460,
+      "parents": 412,
+      "models": {
+        "teacher": {
+          "lift_success": 353,
+          "grasp_hold_success": 299,
+          "strict_pose_success": 51,
+          "hold_pose_contact_success": 51,
+          "position_cm_mean": 6.806061591972097,
+          "angle_deg_mean": 33.93804613561415,
+          "joint_tracking_rmse_rad_mean": 0.4712863512236155,
+          "force20_mean": 0.05354865572224545,
+          "position_cm_median": 4.2963188352035875,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.6419902912621359
+        },
+        "random": {
+          "lift_success": 164,
+          "grasp_hold_success": 143,
+          "strict_pose_success": 16,
+          "hold_pose_contact_success": 16,
+          "position_cm_mean": 11.86152240107649,
+          "angle_deg_mean": 42.15870746680328,
+          "joint_tracking_rmse_rad_mean": 0.5305274842683778,
+          "force20_mean": 0.027730956961474717,
+          "position_cm_median": 12.22442467624404,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.2827669902912621
+        },
+        "guided": {
+          "lift_success": 131,
+          "grasp_hold_success": 110,
+          "strict_pose_success": 8,
+          "hold_pose_contact_success": 8,
+          "position_cm_mean": 13.16421096227729,
+          "angle_deg_mean": 38.782856113532574,
+          "joint_tracking_rmse_rad_mean": 0.5130295124470979,
+          "force20_mean": 0.020797554994481167,
+          "position_cm_median": 12.628143141869785,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.2342233009708738
+        }
+      }
+    }
+  },
+  "by_dataset": {
+    "DexCanvas": {
+      "episodes": 1034,
+      "parents": 711,
+      "models": {
+        "teacher": {
+          "lift_success": 590,
+          "grasp_hold_success": 12,
+          "strict_pose_success": 2,
+          "hold_pose_contact_success": 15,
+          "position_cm_mean": 5.5642183443928195,
+          "angle_deg_mean": 38.15655461980433,
+          "joint_tracking_rmse_rad_mean": 0.3549010083030262,
+          "force20_mean": 0.009024340251083295,
+          "position_cm_median": 3.797090815757927,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.01230661040787623
+        },
+        "random": {
+          "lift_success": 296,
+          "grasp_hold_success": 52,
+          "strict_pose_success": 1,
+          "hold_pose_contact_success": 41,
+          "position_cm_mean": 8.555455537237043,
+          "angle_deg_mean": 43.56399006871553,
+          "joint_tracking_rmse_rad_mean": 0.6350625028528918,
+          "force20_mean": 0.011241572007453607,
+          "position_cm_median": 8.069522348863352,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.0506797937177684
+        },
+        "guided": {
+          "lift_success": 283,
+          "grasp_hold_success": 60,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 40,
+          "position_cm_mean": 8.337701780632221,
+          "angle_deg_mean": 42.291880736937856,
+          "joint_tracking_rmse_rad_mean": 0.5925393026515177,
+          "force20_mean": 0.013107878317937827,
+          "position_cm_median": 7.767213012089504,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.06237693389592124
+        }
+      }
+    },
+    "DexYCB": {
+      "episodes": 263,
+      "parents": 170,
+      "models": {
+        "teacher": {
+          "lift_success": 194,
+          "grasp_hold_success": 154,
+          "strict_pose_success": 28,
+          "hold_pose_contact_success": 28,
+          "position_cm_mean": 9.787050355281151,
+          "angle_deg_mean": 41.89829417321599,
+          "joint_tracking_rmse_rad_mean": 0.47873941026614697,
+          "force20_mean": 0.05663642346852933,
+          "position_cm_median": 5.265155470514872,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.5676470588235294
+        },
+        "random": {
+          "lift_success": 146,
+          "grasp_hold_success": 131,
+          "strict_pose_success": 17,
+          "hold_pose_contact_success": 17,
+          "position_cm_mean": 13.4295441322135,
+          "angle_deg_mean": 49.22828024852775,
+          "joint_tracking_rmse_rad_mean": 0.5415763054368289,
+          "force20_mean": 0.05263124425092977,
+          "position_cm_median": 12.704710213534803,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.5029411764705882
+        },
+        "guided": {
+          "lift_success": 121,
+          "grasp_hold_success": 93,
+          "strict_pose_success": 6,
+          "hold_pose_contact_success": 6,
+          "position_cm_mean": 15.214067245237112,
+          "angle_deg_mean": 46.2378142560386,
+          "joint_tracking_rmse_rad_mean": 0.5474640461231512,
+          "force20_mean": 0.032424657888140695,
+          "position_cm_median": 14.576963631503553,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.35
+        }
+      }
+    },
+    "DexterHand": {
+      "episodes": 184,
+      "parents": 5,
+      "models": {
+        "teacher": {
+          "lift_success": 26,
+          "grasp_hold_success": 9,
+          "strict_pose_success": 1,
+          "hold_pose_contact_success": 3,
+          "position_cm_mean": 9.29762348203744,
+          "angle_deg_mean": 81.50452588177369,
+          "joint_tracking_rmse_rad_mean": 0.36743084674809373,
+          "force20_mean": 0.01317838874532687,
+          "position_cm_median": 5.8838198449876575,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.047854609929078015
+        },
+        "random": {
+          "lift_success": 19,
+          "grasp_hold_success": 8,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 0,
+          "position_cm_mean": 52.7860283153669,
+          "angle_deg_mean": 89.03942117900593,
+          "joint_tracking_rmse_rad_mean": 0.6116416111241607,
+          "force20_mean": 0.013447981136460676,
+          "position_cm_median": 9.054957893159653,
+          "mean_position_over_1m_count": 2,
+          "grasp_hold_parent_macro": 0.039849290780141836
+        },
+        "guided": {
+          "lift_success": 23,
+          "grasp_hold_success": 10,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 4,
+          "position_cm_mean": 19.397168593241105,
+          "angle_deg_mean": 90.02253742937424,
+          "joint_tracking_rmse_rad_mean": 0.6024838941866963,
+          "force20_mean": 0.011953856171112807,
+          "position_cm_median": 8.578466574350994,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.05159334866781675
+        }
+      }
+    },
+    "HOI Full": {
+      "episodes": 2,
+      "parents": 2,
+      "models": {
+        "teacher": {
+          "lift_success": 0,
+          "grasp_hold_success": 0,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 0,
+          "position_cm_mean": 11.317146108264016,
+          "angle_deg_mean": 52.562107151391885,
+          "joint_tracking_rmse_rad_mean": 0.60025895727325,
+          "force20_mean": 0.000252525256288172,
+          "position_cm_median": 11.317146108264016,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.0
+        },
+        "random": {
+          "lift_success": 0,
+          "grasp_hold_success": 0,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 0,
+          "position_cm_mean": 10.30533484050206,
+          "angle_deg_mean": 50.9980068413431,
+          "joint_tracking_rmse_rad_mean": 0.6562978312102496,
+          "force20_mean": 0.000505050512576344,
+          "position_cm_median": 10.30533484050206,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.0
+        },
+        "guided": {
+          "lift_success": 0,
+          "grasp_hold_success": 0,
+          "strict_pose_success": 0,
+          "hold_pose_contact_success": 0,
+          "position_cm_mean": 10.299078907285418,
+          "angle_deg_mean": 52.76625304925888,
+          "joint_tracking_rmse_rad_mean": 0.6213455504434324,
+          "force20_mean": 0.000505050512576344,
+          "position_cm_median": 10.299078907285418,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.0
+        }
+      }
+    },
+    "HOT3D": {
+      "episodes": 509,
+      "parents": 509,
+      "models": {
+        "teacher": {
+          "lift_success": 323,
+          "grasp_hold_success": 255,
+          "strict_pose_success": 30,
+          "hold_pose_contact_success": 30,
+          "position_cm_mean": 7.511007234912242,
+          "angle_deg_mean": 40.011974498921155,
+          "joint_tracking_rmse_rad_mean": 0.47406489572756827,
+          "force20_mean": 0.03847586193671197,
+          "position_cm_median": 6.483875274658203,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.5009823182711198
+        },
+        "random": {
+          "lift_success": 75,
+          "grasp_hold_success": 60,
+          "strict_pose_success": 3,
+          "hold_pose_contact_success": 3,
+          "position_cm_mean": 12.679861823478344,
+          "angle_deg_mean": 45.198189457793944,
+          "joint_tracking_rmse_rad_mean": 0.5535121924565715,
+          "force20_mean": 0.012509475774390669,
+          "position_cm_median": 12.694008496342873,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.11787819253438114
+        },
+        "guided": {
+          "lift_success": 84,
+          "grasp_hold_success": 66,
+          "strict_pose_success": 3,
+          "hold_pose_contact_success": 3,
+          "position_cm_mean": 12.426779984466615,
+          "angle_deg_mean": 43.326852904865326,
+          "joint_tracking_rmse_rad_mean": 0.5383335730851253,
+          "force20_mean": 0.013657634496379403,
+          "position_cm_median": 12.528391944037544,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.12966601178781925
+        }
+      }
+    },
+    "HRDexDB": {
+      "episodes": 140,
+      "parents": 140,
+      "models": {
+        "teacher": {
+          "lift_success": 90,
+          "grasp_hold_success": 74,
+          "strict_pose_success": 12,
+          "hold_pose_contact_success": 12,
+          "position_cm_mean": 7.30736080371164,
+          "angle_deg_mean": 29.0731897468572,
+          "joint_tracking_rmse_rad_mean": 0.4532026218817596,
+          "force20_mean": 0.025264728702716416,
+          "position_cm_median": 5.471417415572937,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.5285714285714286
+        },
+        "random": {
+          "lift_success": 54,
+          "grasp_hold_success": 49,
+          "strict_pose_success": 3,
+          "hold_pose_contact_success": 3,
+          "position_cm_mean": 10.779020259999983,
+          "angle_deg_mean": 33.885060899682614,
+          "joint_tracking_rmse_rad_mean": 0.5292343289534255,
+          "force20_mean": 0.022947046367617158,
+          "position_cm_median": 12.580746340464398,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.35
+        },
+        "guided": {
+          "lift_success": 73,
+          "grasp_hold_success": 63,
+          "strict_pose_success": 3,
+          "hold_pose_contact_success": 3,
+          "position_cm_mean": 9.821618273213069,
+          "angle_deg_mean": 31.556190223062412,
+          "joint_tracking_rmse_rad_mean": 0.5136780576438771,
+          "force20_mean": 0.01802197660614441,
+          "position_cm_median": 8.447443433554776,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.45
+        }
+      }
+    },
+    "OakInk": {
+      "episodes": 233,
+      "parents": 184,
+      "models": {
+        "teacher": {
+          "lift_success": 107,
+          "grasp_hold_success": 56,
+          "strict_pose_success": 16,
+          "hold_pose_contact_success": 17,
+          "position_cm_mean": 215.98844100728363,
+          "angle_deg_mean": 56.5333951698935,
+          "joint_tracking_rmse_rad_mean": 0.42985578569415894,
+          "force20_mean": 0.029167345802648893,
+          "position_cm_median": 9.233342544941962,
+          "mean_position_over_1m_count": 1,
+          "grasp_hold_parent_macro": 0.28125
+        },
+        "random": {
+          "lift_success": 90,
+          "grasp_hold_success": 54,
+          "strict_pose_success": 8,
+          "hold_pose_contact_success": 10,
+          "position_cm_mean": 14.616483660396192,
+          "angle_deg_mean": 55.816380791461654,
+          "joint_tracking_rmse_rad_mean": 0.5290064566037392,
+          "force20_mean": 0.01854013593548139,
+          "position_cm_median": 12.882773499739798,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.2590579710144928
+        },
+        "guided": {
+          "lift_success": 83,
+          "grasp_hold_success": 51,
+          "strict_pose_success": 2,
+          "hold_pose_contact_success": 5,
+          "position_cm_mean": 15.02312708942454,
+          "angle_deg_mean": 50.18425202412034,
+          "joint_tracking_rmse_rad_mean": 0.5308068517173766,
+          "force20_mean": 0.012299910774884714,
+          "position_cm_median": 14.310793315663057,
+          "mean_position_over_1m_count": 0,
+          "grasp_hold_parent_macro": 0.2142210144927536
+        }
+      }
+    }
+  }
+}

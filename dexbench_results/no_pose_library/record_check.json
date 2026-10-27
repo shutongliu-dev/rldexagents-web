@@ -1,0 +1,13 @@
+{
+  "http_records": 3214,
+  "function_call_counts": {
+    "move_geometry": 66,
+    "query_ik": 30,
+    "move_joints": 3,
+    "hold": 3,
+    "get_robot": 2,
+    "get_action": 331
+  },
+  "pose_library_or_preset_calls": {},
+  "result_files_present": true
+}

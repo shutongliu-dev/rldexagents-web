@@ -1,0 +1,34 @@
+{
+  "arm_robot_mode": 2,
+  "arm_errors": [],
+  "hand_connected": true,
+  "hand_enabled": false,
+  "cameras_active": 3,
+  "motion_sent": false,
+  "camera_checks": [
+    {
+      "camera": "image_external",
+      "error": null,
+      "sdk_deprojection_error_m": 2.485418361005271e-08,
+      "pregrasp_computed": true
+    },
+    {
+      "camera": "image_external_2",
+      "error": null,
+      "sdk_deprojection_error_m": 1.4480603778965605e-08,
+      "pregrasp_computed": true
+    },
+    {
+      "camera": "image_external_3",
+      "error": null,
+      "sdk_deprojection_error_m": 1.1675013793840257e-10,
+      "pregrasp_computed": false
+    }
+  ],
+  "nuc_preview": {
+    "success": true,
+    "executed": false,
+    "command_attempts": 0,
+    "trajectory_start_source": "fresh_nuc_feedback"
+  }
+}

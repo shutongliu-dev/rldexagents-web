@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="664.56pt" height="133.704pt" viewBox="0 0 664.56 133.704" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T14:21:47.212829</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 133.704 
+L 664.56 133.704 
+L 664.56 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 8.64 91.8 
+L 128.61 91.8 
+L 128.61 28.044 
+L 8.64 28.044 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #ffffff; stroke: #263746; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 139.212 91.8 
+L 259.182 91.8 
+L 259.182 28.044 
+L 139.212 28.044 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #ffffff; stroke: #263746; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 130.610817 60.1992 
+Q 133.909757 60.1992 136.090663 60.1992 
+" clip-path="url(#p46d93981ad)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 131.290663 57.7992 
+L 136.090663 60.1992 
+L 131.290663 62.5992 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 269.784 91.8 
+L 389.754 91.8 
+L 389.754 28.044 
+L 269.784 28.044 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #ffffff; stroke: #26756b; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 261.182817 60.1992 
+Q 264.481757 60.1992 266.662663 60.1992 
+" clip-path="url(#p46d93981ad)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 261.862663 57.7992 
+L 266.662663 60.1992 
+L 261.862663 62.5992 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 400.356 91.8 
+L 520.326 91.8 
+L 520.326 28.044 
+L 400.356 28.044 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #ffffff; stroke: #26756b; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 391.754817 60.1992 
+Q 395.053757 60.1992 397.234663 60.1992 
+" clip-path="url(#p46d93981ad)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 392.434663 57.7992 
+L 397.234663 60.1992 
+L 392.434663 62.5992 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 530.928 91.8 
+L 650.898 91.8 
+L 650.898 28.044 
+L 530.928 28.044 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #ffffff; stroke: #26756b; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 522.326817 60.1992 
+Q 525.625757 60.1992 527.806663 60.1992 
+" clip-path="url(#p46d93981ad)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 523.006663 57.7992 
+L 527.806663 60.1992 
+L 523.006663 62.5992 
+z
+" clip-path="url(#p46d93981ad)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #263746" x="68.625" y="48.017495" transform="rotate(-0 68.625 48.017495)">Diverse motions</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(18.178828 68.015678)">Human / Sharpa / Wuji2</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(19.093906 79.47142)">Posture and interaction</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #263746" x="199.197" y="48.017495" transform="rotate(-0 199.197 48.017495)">Pose manifold</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(148.999188 68.015678)">Structure and coverage</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(142.422977 79.47142)">Representative candidates</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26756b" x="329.769" y="47.978433" transform="rotate(-0 329.769 47.978433)">Physical RL</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(264.243297 68.015678)">Reference-conditioned teacher</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(280.741266 79.47142)">Successful interactions</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26756b" x="460.341" y="48.017495" transform="rotate(-0 460.341 48.017495)">Skill distillation</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(408.980414 68.015678)">Cluster / Joint / Fingertip</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(421.527875 79.47142)">Hybrid commands</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26756b" x="590.913" y="47.978433" transform="rotate(-0 590.913 47.978433)">Agent toolkit</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(529.753508 68.015678)">Retrieve → invoke → observe</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(550.607062 79.47142)">30 Hz hand control</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #555555" x="332.28" y="115.0848" transform="rotate(-0 332.28 115.0848)">STRUCTURED CANDIDATES  →  VERIFIED PHYSICAL BEHAVIOR  →  CALLABLE FEEDBACK CONTROL</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p46d93981ad">
+   <rect x="8.64" y="8.64" width="647.28" height="116.424"/>
+  </clipPath>
+ </defs>
+</svg>

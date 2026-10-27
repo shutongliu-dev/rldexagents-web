@@ -1,0 +1,40 @@
+DexBench 五任务实验记录（2026-10-27）
+
+依据：dexbench-selected/DexBench_五任务评测提示词.txt；任务语义来自 TASKS.md，控制通过公开 HTTP 接口。
+用户限制：允许 RAX，本次未使用 RAX；全程未使用 hand pose library，也未调用手型预设接口。手指目标由本次观测和手工几何/关节目标生成。
+每个任务仅创建一个有效 episode；未重置场景，未改物理、资产、评分或预算。seed=0，预算使用服务默认值：仿真 120 秒、墙钟 1800 秒、6000 动作、单动作最多 5 秒。第四项使用玩家独立认证接口和 system0 双臂控制器，其余使用 free_tool_agent 几何控制器。
+
+总体结果：5 个 episode 均已结束，环境确认成功 0/5。所有结果 physics_valid=false，completion_sim_s/completion_wall_s 均为空。不能把本次结果作为五项有效物理成功率基准。
+
+01 滑轮皮带装配：环境故障，outcome=infrastructure_error。
+进行了 RGB-D 定位、小滑轮接近、夹持调整和抬升检查，未实现稳定抓取，未完成装配。仿真 16.24 秒，墙钟 1800.001 秒，13 次动作尝试。终止时间处于墙钟上限，但环境返回的不是 budget_exhausted，原样保留 infrastructure_error；failure_detail 为空。
+
+02 样本瓶开盖与复盖：环境故障，outcome=infrastructure_error。
+尝试顶部和侧面抓取，瓶子在台面移动；接触桌面后抬臂恢复。未完成入架、开盖或复盖。仿真 44.08 秒，墙钟 1800.001 秒，25 次动作尝试。failure_detail 为空。
+
+03 调味品与干货分类归位：未成功，outcome=safety_stop。
+进行了可达性查询和醋瓶瓶颈夹持尝试，瓶子最终倾斜在源区域，未有物品归入目标分类区。仿真 9.16 秒，墙钟 782.745 秒，7 次动作尝试。安全停止的详细原因未由结果接口提供，failure_detail 为空。
+
+04 木质平面四连棋：环境故障，episode outcome=infrastructure_error，board outcome=aborted，end_reason=runtime_error。
+声明第一枚黑棋落中央格，尝试抓取、修正和抬升，均未形成有效落子。turn_index=0、commit_count=0，evidence_unavailable=true。仿真 15.10 秒，墙钟 1070.472 秒，9 次动作尝试。
+
+05 遥控电视开关机：环境故障，outcome=infrastructure_error。
+按下并抬离电源键，房间相机显示电视亮起倒计时，后续图像显示自动熄屏。成功夹起遥控器，向收纳架搬运时滑脱到架旁桌面；恢复抓取过程中墙钟上限到达，未完成归架。仿真 32.24 秒，墙钟 1800.001 秒，18 次动作尝试。开关机与抬升属于图像/动作证据，不能替代整体任务成功判定；failure_detail 为空。
+关键图像：05_287_room.png（电视倒计时）、05_881_room.png（熄屏）、05_1401_room.png（遥控器抬升）、05_1508_room.png（搬运后滑脱）。
+
+环境与记录事项：
+第五项首次服务启动在 episode 创建前报 OSError ENOSPC（磁盘空间不足），不是失败后重置 episode。根分区当时仅余约 332 KB。将本次已经终止的 01–04 原始运行目录迁移到 /data/ruoqu/dexbench_20261027_no_pose_library，并在原路径保留符号链接，保留了全部记录。随后成功启动第五项并创建唯一 episode。第四项 runtime_error 与磁盘耗尽时间接近，但无法从公开结果确定因果关系。
+初始创建请求中的接口身份问题曾返回 422，均在创建有效 episode 之前修正，没有增加有效 episode 数量。
+没有读取任务实现、评分器或历史运行内容；迁移和归档仅作文件存储操作，不用于观察或决策。没有安装依赖或访问外部网络。
+model_calls=0 且 model_accounting=unavailable，是服务未统计模型调用，不能解释为没有模型推理。
+
+产物：
+summary.json：每项 episode、运行目录、结果、时间、动作数及录像位置。
+results.csv：便于比较的结果表。
+01_result.json 至 05_result.json：公开结果接口原始返回。
+http.jsonl：本次公开接口请求与响应；actions.jsonl：动作提交和末态提取。
+各任务编号_序号_相机.png/.npy：公开 RGB-D 观测。
+client.py、create.py、vision.py、board.py：本次生成的控制、创建、RGB-D 投影及玩家认证辅助代码；精确动作参数保存在 actions.jsonl/http.jsonl。
+服务已在各 episode 终止后关闭。录像由环境自动编码，实际可用状态及路径见 summary.json。
+
+收尾核验：第五项录像编码完成后也已迁至上述 /data 目录，原路径保留链接。五段 MP4 均通过 ffprobe 读取检查。record_check.json 确认五份结果齐全，3214 条 HTTP 记录中无手型预设/库函数调用。

@@ -1,0 +1,6 @@
+task,name,episode_id,outcome,confirmed_success,elapsed_sim_s,elapsed_wall_s,action_attempts,physics_valid,progress
+01,滑轮皮带装配,,startup_error,False,,,0,,创建回合失败，没有返回 episode_id，未执行动作。
+02,样本瓶开盖与复盖,,startup_error,False,,,0,,创建回合失败，没有返回 episode_id，未执行动作。
+03,调味品与干货分类归位,decfa40bd89948a29c34b49b78bcb33e,infrastructure_error,False,22.399999999993145,1800.0012167669993,16,False,图像观察到盐罐被抓起并放入奶油色收纳箱；后续接近红色调料罐时结束，未完成全部分类。
+04,木质平面四连棋,7141c79b3d464cf7af3389f9f5a397df,infrastructure_error,False,32.499999999973156,1800.0345992859984,18,False,公开棋局状态确认黑棋成功落子 1 次；白棋已搬运但未提交，未形成四连。
+05,遥控电视开关机,b76c4a97fa084c9ab7c753f559160d64,infrastructure_error,False,30.779999999973615,1800.041536732002,17,False,图像观察到电视开启并倒计时，随后关闭；最后一次抬手后遥控器仍在桌上，未放回收纳架。

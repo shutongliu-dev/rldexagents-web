@@ -1,0 +1,3627 @@
+{
+  "samples": 6241,
+  "unique_parents": 3185,
+  "sources": {
+    "dexcanvas": 3435,
+    "dexterhand": 752,
+    "spider": 1386,
+    "quick_hoi": 668
+  },
+  "unique_objects": 116,
+  "k_fixed_for_comparison": 6,
+  "feature_variants": {
+    "joint_only": {
+      "k_metrics": {
+        "k": 6,
+        "weighted_silhouette": 0.13629253161719979,
+        "restart_ari_to_first": 0.9980610126738279
+      },
+      "cluster_quality_and_success": {
+        "cluster_sizes": [
+          404,
+          448,
+          2040,
+          440,
+          1211,
+          1698
+        ],
+        "nmi_cluster_kind": 0.34582016435219703,
+        "nmi_cluster_object": 0.2711201730488694,
+        "nmi_cluster_original_fingertip_pattern": 0.12452827050070821,
+        "tabletop_pick_successes": 1165,
+        "pick_and_pose_tracking_successes": 567,
+        "clusters": [
+          {
+            "cluster": 0,
+            "count": 404,
+            "source_counts": {
+              "dexterhand": 15,
+              "spider": 388,
+              "quick_hoi": 1
+            },
+            "object_top10": [
+              [
+                "unknown",
+                388
+              ],
+              [
+                "Cuboid_01",
+                9
+              ],
+              [
+                "Ring_00",
+                4
+              ],
+              [
+                "Plate_00",
+                2
+              ],
+              [
+                "hoi_full_20261010_O02_0025_00001",
+                1
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                117
+              ],
+              [
+                "11110",
+                80
+              ],
+              [
+                "11100",
+                28
+              ],
+              [
+                "10110",
+                19
+              ],
+              [
+                "11011",
+                18
+              ],
+              [
+                "10111",
+                17
+              ],
+              [
+                "11101",
+                16
+              ],
+              [
+                "11000",
+                15
+              ],
+              [
+                "01111",
+                13
+              ],
+              [
+                "10000",
+                13
+              ]
+            ],
+            "tabletop_pick_successes": 162,
+            "tabletop_pick_success_rate": 0.400990099009901,
+            "pick_and_pose_tracking_successes": 54,
+            "pick_and_pose_tracking_success_rate": 0.13366336633663367
+          },
+          {
+            "cluster": 1,
+            "count": 448,
+            "source_counts": {
+              "dexcanvas": 201,
+              "dexterhand": 6,
+              "spider": 181,
+              "quick_hoi": 60
+            },
+            "object_top10": [
+              [
+                "unknown",
+                181
+              ],
+              [
+                "cylinder3",
+                95
+              ],
+              [
+                "banana",
+                64
+              ],
+              [
+                "cylinder2",
+                22
+              ],
+              [
+                "cylinder7",
+                20
+              ],
+              [
+                "O02@0030@00002",
+                10
+              ],
+              [
+                "O02@0029@00007",
+                5
+              ],
+              [
+                "O02@0200@00001",
+                5
+              ],
+              [
+                "Cuboid_01",
+                4
+              ],
+              [
+                "O02@0205@00001",
+                4
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                73
+              ],
+              [
+                "11000",
+                66
+              ],
+              [
+                "11110",
+                54
+              ],
+              [
+                "11100",
+                48
+              ],
+              [
+                "00110",
+                23
+              ],
+              [
+                "01100",
+                20
+              ],
+              [
+                "01111",
+                19
+              ],
+              [
+                "10110",
+                18
+              ],
+              [
+                "10111",
+                16
+              ],
+              [
+                "10000",
+                16
+              ]
+            ],
+            "tabletop_pick_successes": 146,
+            "tabletop_pick_success_rate": 0.32589285714285715,
+            "pick_and_pose_tracking_successes": 51,
+            "pick_and_pose_tracking_success_rate": 0.11383928571428571
+          },
+          {
+            "cluster": 2,
+            "count": 2040,
+            "source_counts": {
+              "dexcanvas": 1794,
+              "dexterhand": 89,
+              "spider": 102,
+              "quick_hoi": 55
+            },
+            "object_top10": [
+              [
+                "banana",
+                384
+              ],
+              [
+                "cube2",
+                381
+              ],
+              [
+                "cylinder3",
+                272
+              ],
+              [
+                "cube1",
+                246
+              ],
+              [
+                "bowl",
+                152
+              ],
+              [
+                "powerdrill",
+                120
+              ],
+              [
+                "unknown",
+                102
+              ],
+              [
+                "largeclamp",
+                72
+              ],
+              [
+                "mayonnaisebottle",
+                64
+              ],
+              [
+                "cuboid3",
+                42
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                738
+              ],
+              [
+                "11100",
+                424
+              ],
+              [
+                "00000",
+                278
+              ],
+              [
+                "10000",
+                167
+              ],
+              [
+                "11001",
+                70
+              ],
+              [
+                "10001",
+                69
+              ],
+              [
+                "11111",
+                38
+              ],
+              [
+                "10100",
+                34
+              ],
+              [
+                "11110",
+                30
+              ],
+              [
+                "01000",
+                29
+              ]
+            ],
+            "tabletop_pick_successes": 118,
+            "tabletop_pick_success_rate": 0.05784313725490196,
+            "pick_and_pose_tracking_successes": 76,
+            "pick_and_pose_tracking_success_rate": 0.03725490196078431
+          },
+          {
+            "cluster": 3,
+            "count": 440,
+            "source_counts": {
+              "dexcanvas": 1,
+              "spider": 437,
+              "quick_hoi": 2
+            },
+            "object_top10": [
+              [
+                "unknown",
+                437
+              ],
+              [
+                "hoi_full_20261010_O02_0018_00001",
+                2
+              ],
+              [
+                "cylinder2",
+                1
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                97
+              ],
+              [
+                "11110",
+                53
+              ],
+              [
+                "11100",
+                35
+              ],
+              [
+                "11000",
+                34
+              ],
+              [
+                "10110",
+                26
+              ],
+              [
+                "10000",
+                24
+              ],
+              [
+                "10111",
+                23
+              ],
+              [
+                "11011",
+                22
+              ],
+              [
+                "10100",
+                21
+              ],
+              [
+                "10011",
+                13
+              ]
+            ],
+            "tabletop_pick_successes": 208,
+            "tabletop_pick_success_rate": 0.4727272727272727,
+            "pick_and_pose_tracking_successes": 93,
+            "pick_and_pose_tracking_success_rate": 0.21136363636363636
+          },
+          {
+            "cluster": 4,
+            "count": 1211,
+            "source_counts": {
+              "dexcanvas": 100,
+              "dexterhand": 388,
+              "spider": 258,
+              "quick_hoi": 465
+            },
+            "object_top10": [
+              [
+                "unknown",
+                258
+              ],
+              [
+                "Cylinder_00",
+                113
+              ],
+              [
+                "Cuboid_01",
+                93
+              ],
+              [
+                "Ring_00",
+                93
+              ],
+              [
+                "Plate_00",
+                67
+              ],
+              [
+                "O02@0202@00001",
+                54
+              ],
+              [
+                "bowl",
+                53
+              ],
+              [
+                "O02@0011@00003",
+                50
+              ],
+              [
+                "cylinder2",
+                39
+              ],
+              [
+                "O02@0033@00002",
+                35
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                301
+              ],
+              [
+                "11100",
+                182
+              ],
+              [
+                "11110",
+                132
+              ],
+              [
+                "11000",
+                95
+              ],
+              [
+                "01100",
+                55
+              ],
+              [
+                "10111",
+                46
+              ],
+              [
+                "11011",
+                44
+              ],
+              [
+                "01111",
+                43
+              ],
+              [
+                "11001",
+                38
+              ],
+              [
+                "01110",
+                30
+              ]
+            ],
+            "tabletop_pick_successes": 155,
+            "tabletop_pick_success_rate": 0.12799339388934763,
+            "pick_and_pose_tracking_successes": 64,
+            "pick_and_pose_tracking_success_rate": 0.05284888521882741
+          },
+          {
+            "cluster": 5,
+            "count": 1698,
+            "source_counts": {
+              "dexcanvas": 1339,
+              "dexterhand": 254,
+              "spider": 20,
+              "quick_hoi": 85
+            },
+            "object_top10": [
+              [
+                "cube1",
+                276
+              ],
+              [
+                "banana",
+                252
+              ],
+              [
+                "cube2",
+                212
+              ],
+              [
+                "cylinder3",
+                161
+              ],
+              [
+                "largeclamp",
+                108
+              ],
+              [
+                "Cuboid_02",
+                90
+              ],
+              [
+                "mayonnaisebottle",
+                84
+              ],
+              [
+                "powerdrill",
+                79
+              ],
+              [
+                "bowl",
+                77
+              ],
+              [
+                "Plate_00",
+                58
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11110",
+                427
+              ],
+              [
+                "11111",
+                363
+              ],
+              [
+                "11100",
+                308
+              ],
+              [
+                "10111",
+                135
+              ],
+              [
+                "10000",
+                61
+              ],
+              [
+                "11000",
+                57
+              ],
+              [
+                "10110",
+                44
+              ],
+              [
+                "01110",
+                34
+              ],
+              [
+                "01100",
+                33
+              ],
+              [
+                "01111",
+                33
+              ]
+            ],
+            "tabletop_pick_successes": 376,
+            "tabletop_pick_success_rate": 0.22143698468786807,
+            "pick_and_pose_tracking_successes": 229,
+            "pick_and_pose_tracking_success_rate": 0.1348645465253239
+          }
+        ]
+      },
+      "feature_blocks": {
+        "joint_qpos": {
+          "dimensions": 22,
+          "mean": [
+            0.7069828185818497,
+            0.046303949856110194,
+            0.5740236948164661,
+            -0.08096147789392223,
+            0.17368369439015616,
+            0.2654968151095294,
+            -0.08739208124278257,
+            0.7590517431447981,
+            0.4138639195446116,
+            0.3075563182791085,
+            -0.0065192223558279425,
+            0.7726967238513338,
+            0.3729463723695476,
+            0.32489030449463663,
+            0.020015496496414948,
+            0.8572643737820327,
+            0.25810484100208686,
+            0.10442887556994138,
+            0.17718249676553544,
+            0.12466276047864701,
+            1.171023865186215,
+            0.492791336740254
+          ],
+          "scale": [
+            0.4421597788738241,
+            0.15895195066325185,
+            0.5354997657656219,
+            0.21633735926919193,
+            0.38026043716793384,
+            0.344433977774877,
+            0.17534238373065467,
+            0.4276973976850084,
+            0.3573735634628761,
+            0.36390873921491024,
+            0.13749358346982923,
+            0.4978381270844015,
+            0.3610721621646777,
+            0.37865359541896654,
+            0.14143462353392833,
+            0.5306123793719175,
+            0.3638354740630283,
+            0.11972413170092376,
+            0.4000316456519517,
+            0.2059693029885031,
+            0.42397263946475183,
+            0.5722519273526965
+          ],
+          "weight": 1.0
+        }
+      },
+      "pca_explained_variance_ratio": [
+        0.224944577801744,
+        0.15829141772045607
+      ],
+      "rows_with_both_success_labels": 567,
+      "note": "tabletop-pick and pose-tracking outcomes are evaluation annotations, excluded from clustering inputs"
+    },
+    "legacy_full_relation": {
+      "k_metrics": {
+        "k": 6,
+        "weighted_silhouette": 0.10146222497567771,
+        "restart_ari_to_first": 0.5234963838480227
+      },
+      "cluster_quality_and_success": {
+        "cluster_sizes": [
+          1291,
+          342,
+          1,
+          2601,
+          1716,
+          290
+        ],
+        "nmi_cluster_kind": 0.06701433899191718,
+        "nmi_cluster_object": 0.12995807373222037,
+        "nmi_cluster_original_fingertip_pattern": 0.31312870487326316,
+        "tabletop_pick_successes": 1165,
+        "pick_and_pose_tracking_successes": 567,
+        "clusters": [
+          {
+            "cluster": 0,
+            "count": 1291,
+            "source_counts": {
+              "dexcanvas": 818,
+              "dexterhand": 101,
+              "spider": 198,
+              "quick_hoi": 174
+            },
+            "object_top10": [
+              [
+                "banana",
+                294
+              ],
+              [
+                "unknown",
+                198
+              ],
+              [
+                "bowl",
+                99
+              ],
+              [
+                "cube2",
+                87
+              ],
+              [
+                "cube1",
+                72
+              ],
+              [
+                "powerdrill",
+                67
+              ],
+              [
+                "largeclamp",
+                59
+              ],
+              [
+                "cylinder3",
+                56
+              ],
+              [
+                "mayonnaisebottle",
+                46
+              ],
+              [
+                "Ring_00",
+                34
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                376
+              ],
+              [
+                "11100",
+                266
+              ],
+              [
+                "10000",
+                170
+              ],
+              [
+                "00000",
+                98
+              ],
+              [
+                "11001",
+                57
+              ],
+              [
+                "10001",
+                48
+              ],
+              [
+                "10100",
+                46
+              ],
+              [
+                "01100",
+                45
+              ],
+              [
+                "01000",
+                43
+              ],
+              [
+                "00001",
+                28
+              ]
+            ],
+            "tabletop_pick_successes": 120,
+            "tabletop_pick_success_rate": 0.09295120061967467,
+            "pick_and_pose_tracking_successes": 51,
+            "pick_and_pose_tracking_success_rate": 0.039504260263361735
+          },
+          {
+            "cluster": 1,
+            "count": 342,
+            "source_counts": {
+              "dexcanvas": 300,
+              "dexterhand": 12,
+              "spider": 3,
+              "quick_hoi": 27
+            },
+            "object_top10": [
+              [
+                "cylinder3",
+                175
+              ],
+              [
+                "cube2",
+                44
+              ],
+              [
+                "powerdrill",
+                37
+              ],
+              [
+                "cube1",
+                13
+              ],
+              [
+                "bowl",
+                11
+              ],
+              [
+                "O02@0033@00002",
+                11
+              ],
+              [
+                "mayonnaisebottle",
+                10
+              ],
+              [
+                "Plate_00",
+                8
+              ],
+              [
+                "banana",
+                6
+              ],
+              [
+                "hoi_full_20261010_O02_0203_00002",
+                4
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                199
+              ],
+              [
+                "00000",
+                100
+              ],
+              [
+                "10000",
+                24
+              ],
+              [
+                "10010",
+                5
+              ],
+              [
+                "01100",
+                4
+              ],
+              [
+                "11100",
+                4
+              ],
+              [
+                "01000",
+                3
+              ],
+              [
+                "00100",
+                1
+              ],
+              [
+                "10100",
+                1
+              ],
+              [
+                "00001",
+                1
+              ]
+            ],
+            "tabletop_pick_successes": 12,
+            "tabletop_pick_success_rate": 0.03508771929824561,
+            "pick_and_pose_tracking_successes": 6,
+            "pick_and_pose_tracking_success_rate": 0.017543859649122806
+          },
+          {
+            "cluster": 2,
+            "count": 1,
+            "source_counts": {
+              "quick_hoi": 1
+            },
+            "object_top10": [
+              [
+                "O02@0029@00011",
+                1
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "00000",
+                1
+              ]
+            ],
+            "tabletop_pick_successes": 0,
+            "tabletop_pick_success_rate": 0.0,
+            "pick_and_pose_tracking_successes": 0,
+            "pick_and_pose_tracking_success_rate": 0.0
+          },
+          {
+            "cluster": 3,
+            "count": 2601,
+            "source_counts": {
+              "dexcanvas": 991,
+              "dexterhand": 528,
+              "spider": 886,
+              "quick_hoi": 196
+            },
+            "object_top10": [
+              [
+                "unknown",
+                886
+              ],
+              [
+                "cube1",
+                245
+              ],
+              [
+                "banana",
+                212
+              ],
+              [
+                "cylinder3",
+                138
+              ],
+              [
+                "bowl",
+                132
+              ],
+              [
+                "Ring_00",
+                115
+              ],
+              [
+                "Cuboid_01",
+                114
+              ],
+              [
+                "Cylinder_00",
+                114
+              ],
+              [
+                "Cuboid_02",
+                97
+              ],
+              [
+                "Plate_00",
+                88
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                989
+              ],
+              [
+                "11110",
+                487
+              ],
+              [
+                "10111",
+                248
+              ],
+              [
+                "01111",
+                124
+              ],
+              [
+                "11011",
+                116
+              ],
+              [
+                "10110",
+                102
+              ],
+              [
+                "11101",
+                81
+              ],
+              [
+                "11001",
+                68
+              ],
+              [
+                "01110",
+                61
+              ],
+              [
+                "10011",
+                53
+              ]
+            ],
+            "tabletop_pick_successes": 760,
+            "tabletop_pick_success_rate": 0.29219530949634753,
+            "pick_and_pose_tracking_successes": 372,
+            "pick_and_pose_tracking_success_rate": 0.14302191464821223
+          },
+          {
+            "cluster": 4,
+            "count": 1716,
+            "source_counts": {
+              "dexcanvas": 1066,
+              "dexterhand": 99,
+              "spider": 293,
+              "quick_hoi": 258
+            },
+            "object_top10": [
+              [
+                "unknown",
+                293
+              ],
+              [
+                "cube2",
+                276
+              ],
+              [
+                "banana",
+                188
+              ],
+              [
+                "cube1",
+                165
+              ],
+              [
+                "cylinder3",
+                146
+              ],
+              [
+                "cylinder2",
+                79
+              ],
+              [
+                "largeclamp",
+                54
+              ],
+              [
+                "iphone",
+                41
+              ],
+              [
+                "powerdrill",
+                39
+              ],
+              [
+                "bowl",
+                37
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11100",
+                721
+              ],
+              [
+                "11110",
+                273
+              ],
+              [
+                "11000",
+                269
+              ],
+              [
+                "10000",
+                100
+              ],
+              [
+                "01100",
+                72
+              ],
+              [
+                "10100",
+                60
+              ],
+              [
+                "10001",
+                35
+              ],
+              [
+                "01110",
+                30
+              ],
+              [
+                "11001",
+                26
+              ],
+              [
+                "11101",
+                24
+              ]
+            ],
+            "tabletop_pick_successes": 267,
+            "tabletop_pick_success_rate": 0.1555944055944056,
+            "pick_and_pose_tracking_successes": 136,
+            "pick_and_pose_tracking_success_rate": 0.07925407925407925
+          },
+          {
+            "cluster": 5,
+            "count": 290,
+            "source_counts": {
+              "dexcanvas": 260,
+              "dexterhand": 12,
+              "spider": 6,
+              "quick_hoi": 12
+            },
+            "object_top10": [
+              [
+                "cube2",
+                150
+              ],
+              [
+                "cuboid3",
+                42
+              ],
+              [
+                "cube1",
+                27
+              ],
+              [
+                "cylinder3",
+                18
+              ],
+              [
+                "mayonnaisebottle",
+                12
+              ],
+              [
+                "largeclamp",
+                6
+              ],
+              [
+                "Cuboid_02",
+                6
+              ],
+              [
+                "unknown",
+                6
+              ],
+              [
+                "hoi_full_20261010_O02_0206_00001",
+                5
+              ],
+              [
+                "Cuboid_01",
+                4
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                157
+              ],
+              [
+                "00000",
+                111
+              ],
+              [
+                "10000",
+                13
+              ],
+              [
+                "01000",
+                6
+              ],
+              [
+                "01100",
+                2
+              ],
+              [
+                "00100",
+                1
+              ]
+            ],
+            "tabletop_pick_successes": 6,
+            "tabletop_pick_success_rate": 0.020689655172413793,
+            "pick_and_pose_tracking_successes": 2,
+            "pick_and_pose_tracking_success_rate": 0.006896551724137931
+          }
+        ]
+      },
+      "feature_blocks": {
+        "palm_object": {
+          "dimensions": 9,
+          "mean": [
+            0.23903642294047361,
+            -0.08792102004867644,
+            0.2535745318230803,
+            -0.02403814557397255,
+            0.04359883097695732,
+            -0.12195486746166743,
+            0.018600236774177662,
+            0.06585930109450527,
+            0.017109458106627957
+          ],
+          "scale": [
+            2.0991792594376624,
+            2.291755836204141,
+            1.198624052710873,
+            0.5688654876131208,
+            0.5428303715623579,
+            0.6036352995911998,
+            0.5793459581207338,
+            0.5765742082815317,
+            0.5717904387281247
+          ],
+          "weight": 0.8
+        },
+        "fingertip_object": {
+          "dimensions": 15,
+          "mean": [
+            0.028678343603650302,
+            0.04614711147908001,
+            0.067017481499909,
+            -0.03718959570302859,
+            0.05086495254127843,
+            0.012313367747544043,
+            -0.03295489349746454,
+            0.006702095565883559,
+            -0.026663142138396784,
+            -0.04222368345701437,
+            -0.009637997296258893,
+            -0.07154384026844143,
+            -0.013565968042707093,
+            -0.01959368550979227,
+            -0.06767710934784846
+          ],
+          "scale": [
+            0.6085627709661978,
+            0.6349578033622915,
+            0.3773738708238645,
+            0.6029572551967844,
+            0.6273988319837503,
+            0.4041554243843741,
+            0.7339270851844211,
+            0.8282938086373776,
+            0.514284670639583,
+            0.8616126094221654,
+            1.005657464119695,
+            0.6168130298567702,
+            1.066713767377576,
+            1.1641269141420552,
+            0.6780034079935452
+          ],
+          "weight": 2.0
+        },
+        "contact": {
+          "dimensions": 10,
+          "mean": [
+            0.8424931901938791,
+            0.7521230572023714,
+            0.6260214709181221,
+            0.4446402820060888,
+            0.33776638359237304,
+            0.08218900516855727,
+            0.10285905070847988,
+            0.18031485007829817,
+            0.24933050562610043,
+            0.31143369933483445
+          ],
+          "scale": [
+            0.3642779360197799,
+            0.43177999493601193,
+            0.4838580255277603,
+            0.4969258512330117,
+            0.47294846834226106,
+            0.16311410038614238,
+            0.17474176552974804,
+            0.2700473617860946,
+            0.29678452533135063,
+            0.3268097532472219
+          ],
+          "weight": 1.4
+        },
+        "object_shape": {
+          "dimensions": 3,
+          "mean": [
+            0.0,
+            -0.5280437278733919,
+            -1.083425688531921
+          ],
+          "scale": [
+            1.0,
+            0.5973431590479583,
+            0.7970468641773149
+          ],
+          "weight": 0.5
+        }
+      },
+      "pca_explained_variance_ratio": [
+        0.14558469553312042,
+        0.14278344390634612
+      ],
+      "rows_with_both_success_labels": 567,
+      "note": "tabletop-pick and pose-tracking outcomes are evaluation annotations, excluded from clustering inputs"
+    },
+    "tip_relation_joint": {
+      "k_metrics": {
+        "k": 6,
+        "weighted_silhouette": 0.07282566541364438,
+        "restart_ari_to_first": 0.4439722853957494
+      },
+      "cluster_quality_and_success": {
+        "cluster_sizes": [
+          486,
+          1118,
+          786,
+          1381,
+          680,
+          1790
+        ],
+        "nmi_cluster_kind": 0.2753984409742283,
+        "nmi_cluster_object": 0.48137534037795165,
+        "nmi_cluster_original_fingertip_pattern": 0.1295056326077074,
+        "tabletop_pick_successes": 1165,
+        "pick_and_pose_tracking_successes": 567,
+        "clusters": [
+          {
+            "cluster": 0,
+            "count": 486,
+            "source_counts": {
+              "dexcanvas": 448,
+              "dexterhand": 12,
+              "spider": 17,
+              "quick_hoi": 9
+            },
+            "object_top10": [
+              [
+                "cube2",
+                217
+              ],
+              [
+                "cube1",
+                50
+              ],
+              [
+                "cuboid3",
+                42
+              ],
+              [
+                "powerdrill",
+                39
+              ],
+              [
+                "cylinder3",
+                34
+              ],
+              [
+                "mayonnaisebottle",
+                23
+              ],
+              [
+                "largeclamp",
+                22
+              ],
+              [
+                "bowl",
+                19
+              ],
+              [
+                "unknown",
+                17
+              ],
+              [
+                "Cuboid_02",
+                6
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "00000",
+                252
+              ],
+              [
+                "11000",
+                193
+              ],
+              [
+                "10000",
+                30
+              ],
+              [
+                "01000",
+                4
+              ],
+              [
+                "00100",
+                2
+              ],
+              [
+                "00111",
+                1
+              ],
+              [
+                "00110",
+                1
+              ],
+              [
+                "00001",
+                1
+              ],
+              [
+                "00010",
+                1
+              ],
+              [
+                "01100",
+                1
+              ]
+            ],
+            "tabletop_pick_successes": 6,
+            "tabletop_pick_success_rate": 0.012345679012345678,
+            "pick_and_pose_tracking_successes": 3,
+            "pick_and_pose_tracking_success_rate": 0.006172839506172839
+          },
+          {
+            "cluster": 1,
+            "count": 1118,
+            "source_counts": {
+              "dexcanvas": 932,
+              "dexterhand": 122,
+              "spider": 45,
+              "quick_hoi": 19
+            },
+            "object_top10": [
+              [
+                "cube1",
+                472
+              ],
+              [
+                "cube2",
+                376
+              ],
+              [
+                "Cuboid_02",
+                111
+              ],
+              [
+                "powerdrill",
+                80
+              ],
+              [
+                "unknown",
+                45
+              ],
+              [
+                "Ring_00",
+                11
+              ],
+              [
+                "O02@0045@00001",
+                5
+              ],
+              [
+                "O02@0011@00003",
+                4
+              ],
+              [
+                "cylinder2",
+                3
+              ],
+              [
+                "C11001",
+                3
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11100",
+                393
+              ],
+              [
+                "11110",
+                288
+              ],
+              [
+                "11111",
+                198
+              ],
+              [
+                "11000",
+                123
+              ],
+              [
+                "10111",
+                18
+              ],
+              [
+                "10110",
+                17
+              ],
+              [
+                "01111",
+                12
+              ],
+              [
+                "01110",
+                9
+              ],
+              [
+                "10000",
+                8
+              ],
+              [
+                "10100",
+                7
+              ]
+            ],
+            "tabletop_pick_successes": 179,
+            "tabletop_pick_success_rate": 0.16010733452593917,
+            "pick_and_pose_tracking_successes": 119,
+            "pick_and_pose_tracking_success_rate": 0.10644007155635063
+          },
+          {
+            "cluster": 2,
+            "count": 786,
+            "source_counts": {
+              "dexcanvas": 4,
+              "dexterhand": 1,
+              "spider": 779,
+              "quick_hoi": 2
+            },
+            "object_top10": [
+              [
+                "unknown",
+                779
+              ],
+              [
+                "cylinder2",
+                4
+              ],
+              [
+                "Ring_00",
+                1
+              ],
+              [
+                "O02@0017@00002",
+                1
+              ],
+              [
+                "hoi_full_20261010_O02_0205_00001",
+                1
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                235
+              ],
+              [
+                "11110",
+                117
+              ],
+              [
+                "11100",
+                53
+              ],
+              [
+                "10110",
+                43
+              ],
+              [
+                "10111",
+                40
+              ],
+              [
+                "11000",
+                35
+              ],
+              [
+                "11011",
+                32
+              ],
+              [
+                "10000",
+                30
+              ],
+              [
+                "10011",
+                25
+              ],
+              [
+                "11101",
+                20
+              ]
+            ],
+            "tabletop_pick_successes": 364,
+            "tabletop_pick_success_rate": 0.4631043256997455,
+            "pick_and_pose_tracking_successes": 143,
+            "pick_and_pose_tracking_success_rate": 0.18193384223918574
+          },
+          {
+            "cluster": 3,
+            "count": 1381,
+            "source_counts": {
+              "dexcanvas": 446,
+              "dexterhand": 287,
+              "spider": 344,
+              "quick_hoi": 304
+            },
+            "object_top10": [
+              [
+                "unknown",
+                344
+              ],
+              [
+                "bowl",
+                262
+              ],
+              [
+                "Ring_00",
+                148
+              ],
+              [
+                "Plate_00",
+                105
+              ],
+              [
+                "cylinder2",
+                96
+              ],
+              [
+                "powerdrill",
+                78
+              ],
+              [
+                "O02@0011@00003",
+                49
+              ],
+              [
+                "O02@0038@00001",
+                24
+              ],
+              [
+                "Cylinder_00",
+                22
+              ],
+              [
+                "O02@0017@00002",
+                15
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                296
+              ],
+              [
+                "11100",
+                198
+              ],
+              [
+                "11110",
+                169
+              ],
+              [
+                "11000",
+                145
+              ],
+              [
+                "11001",
+                80
+              ],
+              [
+                "10111",
+                63
+              ],
+              [
+                "11011",
+                63
+              ],
+              [
+                "01111",
+                48
+              ],
+              [
+                "10000",
+                35
+              ],
+              [
+                "10001",
+                27
+              ]
+            ],
+            "tabletop_pick_successes": 237,
+            "tabletop_pick_success_rate": 0.1716147719044171,
+            "pick_and_pose_tracking_successes": 113,
+            "pick_and_pose_tracking_success_rate": 0.08182476466328747
+          },
+          {
+            "cluster": 4,
+            "count": 680,
+            "source_counts": {
+              "dexcanvas": 132,
+              "dexterhand": 116,
+              "spider": 135,
+              "quick_hoi": 297
+            },
+            "object_top10": [
+              [
+                "unknown",
+                135
+              ],
+              [
+                "Cuboid_01",
+                114
+              ],
+              [
+                "cylinder3",
+                81
+              ],
+              [
+                "O02@0202@00001",
+                60
+              ],
+              [
+                "cylinder7",
+                48
+              ],
+              [
+                "O02@0033@00002",
+                38
+              ],
+              [
+                "O02@0030@00002",
+                35
+              ],
+              [
+                "O02@0200@00001",
+                29
+              ],
+              [
+                "O02@0029@00007",
+                22
+              ],
+              [
+                "O02@0029@00011",
+                15
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                109
+              ],
+              [
+                "11000",
+                105
+              ],
+              [
+                "11100",
+                101
+              ],
+              [
+                "11110",
+                50
+              ],
+              [
+                "01100",
+                50
+              ],
+              [
+                "10000",
+                39
+              ],
+              [
+                "01110",
+                31
+              ],
+              [
+                "10111",
+                25
+              ],
+              [
+                "01111",
+                19
+              ],
+              [
+                "01000",
+                19
+              ]
+            ],
+            "tabletop_pick_successes": 100,
+            "tabletop_pick_success_rate": 0.14705882352941177,
+            "pick_and_pose_tracking_successes": 18,
+            "pick_and_pose_tracking_success_rate": 0.026470588235294117
+          },
+          {
+            "cluster": 5,
+            "count": 1790,
+            "source_counts": {
+              "dexcanvas": 1473,
+              "dexterhand": 214,
+              "spider": 66,
+              "quick_hoi": 37
+            },
+            "object_top10": [
+              [
+                "banana",
+                698
+              ],
+              [
+                "cylinder3",
+                417
+              ],
+              [
+                "largeclamp",
+                156
+              ],
+              [
+                "Cylinder_00",
+                135
+              ],
+              [
+                "mayonnaisebottle",
+                123
+              ],
+              [
+                "unknown",
+                66
+              ],
+              [
+                "iphone",
+                47
+              ],
+              [
+                "Plate_00",
+                47
+              ],
+              [
+                "Cuboid_01",
+                32
+              ],
+              [
+                "O02@0039@00002",
+                16
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                404
+              ],
+              [
+                "11100",
+                280
+              ],
+              [
+                "10000",
+                167
+              ],
+              [
+                "11110",
+                152
+              ],
+              [
+                "11111",
+                151
+              ],
+              [
+                "10111",
+                102
+              ],
+              [
+                "10001",
+                63
+              ],
+              [
+                "10100",
+                53
+              ],
+              [
+                "10110",
+                46
+              ],
+              [
+                "11001",
+                45
+              ]
+            ],
+            "tabletop_pick_successes": 279,
+            "tabletop_pick_success_rate": 0.1558659217877095,
+            "pick_and_pose_tracking_successes": 171,
+            "pick_and_pose_tracking_success_rate": 0.09553072625698324
+          }
+        ]
+      },
+      "feature_blocks": {
+        "joint_qpos": {
+          "dimensions": 22,
+          "mean": [
+            0.7069828185818497,
+            0.046303949856110194,
+            0.5740236948164661,
+            -0.08096147789392223,
+            0.17368369439015616,
+            0.2654968151095294,
+            -0.08739208124278257,
+            0.7590517431447981,
+            0.4138639195446116,
+            0.3075563182791085,
+            -0.0065192223558279425,
+            0.7726967238513338,
+            0.3729463723695476,
+            0.32489030449463663,
+            0.020015496496414948,
+            0.8572643737820327,
+            0.25810484100208686,
+            0.10442887556994138,
+            0.17718249676553544,
+            0.12466276047864701,
+            1.171023865186215,
+            0.492791336740254
+          ],
+          "scale": [
+            0.4421597788738241,
+            0.15895195066325185,
+            0.5354997657656219,
+            0.21633735926919193,
+            0.38026043716793384,
+            0.344433977774877,
+            0.17534238373065467,
+            0.4276973976850084,
+            0.3573735634628761,
+            0.36390873921491024,
+            0.13749358346982923,
+            0.4978381270844015,
+            0.3610721621646777,
+            0.37865359541896654,
+            0.14143462353392833,
+            0.5306123793719175,
+            0.3638354740630283,
+            0.11972413170092376,
+            0.4000316456519517,
+            0.2059693029885031,
+            0.42397263946475183,
+            0.5722519273526965
+          ],
+          "weight": 1.0
+        },
+        "palm_object": {
+          "dimensions": 9,
+          "mean": [
+            0.23903642294047361,
+            -0.08792102004867644,
+            0.2535745318230803,
+            -0.02403814557397255,
+            0.04359883097695732,
+            -0.12195486746166743,
+            0.018600236774177662,
+            0.06585930109450527,
+            0.017109458106627957
+          ],
+          "scale": [
+            2.0991792594376624,
+            2.291755836204141,
+            1.198624052710873,
+            0.5688654876131208,
+            0.5428303715623579,
+            0.6036352995911998,
+            0.5793459581207338,
+            0.5765742082815317,
+            0.5717904387281247
+          ],
+          "weight": 1.0
+        },
+        "fingertip_xyz_plus_near_distance": {
+          "dimensions": 25,
+          "mean": [
+            0.028678343603650302,
+            0.04614711147908001,
+            0.067017481499909,
+            -0.03718959570302859,
+            0.05086495254127843,
+            0.012313367747544043,
+            -0.03295489349746454,
+            0.006702095565883559,
+            -0.026663142138396784,
+            -0.04222368345701437,
+            -0.009637997296258893,
+            -0.07154384026844143,
+            -0.013565968042707093,
+            -0.01959368550979227,
+            -0.06767710934784846,
+            0.8424931901938791,
+            0.7521230572023714,
+            0.6260214709181221,
+            0.4446402820060888,
+            0.33776638359237304,
+            0.08218900516855727,
+            0.10285905070847988,
+            0.18031485007829817,
+            0.24933050562610043,
+            0.31143369933483445
+          ],
+          "scale": [
+            0.6085627709661978,
+            0.6349578033622915,
+            0.3773738708238645,
+            0.6029572551967844,
+            0.6273988319837503,
+            0.4041554243843741,
+            0.7339270851844211,
+            0.8282938086373776,
+            0.514284670639583,
+            0.8616126094221654,
+            1.005657464119695,
+            0.6168130298567702,
+            1.066713767377576,
+            1.1641269141420552,
+            0.6780034079935452,
+            0.3642779360197799,
+            0.43177999493601193,
+            0.4838580255277603,
+            0.4969258512330117,
+            0.47294846834226106,
+            0.16311410038614238,
+            0.17474176552974804,
+            0.2700473617860946,
+            0.29678452533135063,
+            0.3268097532472219
+          ],
+          "weight": 1.0
+        },
+        "object_shape": {
+          "dimensions": 3,
+          "mean": [
+            0.0,
+            -0.5280437278733919,
+            -1.083425688531921
+          ],
+          "scale": [
+            1.0,
+            0.5973431590479583,
+            0.7970468641773149
+          ],
+          "weight": 1.0
+        }
+      },
+      "pca_explained_variance_ratio": [
+        0.17001537017073126,
+        0.07930808548057985
+      ],
+      "rows_with_both_success_labels": 567,
+      "note": "tabletop-pick and pose-tracking outcomes are evaluation annotations, excluded from clustering inputs"
+    },
+    "link_near_joint": {
+      "k_metrics": {
+        "k": 6,
+        "weighted_silhouette": 0.07502268547430317,
+        "restart_ari_to_first": 0.6979086753861472
+      },
+      "cluster_quality_and_success": {
+        "cluster_sizes": [
+          875,
+          557,
+          1587,
+          2327,
+          424,
+          471
+        ],
+        "nmi_cluster_kind": 0.2358707791330606,
+        "nmi_cluster_object": 0.39104308978312735,
+        "nmi_cluster_original_fingertip_pattern": 0.1382903726874257,
+        "tabletop_pick_successes": 1165,
+        "pick_and_pose_tracking_successes": 567,
+        "clusters": [
+          {
+            "cluster": 0,
+            "count": 875,
+            "source_counts": {
+              "dexcanvas": 10,
+              "dexterhand": 71,
+              "spider": 786,
+              "quick_hoi": 8
+            },
+            "object_top10": [
+              [
+                "unknown",
+                786
+              ],
+              [
+                "Ring_00",
+                51
+              ],
+              [
+                "Cylinder_00",
+                17
+              ],
+              [
+                "cylinder2",
+                8
+              ],
+              [
+                "Plate_00",
+                3
+              ],
+              [
+                "bowl",
+                2
+              ],
+              [
+                "S10021",
+                1
+              ],
+              [
+                "O02@0100@00001",
+                1
+              ],
+              [
+                "O02@0017@00002",
+                1
+              ],
+              [
+                "O02@0017@00001",
+                1
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                256
+              ],
+              [
+                "11110",
+                139
+              ],
+              [
+                "10111",
+                58
+              ],
+              [
+                "11100",
+                58
+              ],
+              [
+                "10110",
+                47
+              ],
+              [
+                "11011",
+                41
+              ],
+              [
+                "11000",
+                33
+              ],
+              [
+                "11101",
+                33
+              ],
+              [
+                "01111",
+                26
+              ],
+              [
+                "10011",
+                26
+              ]
+            ],
+            "tabletop_pick_successes": 392,
+            "tabletop_pick_success_rate": 0.448,
+            "pick_and_pose_tracking_successes": 143,
+            "pick_and_pose_tracking_success_rate": 0.16342857142857142
+          },
+          {
+            "cluster": 1,
+            "count": 557,
+            "source_counts": {
+              "dexcanvas": 63,
+              "dexterhand": 99,
+              "spider": 110,
+              "quick_hoi": 285
+            },
+            "object_top10": [
+              [
+                "unknown",
+                110
+              ],
+              [
+                "Cuboid_01",
+                99
+              ],
+              [
+                "cylinder7",
+                60
+              ],
+              [
+                "O02@0202@00001",
+                60
+              ],
+              [
+                "O02@0033@00002",
+                38
+              ],
+              [
+                "O02@0030@00002",
+                37
+              ],
+              [
+                "O02@0200@00001",
+                29
+              ],
+              [
+                "O02@0029@00007",
+                22
+              ],
+              [
+                "O02@0029@00011",
+                16
+              ],
+              [
+                "O02@0081@00001",
+                14
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                90
+              ],
+              [
+                "11100",
+                90
+              ],
+              [
+                "11000",
+                80
+              ],
+              [
+                "01100",
+                48
+              ],
+              [
+                "11110",
+                41
+              ],
+              [
+                "10000",
+                30
+              ],
+              [
+                "01110",
+                27
+              ],
+              [
+                "10111",
+                22
+              ],
+              [
+                "01111",
+                18
+              ],
+              [
+                "01000",
+                18
+              ]
+            ],
+            "tabletop_pick_successes": 66,
+            "tabletop_pick_success_rate": 0.118491921005386,
+            "pick_and_pose_tracking_successes": 7,
+            "pick_and_pose_tracking_success_rate": 0.012567324955116697
+          },
+          {
+            "cluster": 2,
+            "count": 1587,
+            "source_counts": {
+              "dexcanvas": 1091,
+              "dexterhand": 193,
+              "spider": 103,
+              "quick_hoi": 200
+            },
+            "object_top10": [
+              [
+                "cube2",
+                521
+              ],
+              [
+                "cube1",
+                475
+              ],
+              [
+                "Cuboid_02",
+                123
+              ],
+              [
+                "unknown",
+                103
+              ],
+              [
+                "Ring_00",
+                70
+              ],
+              [
+                "O02@0011@00003",
+                53
+              ],
+              [
+                "powerdrill",
+                39
+              ],
+              [
+                "cuboid3",
+                38
+              ],
+              [
+                "bowl",
+                17
+              ],
+              [
+                "hoi_full_20261010_O02_0206_00001",
+                17
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11100",
+                472
+              ],
+              [
+                "11000",
+                347
+              ],
+              [
+                "11110",
+                319
+              ],
+              [
+                "11111",
+                222
+              ],
+              [
+                "01111",
+                32
+              ],
+              [
+                "10111",
+                29
+              ],
+              [
+                "10110",
+                22
+              ],
+              [
+                "10000",
+                21
+              ],
+              [
+                "10100",
+                14
+              ],
+              [
+                "01100",
+                13
+              ]
+            ],
+            "tabletop_pick_successes": 213,
+            "tabletop_pick_success_rate": 0.1342155009451796,
+            "pick_and_pose_tracking_successes": 131,
+            "pick_and_pose_tracking_success_rate": 0.08254568367989919
+          },
+          {
+            "cluster": 3,
+            "count": 2327,
+            "source_counts": {
+              "dexcanvas": 1728,
+              "dexterhand": 344,
+              "spider": 116,
+              "quick_hoi": 139
+            },
+            "object_top10": [
+              [
+                "banana",
+                601
+              ],
+              [
+                "cylinder3",
+                443
+              ],
+              [
+                "bowl",
+                234
+              ],
+              [
+                "Plate_00",
+                145
+              ],
+              [
+                "largeclamp",
+                135
+              ],
+              [
+                "Cylinder_00",
+                125
+              ],
+              [
+                "unknown",
+                116
+              ],
+              [
+                "mayonnaisebottle",
+                106
+              ],
+              [
+                "cylinder2",
+                92
+              ],
+              [
+                "powerdrill",
+                60
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                508
+              ],
+              [
+                "11100",
+                376
+              ],
+              [
+                "11111",
+                311
+              ],
+              [
+                "11110",
+                233
+              ],
+              [
+                "10000",
+                159
+              ],
+              [
+                "10111",
+                122
+              ],
+              [
+                "11001",
+                108
+              ],
+              [
+                "10001",
+                63
+              ],
+              [
+                "11101",
+                52
+              ],
+              [
+                "10100",
+                49
+              ]
+            ],
+            "tabletop_pick_successes": 334,
+            "tabletop_pick_success_rate": 0.14353244520842287,
+            "pick_and_pose_tracking_successes": 208,
+            "pick_and_pose_tracking_success_rate": 0.0893854748603352
+          },
+          {
+            "cluster": 4,
+            "count": 424,
+            "source_counts": {
+              "dexcanvas": 191,
+              "dexterhand": 26,
+              "spider": 207
+            },
+            "object_top10": [
+              [
+                "unknown",
+                207
+              ],
+              [
+                "banana",
+                52
+              ],
+              [
+                "cylinder3",
+                50
+              ],
+              [
+                "powerdrill",
+                36
+              ],
+              [
+                "Cylinder_00",
+                17
+              ],
+              [
+                "cube2",
+                14
+              ],
+              [
+                "largeclamp",
+                12
+              ],
+              [
+                "mayonnaisebottle",
+                12
+              ],
+              [
+                "iphone",
+                6
+              ],
+              [
+                "Ring_00",
+                6
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                110
+              ],
+              [
+                "11110",
+                44
+              ],
+              [
+                "10000",
+                31
+              ],
+              [
+                "11100",
+                28
+              ],
+              [
+                "11000",
+                24
+              ],
+              [
+                "10110",
+                18
+              ],
+              [
+                "10111",
+                16
+              ],
+              [
+                "10010",
+                15
+              ],
+              [
+                "01100",
+                14
+              ],
+              [
+                "11011",
+                14
+              ]
+            ],
+            "tabletop_pick_successes": 139,
+            "tabletop_pick_success_rate": 0.3278301886792453,
+            "pick_and_pose_tracking_successes": 68,
+            "pick_and_pose_tracking_success_rate": 0.16037735849056603
+          },
+          {
+            "cluster": 5,
+            "count": 471,
+            "source_counts": {
+              "dexcanvas": 352,
+              "dexterhand": 19,
+              "spider": 64,
+              "quick_hoi": 36
+            },
+            "object_top10": [
+              [
+                "powerdrill",
+                64
+              ],
+              [
+                "unknown",
+                64
+              ],
+              [
+                "cube2",
+                58
+              ],
+              [
+                "banana",
+                47
+              ],
+              [
+                "cube1",
+                47
+              ],
+              [
+                "cylinder3",
+                40
+              ],
+              [
+                "largeclamp",
+                33
+              ],
+              [
+                "mayonnaisebottle",
+                30
+              ],
+              [
+                "bowl",
+                28
+              ],
+              [
+                "O02@0038@00001",
+                10
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "00000",
+                294
+              ],
+              [
+                "10000",
+                49
+              ],
+              [
+                "01000",
+                25
+              ],
+              [
+                "11000",
+                13
+              ],
+              [
+                "00001",
+                12
+              ],
+              [
+                "10001",
+                12
+              ],
+              [
+                "01100",
+                10
+              ],
+              [
+                "01110",
+                8
+              ],
+              [
+                "00011",
+                8
+              ],
+              [
+                "00110",
+                6
+              ]
+            ],
+            "tabletop_pick_successes": 21,
+            "tabletop_pick_success_rate": 0.044585987261146494,
+            "pick_and_pose_tracking_successes": 10,
+            "pick_and_pose_tracking_success_rate": 0.021231422505307854
+          }
+        ]
+      },
+      "feature_blocks": {
+        "joint_qpos": {
+          "dimensions": 22,
+          "mean": [
+            0.7069828185818497,
+            0.046303949856110194,
+            0.5740236948164661,
+            -0.08096147789392223,
+            0.17368369439015616,
+            0.2654968151095294,
+            -0.08739208124278257,
+            0.7590517431447981,
+            0.4138639195446116,
+            0.3075563182791085,
+            -0.0065192223558279425,
+            0.7726967238513338,
+            0.3729463723695476,
+            0.32489030449463663,
+            0.020015496496414948,
+            0.8572643737820327,
+            0.25810484100208686,
+            0.10442887556994138,
+            0.17718249676553544,
+            0.12466276047864701,
+            1.171023865186215,
+            0.492791336740254
+          ],
+          "scale": [
+            0.4421597788738241,
+            0.15895195066325185,
+            0.5354997657656219,
+            0.21633735926919193,
+            0.38026043716793384,
+            0.344433977774877,
+            0.17534238373065467,
+            0.4276973976850084,
+            0.3573735634628761,
+            0.36390873921491024,
+            0.13749358346982923,
+            0.4978381270844015,
+            0.3610721621646777,
+            0.37865359541896654,
+            0.14143462353392833,
+            0.5306123793719175,
+            0.3638354740630283,
+            0.11972413170092376,
+            0.4000316456519517,
+            0.2059693029885031,
+            0.42397263946475183,
+            0.5722519273526965
+          ],
+          "weight": 1.0
+        },
+        "palm_object": {
+          "dimensions": 9,
+          "mean": [
+            0.23903642294047361,
+            -0.08792102004867644,
+            0.2535745318230803,
+            -0.02403814557397255,
+            0.04359883097695732,
+            -0.12195486746166743,
+            0.018600236774177662,
+            0.06585930109450527,
+            0.017109458106627957
+          ],
+          "scale": [
+            2.0991792594376624,
+            2.291755836204141,
+            1.198624052710873,
+            0.5688654876131208,
+            0.5428303715623579,
+            0.6036352995911998,
+            0.5793459581207338,
+            0.5765742082815317,
+            0.5717904387281247
+          ],
+          "weight": 1.0
+        },
+        "per_link_near_5mm": {
+          "dimensions": 26,
+          "mean": [
+            0.13411312289697164,
+            0.07434705976606314,
+            0.4968755007210383,
+            0.8782246434866208,
+            0.8859157186348342,
+            0.0666559846178497,
+            0.21246595096939594,
+            0.6692837686268226,
+            0.8064412754366287,
+            0.8301554238102868,
+            0.05704214068258292,
+            0.17112642204774875,
+            0.4499278961704855,
+            0.6154462425893287,
+            0.6583880788335202,
+            0.05031244992789617,
+            0.1488543502643807,
+            0.35314853388879985,
+            0.4625861240185868,
+            0.4757250440634514,
+            0.07178336804999198,
+            0.03685306841852267,
+            0.059926293863162956,
+            0.19323826309886236,
+            0.32478769427976284,
+            0.3300753084441596
+          ],
+          "scale": [
+            0.3407738152554993,
+            0.2623348518024426,
+            0.49999023740894105,
+            0.3270261748842304,
+            0.31791360164448085,
+            0.24942526803127138,
+            0.409052772448802,
+            0.47047104659001604,
+            0.3950870090356845,
+            0.3754961998857335,
+            0.23192312275607327,
+            0.3766193963736926,
+            0.4974864665677897,
+            0.4864896351126363,
+            0.47425016234412715,
+            0.21858890024461491,
+            0.35594484498549295,
+            0.47794837263139467,
+            0.49859823694436745,
+            0.4994103788611975,
+            0.2581288750244537,
+            0.1884009547923321,
+            0.2373502331302496,
+            0.3948382412753572,
+            0.4682954707492087,
+            0.4702399379036975
+          ],
+          "weight": 1.0
+        },
+        "object_shape": {
+          "dimensions": 3,
+          "mean": [
+            0.0,
+            -0.5280437278733919,
+            -1.083425688531921
+          ],
+          "scale": [
+            1.0,
+            0.5973431590479583,
+            0.7970468641773149
+          ],
+          "weight": 1.0
+        }
+      },
+      "pca_explained_variance_ratio": [
+        0.16472642244190053,
+        0.09454801231583058
+      ],
+      "rows_with_both_success_labels": 567,
+      "note": "tabletop-pick and pose-tracking outcomes are evaluation annotations, excluded from clustering inputs"
+    },
+    "link_near_and_distance_joint": {
+      "k_metrics": {
+        "k": 6,
+        "weighted_silhouette": 0.08684021724891969,
+        "restart_ari_to_first": 0.9974087719204358
+      },
+      "cluster_quality_and_success": {
+        "cluster_sizes": [
+          2278,
+          1560,
+          624,
+          644,
+          374,
+          761
+        ],
+        "nmi_cluster_kind": 0.24210283164401467,
+        "nmi_cluster_object": 0.4004034337736779,
+        "nmi_cluster_original_fingertip_pattern": 0.13881594378289513,
+        "tabletop_pick_successes": 1165,
+        "pick_and_pose_tracking_successes": 567,
+        "clusters": [
+          {
+            "cluster": 0,
+            "count": 2278,
+            "source_counts": {
+              "dexcanvas": 1733,
+              "dexterhand": 332,
+              "spider": 80,
+              "quick_hoi": 133
+            },
+            "object_top10": [
+              [
+                "banana",
+                613
+              ],
+              [
+                "cylinder3",
+                383
+              ],
+              [
+                "bowl",
+                254
+              ],
+              [
+                "Plate_00",
+                151
+              ],
+              [
+                "largeclamp",
+                135
+              ],
+              [
+                "mayonnaisebottle",
+                107
+              ],
+              [
+                "Cylinder_00",
+                100
+              ],
+              [
+                "cylinder2",
+                91
+              ],
+              [
+                "powerdrill",
+                90
+              ],
+              [
+                "unknown",
+                80
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                480
+              ],
+              [
+                "11100",
+                372
+              ],
+              [
+                "11111",
+                296
+              ],
+              [
+                "11110",
+                225
+              ],
+              [
+                "10000",
+                170
+              ],
+              [
+                "10111",
+                118
+              ],
+              [
+                "11001",
+                103
+              ],
+              [
+                "10001",
+                72
+              ],
+              [
+                "10100",
+                51
+              ],
+              [
+                "01100",
+                42
+              ]
+            ],
+            "tabletop_pick_successes": 312,
+            "tabletop_pick_success_rate": 0.1369622475856014,
+            "pick_and_pose_tracking_successes": 198,
+            "pick_and_pose_tracking_success_rate": 0.08691834942932397
+          },
+          {
+            "cluster": 1,
+            "count": 1560,
+            "source_counts": {
+              "dexcanvas": 1064,
+              "dexterhand": 176,
+              "spider": 105,
+              "quick_hoi": 215
+            },
+            "object_top10": [
+              [
+                "cube2",
+                531
+              ],
+              [
+                "cube1",
+                472
+              ],
+              [
+                "Cuboid_02",
+                123
+              ],
+              [
+                "unknown",
+                105
+              ],
+              [
+                "Ring_00",
+                53
+              ],
+              [
+                "O02@0011@00003",
+                53
+              ],
+              [
+                "cuboid3",
+                38
+              ],
+              [
+                "hoi_full_20261010_O02_0206_00001",
+                16
+              ],
+              [
+                "powerdrill",
+                15
+              ],
+              [
+                "O02@0206@00001",
+                15
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11100",
+                462
+              ],
+              [
+                "11000",
+                347
+              ],
+              [
+                "11110",
+                325
+              ],
+              [
+                "11111",
+                215
+              ],
+              [
+                "01111",
+                31
+              ],
+              [
+                "10111",
+                28
+              ],
+              [
+                "10110",
+                20
+              ],
+              [
+                "10000",
+                17
+              ],
+              [
+                "01100",
+                15
+              ],
+              [
+                "10100",
+                13
+              ]
+            ],
+            "tabletop_pick_successes": 203,
+            "tabletop_pick_success_rate": 0.13012820512820514,
+            "pick_and_pose_tracking_successes": 129,
+            "pick_and_pose_tracking_success_rate": 0.08269230769230769
+          },
+          {
+            "cluster": 2,
+            "count": 624,
+            "source_counts": {
+              "dexcanvas": 204,
+              "dexterhand": 67,
+              "spider": 349,
+              "quick_hoi": 4
+            },
+            "object_top10": [
+              [
+                "unknown",
+                349
+              ],
+              [
+                "banana",
+                57
+              ],
+              [
+                "Cylinder_00",
+                55
+              ],
+              [
+                "cylinder3",
+                53
+              ],
+              [
+                "powerdrill",
+                47
+              ],
+              [
+                "largeclamp",
+                15
+              ],
+              [
+                "mayonnaisebottle",
+                13
+              ],
+              [
+                "cylinder2",
+                9
+              ],
+              [
+                "Ring_00",
+                8
+              ],
+              [
+                "iphone",
+                6
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                178
+              ],
+              [
+                "11110",
+                48
+              ],
+              [
+                "10111",
+                40
+              ],
+              [
+                "11100",
+                35
+              ],
+              [
+                "10000",
+                30
+              ],
+              [
+                "10110",
+                28
+              ],
+              [
+                "11000",
+                27
+              ],
+              [
+                "11101",
+                24
+              ],
+              [
+                "11011",
+                23
+              ],
+              [
+                "01100",
+                19
+              ]
+            ],
+            "tabletop_pick_successes": 236,
+            "tabletop_pick_success_rate": 0.3782051282051282,
+            "pick_and_pose_tracking_successes": 107,
+            "pick_and_pose_tracking_success_rate": 0.17147435897435898
+          },
+          {
+            "cluster": 3,
+            "count": 644,
+            "source_counts": {
+              "dexcanvas": 113,
+              "dexterhand": 107,
+              "spider": 124,
+              "quick_hoi": 300
+            },
+            "object_top10": [
+              [
+                "unknown",
+                124
+              ],
+              [
+                "Cuboid_01",
+                107
+              ],
+              [
+                "O02@0202@00001",
+                60
+              ],
+              [
+                "cylinder7",
+                58
+              ],
+              [
+                "cylinder3",
+                52
+              ],
+              [
+                "O02@0033@00002",
+                38
+              ],
+              [
+                "O02@0030@00002",
+                37
+              ],
+              [
+                "O02@0200@00001",
+                29
+              ],
+              [
+                "O02@0029@00007",
+                22
+              ],
+              [
+                "O02@0029@00011",
+                16
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11000",
+                121
+              ],
+              [
+                "11100",
+                99
+              ],
+              [
+                "11111",
+                99
+              ],
+              [
+                "01100",
+                49
+              ],
+              [
+                "11110",
+                47
+              ],
+              [
+                "10000",
+                37
+              ],
+              [
+                "01110",
+                29
+              ],
+              [
+                "10111",
+                24
+              ],
+              [
+                "01000",
+                19
+              ],
+              [
+                "10100",
+                17
+              ]
+            ],
+            "tabletop_pick_successes": 81,
+            "tabletop_pick_success_rate": 0.12577639751552794,
+            "pick_and_pose_tracking_successes": 8,
+            "pick_and_pose_tracking_success_rate": 0.012422360248447204
+          },
+          {
+            "cluster": 4,
+            "count": 374,
+            "source_counts": {
+              "dexcanvas": 319,
+              "dexterhand": 13,
+              "spider": 30,
+              "quick_hoi": 12
+            },
+            "object_top10": [
+              [
+                "cube2",
+                61
+              ],
+              [
+                "cube1",
+                50
+              ],
+              [
+                "powerdrill",
+                47
+              ],
+              [
+                "cylinder3",
+                45
+              ],
+              [
+                "banana",
+                30
+              ],
+              [
+                "largeclamp",
+                30
+              ],
+              [
+                "unknown",
+                30
+              ],
+              [
+                "mayonnaisebottle",
+                28
+              ],
+              [
+                "bowl",
+                23
+              ],
+              [
+                "Cuboid_02",
+                6
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "00000",
+                281
+              ],
+              [
+                "10000",
+                36
+              ],
+              [
+                "01000",
+                19
+              ],
+              [
+                "00001",
+                9
+              ],
+              [
+                "00110",
+                5
+              ],
+              [
+                "00011",
+                5
+              ],
+              [
+                "00111",
+                4
+              ],
+              [
+                "00100",
+                2
+              ],
+              [
+                "10100",
+                2
+              ],
+              [
+                "01110",
+                2
+              ]
+            ],
+            "tabletop_pick_successes": 9,
+            "tabletop_pick_success_rate": 0.02406417112299465,
+            "pick_and_pose_tracking_successes": 2,
+            "pick_and_pose_tracking_success_rate": 0.0053475935828877
+          },
+          {
+            "cluster": 5,
+            "count": 761,
+            "source_counts": {
+              "dexcanvas": 2,
+              "dexterhand": 57,
+              "spider": 698,
+              "quick_hoi": 4
+            },
+            "object_top10": [
+              [
+                "unknown",
+                698
+              ],
+              [
+                "Ring_00",
+                53
+              ],
+              [
+                "Cylinder_00",
+                4
+              ],
+              [
+                "cylinder2",
+                2
+              ],
+              [
+                "O02@0017@00002",
+                1
+              ],
+              [
+                "O02@0017@00001",
+                1
+              ],
+              [
+                "hoi_full_20261010_O02_0048_00001",
+                1
+              ],
+              [
+                "hoi_full_20261010_O02_0205_00001",
+                1
+              ]
+            ],
+            "fingertip_pattern_top10": [
+              [
+                "11111",
+                201
+              ],
+              [
+                "11110",
+                131
+              ],
+              [
+                "11100",
+                57
+              ],
+              [
+                "10110",
+                45
+              ],
+              [
+                "11011",
+                39
+              ],
+              [
+                "10111",
+                38
+              ],
+              [
+                "11000",
+                28
+              ],
+              [
+                "11101",
+                27
+              ],
+              [
+                "01111",
+                25
+              ],
+              [
+                "10011",
+                23
+              ]
+            ],
+            "tabletop_pick_successes": 324,
+            "tabletop_pick_success_rate": 0.42575558475689884,
+            "pick_and_pose_tracking_successes": 123,
+            "pick_and_pose_tracking_success_rate": 0.1616294349540079
+          }
+        ]
+      },
+      "feature_blocks": {
+        "joint_qpos": {
+          "dimensions": 22,
+          "mean": [
+            0.7069828185818497,
+            0.046303949856110194,
+            0.5740236948164661,
+            -0.08096147789392223,
+            0.17368369439015616,
+            0.2654968151095294,
+            -0.08739208124278257,
+            0.7590517431447981,
+            0.4138639195446116,
+            0.3075563182791085,
+            -0.0065192223558279425,
+            0.7726967238513338,
+            0.3729463723695476,
+            0.32489030449463663,
+            0.020015496496414948,
+            0.8572643737820327,
+            0.25810484100208686,
+            0.10442887556994138,
+            0.17718249676553544,
+            0.12466276047864701,
+            1.171023865186215,
+            0.492791336740254
+          ],
+          "scale": [
+            0.4421597788738241,
+            0.15895195066325185,
+            0.5354997657656219,
+            0.21633735926919193,
+            0.38026043716793384,
+            0.344433977774877,
+            0.17534238373065467,
+            0.4276973976850084,
+            0.3573735634628761,
+            0.36390873921491024,
+            0.13749358346982923,
+            0.4978381270844015,
+            0.3610721621646777,
+            0.37865359541896654,
+            0.14143462353392833,
+            0.5306123793719175,
+            0.3638354740630283,
+            0.11972413170092376,
+            0.4000316456519517,
+            0.2059693029885031,
+            0.42397263946475183,
+            0.5722519273526965
+          ],
+          "weight": 1.0
+        },
+        "palm_object": {
+          "dimensions": 9,
+          "mean": [
+            0.23903642294047361,
+            -0.08792102004867644,
+            0.2535745318230803,
+            -0.02403814557397255,
+            0.04359883097695732,
+            -0.12195486746166743,
+            0.018600236774177662,
+            0.06585930109450527,
+            0.017109458106627957
+          ],
+          "scale": [
+            2.0991792594376624,
+            2.291755836204141,
+            1.198624052710873,
+            0.5688654876131208,
+            0.5428303715623579,
+            0.6036352995911998,
+            0.5793459581207338,
+            0.5765742082815317,
+            0.5717904387281247
+          ],
+          "weight": 1.0
+        },
+        "per_link_near_5mm_plus_normalized_clearance": {
+          "dimensions": 52,
+          "mean": [
+            0.13411312289697164,
+            0.07434705976606314,
+            0.4968755007210383,
+            0.8782246434866208,
+            0.8859157186348342,
+            0.0666559846178497,
+            0.21246595096939594,
+            0.6692837686268226,
+            0.8064412754366287,
+            0.8301554238102868,
+            0.05704214068258292,
+            0.17112642204774875,
+            0.4499278961704855,
+            0.6154462425893287,
+            0.6583880788335202,
+            0.05031244992789617,
+            0.1488543502643807,
+            0.35314853388879985,
+            0.4625861240185868,
+            0.4757250440634514,
+            0.07178336804999198,
+            0.03685306841852267,
+            0.059926293863162956,
+            0.19323826309886236,
+            0.32478769427976284,
+            0.3300753084441596,
+            0.16892992168718732,
+            0.18283567773217838,
+            0.06054967655292489,
+            0.02364985642325911,
+            0.02105454668756185,
+            0.17543075762461818,
+            0.11650624310889231,
+            0.046186362178899126,
+            0.035827293015094366,
+            0.030618400901559588,
+            0.1804120279962314,
+            0.1320201070818018,
+            0.07699060852765358,
+            0.06918270514616552,
+            0.06546631386621547,
+            0.19024805017688032,
+            0.14652672826394258,
+            0.10389270211994991,
+            0.09895491633726244,
+            0.09825610654959797,
+            0.1995523859334712,
+            0.20422183624559936,
+            0.1852496867250821,
+            0.14830436147944256,
+            0.1292584927314002,
+            0.1292107374168866
+          ],
+          "scale": [
+            0.3407738152554993,
+            0.2623348518024426,
+            0.49999023740894105,
+            0.3270261748842304,
+            0.31791360164448085,
+            0.24942526803127138,
+            0.409052772448802,
+            0.47047104659001604,
+            0.3950870090356845,
+            0.3754961998857335,
+            0.23192312275607327,
+            0.3766193963736926,
+            0.4974864665677897,
+            0.4864896351126363,
+            0.47425016234412715,
+            0.21858890024461491,
+            0.35594484498549295,
+            0.47794837263139467,
+            0.49859823694436745,
+            0.4994103788611975,
+            0.2581288750244537,
+            0.1884009547923321,
+            0.2373502331302496,
+            0.3948382412753572,
+            0.4682954707492087,
+            0.4702399379036975,
+            0.09106405832576724,
+            0.07959388203027594,
+            0.06912574844957063,
+            0.05793433040150694,
+            0.05846062445533384,
+            0.08164335862091504,
+            0.0882110841638974,
+            0.0716844564446539,
+            0.06921703022181366,
+            0.06886055354277135,
+            0.08049334251077656,
+            0.08653032790858191,
+            0.08730535665590988,
+            0.09579264711408714,
+            0.0977952852066925,
+            0.07841777018350922,
+            0.09000171068035981,
+            0.09622301115738842,
+            0.10413598491921817,
+            0.10546209788891363,
+            0.07974675436932863,
+            0.07156190610874964,
+            0.08106998240275304,
+            0.0985588603085477,
+            0.10639321781961077,
+            0.10674509506241207
+          ],
+          "weight": 1.0
+        },
+        "object_shape": {
+          "dimensions": 3,
+          "mean": [
+            0.0,
+            -0.5280437278733919,
+            -1.083425688531921
+          ],
+          "scale": [
+            1.0,
+            0.5973431590479583,
+            0.7970468641773149
+          ],
+          "weight": 1.0
+        }
+      },
+      "pca_explained_variance_ratio": [
+        0.1757160369507843,
+        0.10229437697249776
+      ],
+      "rows_with_both_success_labels": 567,
+      "note": "tabletop-pick and pose-tracking outcomes are evaluation annotations, excluded from clustering inputs"
+    }
+  },
+  "joint_qpos_dimensions": 22,
+  "per_link_features": 26,
+  "cross_variant_adjusted_rand": {
+    "joint_only__legacy_full_relation": 0.05818085147232028,
+    "joint_only__tip_relation_joint": 0.19487606436179777,
+    "joint_only__link_near_joint": 0.13450469666761602,
+    "joint_only__link_near_and_distance_joint": 0.15830879150122,
+    "legacy_full_relation__tip_relation_joint": 0.0543840624381601,
+    "legacy_full_relation__link_near_joint": 0.03174683807707007,
+    "legacy_full_relation__link_near_and_distance_joint": 0.03302078997561431,
+    "tip_relation_joint__link_near_joint": 0.45047452461148335,
+    "tip_relation_joint__link_near_and_distance_joint": 0.46971378486018167,
+    "link_near_joint__link_near_and_distance_joint": 0.7976816658711934
+  },
+  "distance_input": "object-size normalized FCL clearance from collision meshes; capped to [-0.05, 0.25] object extents",
+  "near_contact_threshold_m": 0.005,
+  "sample_frame": "the same source_frame_index selected by existing 24-frame fingertip proximity extraction",
+  "sample_weighting": "inverse parent trajectory count (identical weights for all variants)",
+  "success_metrics": "tabletop_pick_success and pose_tracking_success; evaluation only, not model input"
+}

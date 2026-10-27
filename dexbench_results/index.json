@@ -1,0 +1,51 @@
+[
+  {
+    "experiment": "no_pose_library",
+    "files": [
+      "report.txt",
+      "results.csv",
+      "summary.json",
+      "record_check.json",
+      "01_result.json",
+      "02_result.json",
+      "03_result.json",
+      "04_result.json",
+      "05_result.json"
+    ],
+    "source": "/home/ruoqu/crq_ws/dexx/dex_interface_bench/experiments/20261027_five_tasks_no_pose_library",
+    "videos": "../dexbench_videos/no_pose_library"
+  },
+  {
+    "experiment": "pose_library",
+    "files": [
+      "report.txt",
+      "results.csv",
+      "summary.json",
+      "configuration.json",
+      "01_result.json",
+      "02_result.json",
+      "03_result.json",
+      "04_result.json",
+      "05_result.json"
+    ],
+    "source": "/home/ruoqu/crq_ws/dexx/dex_interface_bench/experiments/20261027_five_tasks_pose_library",
+    "videos": "../dexbench_videos/pose_library"
+  },
+  {
+    "experiment": "all_tools",
+    "files": [
+      "report.txt",
+      "results.csv",
+      "summary.json",
+      "configuration.json",
+      "04_recording_recovery.json",
+      "01_result.json",
+      "02_result.json",
+      "03_result.json",
+      "04_result.json",
+      "05_result.json"
+    ],
+    "source": "/home/ruoqu/crq_ws/dexx/dex_interface_bench/experiments/20261027_five_tasks_all_tools",
+    "videos": "../dexbench_videos/all_tools"
+  }
+]

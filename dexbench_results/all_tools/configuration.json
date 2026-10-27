@@ -1,0 +1,9 @@
+{
+  "seed": 0,
+  "allowed_tools": "all locally available tools through public simulation interfaces",
+  "hand_pose_library": true,
+  "rax_allowed": true,
+  "rax_used": false,
+  "joint_limit_roundoff_fix": true,
+  "budgets": "environment defaults unchanged"
+}

@@ -1,0 +1,186 @@
+{
+  "board_game": {
+    "protocol": "bench_board_game_state_v1",
+    "task_id": "connect_four_5x5",
+    "turn_index": 1,
+    "current_player": null,
+    "terminal": true,
+    "winner": null,
+    "draw": false,
+    "pending_move": {
+      "player_id": "player_1",
+      "piece_id": "white_00",
+      "q": 1,
+      "r": 3,
+      "turn_index": 1,
+      "attempt_index": 2
+    },
+    "status": {
+      "outcome": "truncated",
+      "end_reason": "time_limit",
+      "recovery_required": false,
+      "evidence_unavailable": false,
+      "reason": "piece_not_at_board_height",
+      "retryable": false
+    },
+    "settlement_dwell_s": 0.0,
+    "commit_count": 1
+  },
+  "episode": {
+    "spec": {
+      "protocol": "agent_bench_v1",
+      "episode_id": "7141c79b3d464cf7af3389f9f5a397df",
+      "agent_id": "codex_fixed_gesture_library",
+      "agent_version": "1",
+      "agent_config_sha256": "de523072a8176efd98d8d57cf1eb131fc4fdca71620b92ee15f971a33f788701",
+      "task_id": "connect_four_5x5",
+      "task_release_sha256": "6be7148ca4135b0c23a1067d1151ea671a687aea0fddae469d7ea56226d9dcb0",
+      "evaluator_sha256": "2a8f6743f993f45aeb03cf3b21ab4ef987d155ad377bd683f17db3bd541c8409",
+      "robot_id": "dual_fr3_sharpa_w01",
+      "robot_asset_sha256": "70e00f4126c188f96b36ffda63a5fb1d25ebbb3c801577aadadb5aef10d5ba46",
+      "physics_profile_sha256": "292a6a679ffb76668f366615f46f7e530b57e65baae7b8cdcacf5f5d0a21e6b0",
+      "scene_variant": "original_v1",
+      "scene_sha256": "1ab19f23b21cbab036ef4ae0f06b9b1611b642e562090798bed874b032563406",
+      "runtime_code_sha256": "770b4f0e0164de09c59bc6d7f1b52b0731111a377d53f782bee20d0f0b58b158",
+      "sensor_config_sha256": "a1545f3c6d283d86d35e5438c12ca35f490533a7b4db2d890cfdfb348221a8e4",
+      "execution_environment_sha256": "511ef97818813788421d32b3a5e04b331e2e778f56f9652111973860cdf254f9",
+      "seed": 0,
+      "track": "system0",
+      "observation_profile": "vision_proprio",
+      "execution_mode": "pause_physics_during_agent",
+      "instruction": "L2 · 木质平面四连棋 5×5。通过机器人实际抓放棋子，按公开规则轮流对弈；落子由原生接触稳定性裁判确认。",
+      "budgets": {
+        "sim_time_s": 120.0,
+        "wall_time_s": 1800.0,
+        "max_actions": 6000,
+        "max_model_calls": 256,
+        "max_action_sim_s": 5.0
+      },
+      "system0": {
+        "policy_id": "classical_fingertip_bimanual",
+        "version": "1.2.0-board1",
+        "implementation_sha256": "23f19b13e58a0450b0f0e152726cf419e17a26da921888031ddf0198bcd2fcc4",
+        "weights_sha256": null,
+        "trained": false,
+        "observation_profile": "vision_proprio",
+        "skills": [
+          "move_geometry",
+          "hold"
+        ],
+        "control_period_s": 0.02,
+        "geometry_inputs": [
+          "wrist_pose",
+          "fingertip_positions",
+          "hand_posture"
+        ],
+        "force_objectives": false,
+        "camera_observation_mode": "decision_only",
+        "supported_robot_ids": [
+          "dual_fr3_sharpa_w01"
+        ],
+        "robot_posture_profile": {
+          "profile_id": "sharpa_dip_pip_bimanual_v1",
+          "max_distal_minus_proximal_rad": 0.5,
+          "joint_pairs": [
+            {
+              "proximal_joint": "left_index_PIP",
+              "distal_joint": "left_index_DIP"
+            },
+            {
+              "proximal_joint": "left_middle_PIP",
+              "distal_joint": "left_middle_DIP"
+            },
+            {
+              "proximal_joint": "left_ring_PIP",
+              "distal_joint": "left_ring_DIP"
+            },
+            {
+              "proximal_joint": "left_pinky_PIP",
+              "distal_joint": "left_pinky_DIP"
+            },
+            {
+              "proximal_joint": "right_index_PIP",
+              "distal_joint": "right_index_DIP"
+            },
+            {
+              "proximal_joint": "right_middle_PIP",
+              "distal_joint": "right_middle_DIP"
+            },
+            {
+              "proximal_joint": "right_ring_PIP",
+              "distal_joint": "right_ring_DIP"
+            },
+            {
+              "proximal_joint": "right_pinky_PIP",
+              "distal_joint": "right_pinky_DIP"
+            }
+          ],
+          "scope": "requested_finger_goals_only",
+          "measured_state_projected": false,
+          "unselected_fingers": "preserve",
+          "grasp_success_guarantee": false
+        },
+        "hand_goal_semantics": {
+          "protocol": "accepted_hand_goal_retention_v2",
+          "scope": "move_geometry_and_hold",
+          "selected_fingers": "explicit_tip_keys_union_hand_posture_joint_chains",
+          "normal_omission": "previous_accepted_goal_or_persistent_fixed_drive",
+          "initial_omission": "measured_reference",
+          "recovery_omission": "committed_continuous_stop_fixed_drive_without_pi",
+          "selected_partial_posture_omission": "measured_reference",
+          "wrist_omission": "current_measured_pose",
+          "selected_tip_ik": "verified_position_may_change_redundant_joint_solution",
+          "simultaneous_tip_posture": "same_chain_posture_is_ik_reference_not_joint_objective",
+          "recovery_hold": "all_controlled_joints_fixed_drive",
+          "geometry_arm": "resume_tracking_requested_or_measured_wrist",
+          "fixed_hand_exit": "successful_explicit_chain_reselection_only",
+          "rejected_begin": "all_goal_mode_anchor_and_pending_state_unchanged",
+          "completion": {
+            "wrist": "requested_or_measured_maintained_pose",
+            "fingertips": "explicit_tip_fk_at_advertised_tolerance",
+            "joint_posture": "explicit_entries_on_chains_without_simultaneous_tip",
+            "unselected_hand": "maintenance_only_not_joint_completion",
+            "reference": "all_acknowledged_command_velocities_stationary"
+          },
+          "measured_reference": {
+            "epsilon_rad": 0.03,
+            "scope": "simulation_internal_reference_eligibility_not_hardware_safety",
+            "raw_feedback_projected": false,
+            "emitted_targets": "strict_urdf_bounds"
+          },
+          "feedback_protocol": "robot_execution_state_v1"
+        },
+        "geometry_tolerance_policy": {
+          "protocol": "geometry_tolerance_policy_v2",
+          "wrist_position_completion_cap_m": 0.003,
+          "wrist_orientation_completion_cap_rad": 0.04,
+          "fingertip_completion_m": 0.0015,
+          "joint_posture_completion_rad": 0.03,
+          "ik_verification_scale": 0.5,
+          "wrist_rule": "minimum_of_request_and_controller_cap",
+          "fingertip_ik_acceptance_m": 0.001,
+          "wrist_settle_speed_m_s": 0.002,
+          "stall_window_s": 0.3
+        },
+        "direct_control_handoff": null,
+        "hold_modes": [
+          "reference",
+          "acknowledged_drive"
+        ]
+      },
+      "split": "development"
+    },
+    "outcome": "infrastructure_error",
+    "elapsed_sim_s": 32.499999999973156,
+    "elapsed_wall_s": 1800.0345992859984,
+    "model_latency_s": 0.0,
+    "model_calls": 0,
+    "model_accounting": "unavailable",
+    "action_attempts": 18,
+    "completion_sim_s": null,
+    "completion_wall_s": null,
+    "physics_valid": false,
+    "evaluator_evidence_sha256": "1d16d7f926685cd87b20dc6a8a8b74f29ffc9e513e48c69b2aead2d1ae4c8064",
+    "failure_detail": ""
+  }
+}

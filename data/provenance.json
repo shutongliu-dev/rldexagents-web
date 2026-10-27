@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-27",
+  "cluster_source": "/home/ruoqu/crq_ws/dexx/dexhand_hoi_learning/audit/functional_hand_object_clusters_20261025/full_train_hoi_6241/link_contact_clearance_comparison",
+  "pca_source": "/home/ruoqu/crq_ws/dexx/dexhand_hoi_learning/audit/pose_manifold_e1_20261027/results_delivery",
+  "demo_source": "/home/ruoqu/crq_ws/dexx/dexhand_hoi_learning/audit/functional_hand_object_clusters_20261025/full_train_hoi_6241/physx_contact_joint_clusters",
+  "cluster_method": "link_near_and_distance_joint",
+  "samples": 6241,
+  "success_definition": "tabletop_pick_success AND pose_tracking_success",
+  "video_mapping": "exact trajectory key; original PhysX cluster IDs are not the final link-near IDs",
+  "missing_saved_success_video_clusters": [
+    3,
+    4
+  ],
+  "source_files_are_provenance_only": "All displayed media, figures, point data, and scripts are copied locally."
+}

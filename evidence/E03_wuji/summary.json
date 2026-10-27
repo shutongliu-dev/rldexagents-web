@@ -1,0 +1,186 @@
+{
+  "source": "Wuji Hand 2 right proprioception, screened 2026-10-08 LeRobot exports",
+  "input_datasets": [
+    {
+      "name": "pour_milk_powder_into_plastic_cup_wuji2_20261008_screened_88",
+      "episodes": 88,
+      "source_frames": 52423
+    },
+    {
+      "name": "sugar_cubes_into_plastic_cup_wuji2_20261008_screened_87",
+      "episodes": 87,
+      "source_frames": 43467
+    }
+  ],
+  "episodes": 175,
+  "retargeted_pose_samples": 1400,
+  "method": "Wuji2 URDF FK landmarks -> existing DEXX weighted kinematic Sharpa retarget; 8 uniform frames per episode; independent pose fit, no object pose/contact labels",
+  "source_joint_order": [
+    "r_thumb_cmc_flex",
+    "r_thumb_cmc_abd",
+    "r_thumb_mcp",
+    "r_thumb_ip",
+    "r_index_finger_mcp_flex",
+    "r_index_finger_mcp_abd",
+    "r_index_finger_pip",
+    "r_index_finger_dip",
+    "r_middle_finger_mcp_flex",
+    "r_middle_finger_mcp_abd",
+    "r_middle_finger_pip",
+    "r_middle_finger_dip",
+    "r_ring_finger_mcp_flex",
+    "r_ring_finger_mcp_abd",
+    "r_ring_finger_pip",
+    "r_ring_finger_dip",
+    "r_pinky_mcp_flex",
+    "r_pinky_mcp_abd",
+    "r_pinky_pip",
+    "r_pinky_dip"
+  ],
+  "retarget_joint_names": [
+    "right_thumb_CMC_FE",
+    "right_thumb_CMC_AA",
+    "right_thumb_MCP_FE",
+    "right_thumb_MCP_AA",
+    "right_thumb_IP",
+    "right_index_MCP_FE",
+    "right_index_MCP_AA",
+    "right_index_PIP",
+    "right_index_DIP",
+    "right_middle_MCP_FE",
+    "right_middle_MCP_AA",
+    "right_middle_PIP",
+    "right_middle_DIP",
+    "right_ring_MCP_FE",
+    "right_ring_MCP_AA",
+    "right_ring_PIP",
+    "right_ring_DIP",
+    "right_pinky_CMC",
+    "right_pinky_MCP_FE",
+    "right_pinky_MCP_AA",
+    "right_pinky_PIP",
+    "right_pinky_DIP"
+  ],
+  "tip_error_mm": {
+    "mean": 4.125151317566633,
+    "p50": 4.061843268573284,
+    "p95": 11.513420846313238,
+    "fraction_max_tip_below_30mm": 1.0
+  },
+  "existing_manifold": "/mnt/cpfs/workspace/rq_ws/outputs/hand_pose_cluster_all_20261023/full_analysis",
+  "projection_method": "fixed PCA and KMeans fitted to the existing full Sharpa hand-pose collection; not refit with Wuji2",
+  "cluster_counts": {
+    "all_samples": [
+      957,
+      146,
+      0,
+      0,
+      156,
+      141
+    ]
+  },
+  "cluster_counts_by_dataset_and_task": {
+    "pour_milk_powder_into_plastic_cup_wuji2_20261008_screened_88 | Pour the milk powder from the paper cup into the plastic cup.": [
+      353,
+      93,
+      0,
+      0,
+      119,
+      139
+    ],
+    "sugar_cubes_into_plastic_cup_wuji2_20261008_screened_87 | First pour the milk powder from the paper cup into the plastic cup, then use a wooden spoon to put sugar cubes into the plastic cup.": [
+      22,
+      3,
+      0,
+      0,
+      5,
+      2
+    ],
+    "sugar_cubes_into_plastic_cup_wuji2_20261008_screened_87 | Use a wooden spoon to put sugar cubes into the plastic cup.": [
+      582,
+      50,
+      0,
+      0,
+      32,
+      0
+    ]
+  },
+  "nearest_cluster_distance": {
+    "Wuji2": {
+      "median": 1.2030439732834415,
+      "p95": 1.502253729557637
+    },
+    "existing_sources": {
+      "dexcanvas": {
+        "samples": 5000,
+        "median": 1.2635091298554717,
+        "p95": 1.6957799115830718
+      },
+      "dexterhand": {
+        "samples": 64,
+        "median": 1.284344978362801,
+        "p95": 1.885954000395995
+      },
+      "oakink_native": {
+        "samples": 5000,
+        "median": 1.0347493437384334,
+        "p95": 1.5007183226357865
+      },
+      "oakink_expanded": {
+        "samples": 5000,
+        "median": 1.072164856751676,
+        "p95": 1.632458224267962
+      },
+      "human_wrist": {
+        "samples": 672,
+        "median": 1.2068132794039275,
+        "p95": 1.5773484679657492
+      },
+      "spider_dexycb_fixed": {
+        "samples": 1160,
+        "median": 1.4402250099142235,
+        "p95": 2.1529343556692795
+      },
+      "spider_dexycb_lifted": {
+        "samples": 2072,
+        "median": 1.5196696533508725,
+        "p95": 2.3045119073844056
+      },
+      "spider_hot3d_v2": {
+        "samples": 5000,
+        "median": 1.2820492197225621,
+        "p95": 2.2594481236144506
+      },
+      "spider_hrdexdb_24f": {
+        "samples": 1968,
+        "median": 1.2833441844228504,
+        "p95": 2.1895307061648768
+      },
+      "spider_oakink_lifted": {
+        "samples": 728,
+        "median": 1.179957115095668,
+        "p95": 2.121101265944976
+      },
+      "hrdexdb_full": {
+        "samples": 1552,
+        "median": 0.9133681701127642,
+        "p95": 1.4589880225528995
+      },
+      "sharpadex": {
+        "samples": 5000,
+        "median": 1.2959405395668409,
+        "p95": 1.8203906925698679
+      },
+      "robotool_robot": {
+        "samples": 744,
+        "median": 1.1422242005847285,
+        "p95": 1.7265203279706194
+      }
+    }
+  },
+  "limitations": [
+    "The Wuji2 export contains no object pose or 3D object geometry; this is hand-pose manifold comparison only.",
+    "Cluster IDs are inherited from the existing Sharpa hand-pose PCA/KMeans model.",
+    "The source joint order is interpreted as Hand 2 URDF DOF order; validate against an episode video before treating the fit as physically exact."
+  ]
+}

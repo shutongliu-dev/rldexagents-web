@@ -1,0 +1,256 @@
+action_delay_max_steps: 3
+action_smoothing_alpha: 0.4
+bounds_loss_coef: 0.0001
+control_dr: true
+control_dr_profile: poseobs
+final_object_reward: true
+final_reward_window: 10
+force_weight: 0
+full_reference_observation: true
+hand_weight: 0
+history_length: 8
+initialization_curriculum_offset_steps: 102432
+initialization_curriculum_steps: 15000
+initialization_start_fraction: 0.3
+local_asset_fastpath: true
+lookahead_steps: 1
+object_goal_probability: 1
+object_goal_type: trajectory_waypoint
+object_mass_dr_kg:
+- 0.01
+- 0.15
+object_pose_dr:
+  bias_pos_m: 0.05
+  bias_rot_rad: 0.05
+  dropout: 0.02
+  latency_steps: 2
+  noise_pos_m: 0.008
+  noise_rot_rad: 0.06
+object_pose_fine_position_m: 0.03
+object_pose_fine_rotation_rad: 0.5235987755982988
+object_pose_fine_weight: 8
+object_position_decay: 40
+object_position_weight: 16
+object_progress_weight: 0
+object_rotation_decay: 2
+object_rotation_weight: 12
+pattern_weights:
+- 1
+- 0
+- 0
+- 0
+- 0
+- 0
+- 0
+ppo:
+  desired_kl: 0.008
+  entropy_coef: 0.0001
+  init_noise_std: 1.0
+  learning_rate: 5.0e-05
+  mini_batch_size: 1024
+  num_learning_epochs: 5
+  num_steps_per_env: 32
+  value_loss_coef: 1
+real_hand_joint_limits: true
+reference_random_start: true
+reference_start_max_fraction: 0.98
+release_normalization: true
+reset_optimizer_on_resume: true
+resume_learning_rate: 5.0e-05
+retention_weight: 0
+reward_mode: object_only
+schedule_ratios:
+- 1
+- 0
+- 0
+slip_weight: 0
+sonic:
+  bottleneck: continuous
+  future_frames: 6
+  future_spacing_s: 0.1
+  history_length: 8
+  latent_dim: 32
+  levels:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  reconstruction_weight: 0.1
+  reference_mean:
+  - -0.2553357779979706
+  - 0.05445884168148041
+  - 0.0324864499270916
+  - -0.21376939117908478
+  - -0.8013191819190979
+  - -0.5308520793914795
+  - -0.20818188786506653
+  - -0.3723362386226654
+  - -0.5929492115974426
+  - -0.47581785917282104
+  - 0.051367808133363724
+  - -0.3005220890045166
+  - -0.5576754212379456
+  - -0.46634525060653687
+  - 0.05310412123799324
+  - -0.1280275136232376
+  - -0.6917270421981812
+  - -0.26886725425720215
+  - -0.5933745503425598
+  - 0.2788325846195221
+  - 0.2024223804473877
+  - -0.4396250247955322
+  - 0.43823471665382385
+  - 0.1573038101196289
+  - 0.6277058720588684
+  - 0.023879732936620712
+  - 0.01722254417836666
+  - -0.08277244120836258
+  - -0.03239000216126442
+  - 0.10176116973161697
+  - 0.032578833401203156
+  - 0.020458927378058434
+  - 0.2042621672153473
+  - 0.1252003014087677
+  - -0.03884272277355194
+  - 0.1951417624950409
+  - 0.0939343199133873
+  - -0.026910746470093727
+  - 0.164133682847023
+  - 0.06434407830238342
+  - -0.02033994160592556
+  - 0.14898928999900818
+  - 0.03301601484417915
+  - -0.00017027230933308601
+  - 0.13388502597808838
+  - 0.016660626977682114
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - -0.02154122106730938
+  - 0.021294325590133667
+  - -0.00715029239654541
+  - -0.006562490016222
+  - -0.0008400771184824407
+  - 0.01189251709729433
+  reference_std:
+  - 0.4772185683250427
+  - 0.46576979756355286
+  - 0.570133626461029
+  - 0.6052923202514648
+  - 0.4074549376964569
+  - 0.38822615146636963
+  - 0.4849536120891571
+  - 0.5385028123855591
+  - 0.48373353481292725
+  - 0.41191789507865906
+  - 0.39044269919395447
+  - 0.6047881841659546
+  - 0.49435845017433167
+  - 0.44216388463974
+  - 0.3827824294567108
+  - 0.6529772877693176
+  - 0.5021600127220154
+  - 0.8646515607833862
+  - 0.4312169849872589
+  - 0.5277380347251892
+  - 0.6357319951057434
+  - 0.7620937824249268
+  - 0.4472416937351227
+  - 0.4046459496021271
+  - 0.31167760491371155
+  - 0.5446950793266296
+  - 0.5619503259658813
+  - 0.6162800788879395
+  - 0.6001428365707397
+  - 0.565033495426178
+  - 0.5550676584243774
+  - 0.7732232809066772
+  - 0.9168885946273804
+  - 0.8873355984687805
+  - 0.7444911599159241
+  - 0.929086446762085
+  - 0.9100092649459839
+  - 0.7866426706314087
+  - 0.9417011141777039
+  - 0.9228198528289795
+  - 0.8148079514503479
+  - 0.955362856388092
+  - 0.9461560249328613
+  - 0.8549532890319824
+  - 0.9507867097854614
+  - 0.9769474267959595
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 0.6888479590415955
+  - 1.1118706464767456
+  - 1.0588759183883667
+  - 0.2136320173740387
+  - 0.20923984050750732
+  - 0.23586930334568024
+spatial_augmentation:
+  curriculum_offset_steps: 32000
+  curriculum_ramp_steps: 48000
+  curriculum_start_steps: 0
+  translation_m:
+  - 0.15
+  - 0.15
+  - 0.0
+  yaw_rad: 1.5707963267948966
+stage: 2
+tip_std_m: 0.04
+tracking_reward_style: dexx
+wrist_offset:
+  curriculum_offset_steps: 0
+  curriculum_ramp_steps: 32000
+  curriculum_start_steps: 0
+  episode_ramp_steps: 30
+  probability: 0.75
+  rotation_rad:
+  - 0.0872664626
+  - 0.0872664626
+  - 0.0872664626
+  translation_m:
+  - 0.01
+  - 0.01
+  - 0.01

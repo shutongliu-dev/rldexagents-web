@@ -1,0 +1,258 @@
+{
+  "experiment": "20261027_five_tasks_all_tools",
+  "configuration": {
+    "seed": 0,
+    "allowed_tools": "all locally available tools through public simulation interfaces",
+    "hand_pose_library": true,
+    "rax_allowed": true,
+    "rax_used": false,
+    "joint_limit_roundoff_fix": true,
+    "budgets": "environment defaults unchanged"
+  },
+  "confirmed_successes": 0,
+  "created_episodes": 5,
+  "tasks": [
+    {
+      "task": "01",
+      "name": "滑轮皮带装配",
+      "episode_id": "5bff1ee5f10246fa81130901a4aac909",
+      "outcome": "infrastructure_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": 16.440000000007036,
+      "elapsed_wall_s": 1800.0012145049986,
+      "action_attempts": 9,
+      "physics_valid": false,
+      "failure_detail": "",
+      "progress": "多次尝试夹持小带轮；首次抬升后带轮仍在台面，未完成带轮或皮带装配。",
+      "result_file": "01_result.json",
+      "budgets": {
+        "sim_time_s": 120.0,
+        "wall_time_s": 1800.0,
+        "max_actions": 6000,
+        "max_model_calls": 256,
+        "max_action_sim_s": 5.0
+      },
+      "video": {
+        "path": "/data/ruoqu/dexbench_20261027_all_tools/20261027_064722_086887_01/episodes/5bff1ee5f10246fa81130901a4aac909/private/demo_recording/demo.mp4",
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "1803.800000",
+            "size": "51240200"
+          }
+        },
+        "returncode": 0
+      }
+    },
+    {
+      "task": "02",
+      "name": "样本瓶开盖与复盖",
+      "episode_id": "e2a0222334284bb1b80f13df2c8aaeaf",
+      "outcome": "safety_stop",
+      "confirmed_success": false,
+      "elapsed_sim_s": 8.099999999998408,
+      "elapsed_wall_s": 365.066804864,
+      "action_attempts": 4,
+      "physics_valid": false,
+      "failure_detail": "",
+      "progress": "已接近岛台样本瓶；下降过程中环境 safety_stop，未开盖、复盖或归位。",
+      "result_file": "02_result.json",
+      "budgets": {
+        "sim_time_s": 120.0,
+        "wall_time_s": 1800.0,
+        "max_actions": 6000,
+        "max_model_calls": 256,
+        "max_action_sim_s": 5.0
+      },
+      "video": {
+        "path": "/data/ruoqu/dexbench_20261027_all_tools/20261027_071857_154524_02/episodes/e2a0222334284bb1b80f13df2c8aaeaf/private/demo_recording/demo.mp4",
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "311.850000",
+            "size": "10029637"
+          }
+        },
+        "returncode": 0
+      }
+    },
+    {
+      "task": "03",
+      "name": "调味品与干货分类归位",
+      "episode_id": "0992adeaba014da1af409b2d17bcde0f",
+      "outcome": "infrastructure_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": 38.62000000000238,
+      "elapsed_wall_s": 1750.435629898002,
+      "action_attempts": 20,
+      "physics_valid": false,
+      "failure_detail": "",
+      "progress": "盐罐抓取失败并倒下；随后红椒粉罐被抓起，搬运途中环境终止，未完成分类。",
+      "result_file": "03_result.json",
+      "budgets": {
+        "sim_time_s": 120.0,
+        "wall_time_s": 1800.0,
+        "max_actions": 6000,
+        "max_model_calls": 256,
+        "max_action_sim_s": 5.0
+      },
+      "video": {
+        "path": "/data/ruoqu/dexbench_20261027_all_tools/20261027_072558_106847_03/episodes/0992adeaba014da1af409b2d17bcde0f/private/demo_recording/demo.mp4",
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "1634.250000",
+            "size": "56362585"
+          }
+        },
+        "returncode": 0
+      }
+    },
+    {
+      "task": "04",
+      "name": "木质平面四连棋",
+      "episode_id": "76c7cbd8e8ae4d13a4ee6f383bd3d723",
+      "outcome": "infrastructure_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": 39.24000000000534,
+      "elapsed_wall_s": 1800.045312008002,
+      "action_attempts": 26,
+      "physics_valid": false,
+      "failure_detail": "",
+      "progress": "裁判确认黑棋、白棋各落子一次（commit_count=2）；第二枚黑棋未提交，无赢家。",
+      "result_file": "04_result.json",
+      "budgets": {
+        "sim_time_s": 120.0,
+        "wall_time_s": 1800.0,
+        "max_actions": 6000,
+        "max_model_calls": 256,
+        "max_action_sim_s": 5.0
+      },
+      "board_game": {
+        "protocol": "bench_board_game_state_v1",
+        "task_id": "connect_four_5x5",
+        "turn_index": 2,
+        "current_player": null,
+        "terminal": true,
+        "winner": null,
+        "draw": false,
+        "pending_move": {
+          "player_id": "player_0",
+          "piece_id": "black_01",
+          "q": 1,
+          "r": 0,
+          "turn_index": 2,
+          "attempt_index": 3
+        },
+        "status": {
+          "outcome": "truncated",
+          "end_reason": "time_limit",
+          "recovery_required": false,
+          "evidence_unavailable": false,
+          "reason": "piece_footprint_outside_cell",
+          "retryable": false
+        },
+        "settlement_dwell_s": 0.0,
+        "commit_count": 2
+      },
+      "video": {
+        "path": "/data/ruoqu/dexbench_20261027_all_tools/20261027_075633_216805_04/episodes/76c7cbd8e8ae4d13a4ee6f383bd3d723/private/demo_recording/demo_recovered.mp4",
+        "returncode": 0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "1806.300000",
+            "size": "63237729"
+          }
+        },
+        "recovery_report": "04_recording_recovery.json"
+      }
+    },
+    {
+      "task": "05",
+      "name": "遥控电视开关机",
+      "episode_id": "8b5f615f90ba4389aaa971651e3dccae",
+      "outcome": "infrastructure_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": 28.85999999997809,
+      "elapsed_wall_s": 1800.029405999001,
+      "action_attempts": 17,
+      "physics_valid": false,
+      "failure_detail": "",
+      "progress": "图像显示按键后电视开机并倒计时，后续关闭；遥控器抬起后曾滑落，重新侧向夹持后再次抬起，未归位。",
+      "result_file": "05_result.json",
+      "budgets": {
+        "sim_time_s": 120.0,
+        "wall_time_s": 1800.0,
+        "max_actions": 6000,
+        "max_model_calls": 256,
+        "max_action_sim_s": 5.0
+      },
+      "video": {
+        "path": "/data/ruoqu/dexbench_20261027_all_tools/20261027_082839_364211_05/episodes/8b5f615f90ba4389aaa971651e3dccae/private/demo_recording/demo.mp4",
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "1804.950000",
+            "size": "99093081"
+          }
+        },
+        "returncode": 0
+      }
+    }
+  ],
+  "tools_used": [
+    "public RGB-D and depth projection",
+    "public robot FK and tactile observations",
+    "public query_ik",
+    "move_geometry",
+    "move_joints",
+    "hold",
+    "authenticated board placement intents",
+    "dex_agent fixed gesture families and C0 references",
+    "explicit posture scaling and fingertip geometry adaptations"
+  ],
+  "rax_used": false,
+  "allowed_tools_note": "All local tools were permitted; permission does not mean every available tool was invoked.",
+  "joint_limit_fix_exercised": true,
+  "model_accounting": "unavailable; API model_calls=0 is not an agent model call count.",
+  "limits": "No reset or restart within an episode; task assets, physics, scoring and budgets were not changed.",
+  "recording_note": "Task 04 archival overlapped recording postprocessing. Four missing and one damaged composite frame were reconstructed solely from their corresponding original RGB frames, and the video was re-encoded as demo_recovered.mp4. Original recording error and recovery report are preserved.",
+  "recording_metadata_disclosure": "After task 04 ended, video recovery read recording metadata. Its first-frame record included null placed_count/required_count and success=false. These fields were not used for robot control or outcome adjudication.",
+  "diagnostic_note": "Task 03 returned infrastructure_error at about 1750 wall seconds, before its 1800-second limit; public failure_detail was empty. Do not label this a proven wall-time exhaustion or infer a private cause."
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "episode_creation",
+  "outcome": "startup_error",
+  "response": {
+    "detail": "Native service failed; operator diagnostics are private"
+  },
+  "episode_id": null,
+  "executed_actions": 0
+}

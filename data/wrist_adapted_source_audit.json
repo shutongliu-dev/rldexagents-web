@@ -1,0 +1,619 @@
+{
+  "display_name": "OakInk (wrist-adapted)",
+  "original_source": "OakInk-v2",
+  "record_count": 68,
+  "records": [
+    {
+      "key": "scene_01__A003++seq__7cc685df14ba8096034f__2023-04-16-09-37-10__O02_0015_00008__right__stage2__f6495",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A003++seq__7cc685df14ba8096034f__2023-04-16-09-37-10__O02@0015@00008__right__stage2__f6495/metadata.json",
+      "source_sequence_id": "scene_01__A003++seq__7cc685df14ba8096034f__2023-04-16-09-37-10",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A003++seq__894b2fdab230f1a2506b__2023-04-15-09-39-22__O02_0015_00019__right__stage0__f1266",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A003++seq__894b2fdab230f1a2506b__2023-04-15-09-39-22__O02@0015@00019__right__stage0__f1266/metadata.json",
+      "source_sequence_id": "scene_01__A003++seq__894b2fdab230f1a2506b__2023-04-15-09-39-22",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A003++seq__c43758330dcc6637f14c__2023-04-16-10-49-51__O02_0017_00001__right__stage1__f3662",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A003++seq__c43758330dcc6637f14c__2023-04-16-10-49-51__O02@0017@00001__right__stage1__f3662/metadata.json",
+      "source_sequence_id": "scene_01__A003++seq__c43758330dcc6637f14c__2023-04-16-10-49-51",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A003++seq__ce2f09a1ccbe225a69aa__2023-04-23-19-08-48__O02_0011_00001__right__stage1__f4473",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A003++seq__ce2f09a1ccbe225a69aa__2023-04-23-19-08-48__O02@0011@00001__right__stage1__f4473/metadata.json",
+      "source_sequence_id": "scene_01__A003++seq__ce2f09a1ccbe225a69aa__2023-04-23-19-08-48",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A003++seq__d4ddf93a38e3228cdd3a__2023-04-15-10-15-10__O02_0013_00004__right__stage0__f1108",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A003++seq__d4ddf93a38e3228cdd3a__2023-04-15-10-15-10__O02@0013@00004__right__stage0__f1108/metadata.json",
+      "source_sequence_id": "scene_01__A003++seq__d4ddf93a38e3228cdd3a__2023-04-15-10-15-10",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A003++seq__f447ca25c7bb0e21616a__2023-04-15-09-35-55__O02_0015_00010__right__stage0__f1088",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A003++seq__f447ca25c7bb0e21616a__2023-04-15-09-35-55__O02@0015@00010__right__stage0__f1088/metadata.json",
+      "source_sequence_id": "scene_01__A003++seq__f447ca25c7bb0e21616a__2023-04-15-09-35-55",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A003++seq__fe346e4fc4e0cab776de__2023-04-15-09-37-24__O02_0015_00004__right__stage0__f1124",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A003++seq__fe346e4fc4e0cab776de__2023-04-15-09-37-24__O02@0015@00004__right__stage0__f1124/metadata.json",
+      "source_sequence_id": "scene_01__A003++seq__fe346e4fc4e0cab776de__2023-04-15-09-37-24",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A004++seq__c1e3698b2dfc3650fa61__2023-04-28-18-35-15__O02_0015_00001__right__stage0__f1391",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A004++seq__c1e3698b2dfc3650fa61__2023-04-28-18-35-15__O02@0015@00001__right__stage0__f1391/metadata.json",
+      "source_sequence_id": "scene_01__A004++seq__c1e3698b2dfc3650fa61__2023-04-28-18-35-15",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A005++seq__65ef09f4bf2106cb735d__2023-04-24-20-20-31__O02_0015_00004__right__stage4__f3847",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A005++seq__65ef09f4bf2106cb735d__2023-04-24-20-20-31__O02@0015@00004__right__stage4__f3847/metadata.json",
+      "source_sequence_id": "scene_01__A005++seq__65ef09f4bf2106cb735d__2023-04-24-20-20-31",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A005++seq__86fb02fdc014aad9042d__2023-04-15-16-00-57__O02_0015_00013__right__stage5__f3860",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A005++seq__86fb02fdc014aad9042d__2023-04-15-16-00-57__O02@0015@00013__right__stage5__f3860/metadata.json",
+      "source_sequence_id": "scene_01__A005++seq__86fb02fdc014aad9042d__2023-04-15-16-00-57",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A005++seq__cd0aeb52231c8eb7e6d2__2023-04-24-20-01-27__O02_0015_00004__right__stage1__f1901",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A005++seq__cd0aeb52231c8eb7e6d2__2023-04-24-20-01-27__O02@0015@00004__right__stage1__f1901/metadata.json",
+      "source_sequence_id": "scene_01__A005++seq__cd0aeb52231c8eb7e6d2__2023-04-24-20-01-27",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A005++seq__d01e231560b7068d4149__2023-04-15-14-24-56__O02_0015_00001__right__stage0__f757",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A005++seq__d01e231560b7068d4149__2023-04-15-14-24-56__O02@0015@00001__right__stage0__f757/metadata.json",
+      "source_sequence_id": "scene_01__A005++seq__d01e231560b7068d4149__2023-04-15-14-24-56",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A007++seq__0b666c7b299d875e5f1e__2023-04-21-11-38-16__O02_0015_00004__right__stage0__f1073",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A007++seq__0b666c7b299d875e5f1e__2023-04-21-11-38-16__O02@0015@00004__right__stage0__f1073/metadata.json",
+      "source_sequence_id": "scene_01__A007++seq__0b666c7b299d875e5f1e__2023-04-21-11-38-16",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A007++seq__3783890ba75da6556f48__2023-04-21-10-24-03__O02_0015_00019__right__stage0__f662",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A007++seq__3783890ba75da6556f48__2023-04-21-10-24-03__O02@0015@00019__right__stage0__f662/metadata.json",
+      "source_sequence_id": "scene_01__A007++seq__3783890ba75da6556f48__2023-04-21-10-24-03",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A007++seq__90724a6acd7d7f462f5a__2023-04-21-10-17-48__O02_0015_00001__right__stage0__f678",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A007++seq__90724a6acd7d7f462f5a__2023-04-21-10-17-48__O02@0015@00001__right__stage0__f678/metadata.json",
+      "source_sequence_id": "scene_01__A007++seq__90724a6acd7d7f462f5a__2023-04-21-10-17-48",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A007++seq__c3f6f36802e1ea88936f__2023-04-21-10-22-24__O02_0013_00004__right__stage0__f807",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A007++seq__c3f6f36802e1ea88936f__2023-04-21-10-22-24__O02@0013@00004__right__stage0__f807/metadata.json",
+      "source_sequence_id": "scene_01__A007++seq__c3f6f36802e1ea88936f__2023-04-21-10-22-24",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A008++seq__495b60ed26f7b9c5cd2e__2023-04-23-11-41-39__O02_0015_00019__right__stage0__f395",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A008++seq__495b60ed26f7b9c5cd2e__2023-04-23-11-41-39__O02@0015@00019__right__stage0__f395/metadata.json",
+      "source_sequence_id": "scene_01__A008++seq__495b60ed26f7b9c5cd2e__2023-04-23-11-41-39",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A008++seq__709821691ed6e9de0ecf__2023-04-23-11-38-59__O02_0015_00016__right__stage0__f423",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__A008++seq__709821691ed6e9de0ecf__2023-04-23-11-38-59__O02@0015@00016__right__stage0__f423/metadata.json",
+      "source_sequence_id": "scene_01__A008++seq__709821691ed6e9de0ecf__2023-04-23-11-38-59",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__A008++seq__ab46c9bce215db8cf6a0__2023-04-23-11-36-06__O02_0013_00004__right__stage0__f470",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__A008++seq__ab46c9bce215db8cf6a0__2023-04-23-11-36-06__O02@0013@00004__right__stage0__f470/metadata.json",
+      "source_sequence_id": "scene_01__A008++seq__ab46c9bce215db8cf6a0__2023-04-23-11-36-06",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__O001++seq__97fc3dab0aa577c392a5__2023-04-13-20-53-02__O02_0015_00001__right__stage4__f6948",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_01__O001++seq__97fc3dab0aa577c392a5__2023-04-13-20-53-02__O02@0015@00001__right__stage4__f6948/metadata.json",
+      "source_sequence_id": "scene_01__O001++seq__97fc3dab0aa577c392a5__2023-04-13-20-53-02",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_01__O001++seq__9ed971eba20293345ab6__2023-04-13-20-25-04__O02_0020_00001__right__stage0__f696",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_01__O001++seq__9ed971eba20293345ab6__2023-04-13-20-25-04__O02@0020@00001__right__stage0__f696/metadata.json",
+      "source_sequence_id": "scene_01__O001++seq__9ed971eba20293345ab6__2023-04-13-20-25-04",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A001++seq__ebfdd1628a285feceaf7__2023-04-15-19-20-56__O02_0029_00008__right__stage3__f6668",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_02__A001++seq__ebfdd1628a285feceaf7__2023-04-15-19-20-56__O02@0029@00008__right__stage3__f6668/metadata.json",
+      "source_sequence_id": "scene_02__A001++seq__ebfdd1628a285feceaf7__2023-04-15-19-20-56",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A002++seq__592b80dc7af63ce7ae6e__2023-04-17-14-59-25__O02_0018_00001__right__stage0__f780",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_02__A002++seq__592b80dc7af63ce7ae6e__2023-04-17-14-59-25__O02@0018@00001__right__stage0__f780/metadata.json",
+      "source_sequence_id": "scene_02__A002++seq__592b80dc7af63ce7ae6e__2023-04-17-14-59-25",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A004++seq__1b938c494ba4cc48e3bf__2023-05-07-20-02-56__O02_0037_00001__right__stage5__f4990",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_02__A004++seq__1b938c494ba4cc48e3bf__2023-05-07-20-02-56__O02@0037@00001__right__stage5__f4990/metadata.json",
+      "source_sequence_id": "scene_02__A004++seq__1b938c494ba4cc48e3bf__2023-05-07-20-02-56",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A004++seq__352c9c1998b2e922f92c__2023-05-07-18-34-12__O02_0048_00001__right__stage2__f2715",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A004++seq__352c9c1998b2e922f92c__2023-05-07-18-34-12__O02@0048@00001__right__stage2__f2715/metadata.json",
+      "source_sequence_id": "scene_02__A004++seq__352c9c1998b2e922f92c__2023-05-07-18-34-12",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A004++seq__988f47650371f35d6001__2023-04-26-20-39-46__O02_0018_00001__right__stage0__f955",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_02__A004++seq__988f47650371f35d6001__2023-04-26-20-39-46__O02@0018@00001__right__stage0__f955/metadata.json",
+      "source_sequence_id": "scene_02__A004++seq__988f47650371f35d6001__2023-04-26-20-39-46",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A004++seq__9cf448429878c58036ef__2023-05-07-18-47-31__O02_0018_00001__right__stage6__f4031",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A004++seq__9cf448429878c58036ef__2023-05-07-18-47-31__O02@0018@00001__right__stage6__f4031/metadata.json",
+      "source_sequence_id": "scene_02__A004++seq__9cf448429878c58036ef__2023-05-07-18-47-31",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A005++seq__0366f467a3e260d6c840__2023-04-20-09-55-54__O02_0018_00001__right__stage0__f931",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A005++seq__0366f467a3e260d6c840__2023-04-20-09-55-54__O02@0018@00001__right__stage0__f931/metadata.json",
+      "source_sequence_id": "scene_02__A005++seq__0366f467a3e260d6c840__2023-04-20-09-55-54",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A005++seq__37d7bf4253158917183b__2023-04-20-09-56-54__O02_0018_00001__right__stage2__f2679",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A005++seq__37d7bf4253158917183b__2023-04-20-09-56-54__O02@0018@00001__right__stage2__f2679/metadata.json",
+      "source_sequence_id": "scene_02__A005++seq__37d7bf4253158917183b__2023-04-20-09-56-54",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A005++seq__5ced9ba4d054b4039ecb__2023-04-25-20-36-43__O02_0018_00001__right__stage5__f2217",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A005++seq__5ced9ba4d054b4039ecb__2023-04-25-20-36-43__O02@0018@00001__right__stage5__f2217/metadata.json",
+      "source_sequence_id": "scene_02__A005++seq__5ced9ba4d054b4039ecb__2023-04-25-20-36-43",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A005++seq__e04db873d94e3ad37cbe__2023-04-25-19-12-10__O02_0018_00001__right__stage8__f4454",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A005++seq__e04db873d94e3ad37cbe__2023-04-25-19-12-10__O02@0018@00001__right__stage8__f4454/metadata.json",
+      "source_sequence_id": "scene_02__A005++seq__e04db873d94e3ad37cbe__2023-04-25-19-12-10",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A005++seq__f0b722436e99d448cd74__2023-04-25-18-55-27__O02_0018_00001__right__stage4__f2520",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A005++seq__f0b722436e99d448cd74__2023-04-25-18-55-27__O02@0018@00001__right__stage4__f2520/metadata.json",
+      "source_sequence_id": "scene_02__A005++seq__f0b722436e99d448cd74__2023-04-25-18-55-27",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A007++seq__0308b11a48fa1bc03f78__2023-05-15-18-33-56__O02_0018_00001__right__stage2__f1535",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_02__A007++seq__0308b11a48fa1bc03f78__2023-05-15-18-33-56__O02@0018@00001__right__stage2__f1535/metadata.json",
+      "source_sequence_id": "scene_02__A007++seq__0308b11a48fa1bc03f78__2023-05-15-18-33-56",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A007++seq__662b07567133f2490efc__2023-05-15-19-42-12__O02_0044_00001__right__stage7__f7393",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A007++seq__662b07567133f2490efc__2023-05-15-19-42-12__O02@0044@00001__right__stage7__f7393/metadata.json",
+      "source_sequence_id": "scene_02__A007++seq__662b07567133f2490efc__2023-05-15-19-42-12",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A007++seq__ad1415514c0aa0d3c778__2023-05-15-18-38-37__C43001__right__stage3__f2817",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A007++seq__ad1415514c0aa0d3c778__2023-05-15-18-38-37__C43001__right__stage3__f2817/metadata.json",
+      "source_sequence_id": "scene_02__A007++seq__ad1415514c0aa0d3c778__2023-05-15-18-38-37",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A007++seq__ad1415514c0aa0d3c778__2023-05-15-18-38-37__O02_0018_00001__right__stage0__f764",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_02__A007++seq__ad1415514c0aa0d3c778__2023-05-15-18-38-37__O02@0018@00001__right__stage0__f764/metadata.json",
+      "source_sequence_id": "scene_02__A007++seq__ad1415514c0aa0d3c778__2023-05-15-18-38-37",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_02__A008++seq__3f8ff5acad0ca31e833f__2023-04-23-09-53-48__O02_0018_00001__right__stage1__f976",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_02__A008++seq__3f8ff5acad0ca31e833f__2023-04-23-09-53-48__O02@0018@00001__right__stage1__f976/metadata.json",
+      "source_sequence_id": "scene_02__A008++seq__3f8ff5acad0ca31e833f__2023-04-23-09-53-48",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__0f90057f6302c9e0a117__2023-04-26-19-33-13__O02_0206_00001__right__stage3__f4249",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__0f90057f6302c9e0a117__2023-04-26-19-33-13__O02@0206@00001__right__stage3__f4249/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__0f90057f6302c9e0a117__2023-04-26-19-33-13",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__3b1e6115aecab0a539cb__2023-04-26-19-40-43__O02_0206_00001__right__stage6__f7430",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__3b1e6115aecab0a539cb__2023-04-26-19-40-43__O02@0206@00001__right__stage6__f7430/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__3b1e6115aecab0a539cb__2023-04-26-19-40-43",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__6ca00493d658a7c96f4b__2023-04-26-19-30-01__O02_0206_00001__right__stage1__f1317",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__6ca00493d658a7c96f4b__2023-04-26-19-30-01__O02@0206@00001__right__stage1__f1317/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__6ca00493d658a7c96f4b__2023-04-26-19-30-01",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__81a953a8e44603fbe7cb__2023-04-26-18-39-34__O02_0206_00001__right__stage1__f1687",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__81a953a8e44603fbe7cb__2023-04-26-18-39-34__O02@0206@00001__right__stage1__f1687/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__81a953a8e44603fbe7cb__2023-04-26-18-39-34",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__8e5df63b75649763e706__2023-04-26-19-22-54__O02_0206_00001__right__stage7__f5601",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__8e5df63b75649763e706__2023-04-26-19-22-54__O02@0206@00001__right__stage7__f5601/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__8e5df63b75649763e706__2023-04-26-19-22-54",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__b5fa37e582ac84807337__2023-04-26-19-53-13__O02_0206_00001__right__stage3__f2775",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__b5fa37e582ac84807337__2023-04-26-19-53-13__O02@0206@00001__right__stage3__f2775/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__b5fa37e582ac84807337__2023-04-26-19-53-13",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__beb8fa60acb6693c34ff__2023-04-22-19-42-37__O02_0206_00001__right__stage0__f1223",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__beb8fa60acb6693c34ff__2023-04-22-19-42-37__O02@0206@00001__right__stage0__f1223/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__beb8fa60acb6693c34ff__2023-04-22-19-42-37",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__c8c4e4249e0c85e451a1__2023-04-22-18-47-07__O02_0205_00001__right__stage1__f1775",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A004++seq__c8c4e4249e0c85e451a1__2023-04-22-18-47-07__O02@0205@00001__right__stage1__f1775/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__c8c4e4249e0c85e451a1__2023-04-22-18-47-07",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__da60be610023cdf04491__2023-04-22-19-29-49__O02_0203_00002__right__stage4__f2900",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A004++seq__da60be610023cdf04491__2023-04-22-19-29-49__O02@0203@00002__right__stage4__f2900/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__da60be610023cdf04491__2023-04-22-19-29-49",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__dd7fe851e3065043361f__2023-04-22-20-38-45__O02_0203_00002__right__stage3__f2711",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A004++seq__dd7fe851e3065043361f__2023-04-22-20-38-45__O02@0203@00002__right__stage3__f2711/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__dd7fe851e3065043361f__2023-04-22-20-38-45",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__f5a3d2061cdb3e4516dc__2023-04-26-18-48-39__O02_0206_00001__right__stage1__f1507",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__f5a3d2061cdb3e4516dc__2023-04-26-18-48-39__O02@0206@00001__right__stage1__f1507/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__f5a3d2061cdb3e4516dc__2023-04-26-18-48-39",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A004++seq__facbce031fe123b84569__2023-04-26-18-25-35__O02_0206_00001__right__stage6__f4842",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A004++seq__facbce031fe123b84569__2023-04-26-18-25-35__O02@0206@00001__right__stage6__f4842/metadata.json",
+      "source_sequence_id": "scene_03__A004++seq__facbce031fe123b84569__2023-04-26-18-25-35",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__1c03f4a45689cf1478c5__2023-04-21-09-40-51__O02_0206_00001__right__stage8__f7938",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A007++seq__1c03f4a45689cf1478c5__2023-04-21-09-40-51__O02@0206@00001__right__stage8__f7938/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__1c03f4a45689cf1478c5__2023-04-21-09-40-51",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__2bae9f0f317c19cd1b5d__2023-05-15-20-32-31__O02_0015_00025__right__stage2__f1653",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__2bae9f0f317c19cd1b5d__2023-05-15-20-32-31__O02@0015@00025__right__stage2__f1653/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__2bae9f0f317c19cd1b5d__2023-05-15-20-32-31",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49__O02_0015_00023__right__stage18__f15786",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49__O02@0015@00023__right__stage18__f15786/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49__O02_0206_00001__right__stage16__f12920",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49__O02@0206@00001__right__stage16__f12920/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49__O02_0206_00001__right__stage8__f8565",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49__O02@0206@00001__right__stage8__f8565/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__39e5ee70d56b9e9652da__2023-05-15-20-24-49",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__3da1c0d65ae209028cb1__2023-04-20-14-36-16__O02_0203_00002__right__stage2__f2512",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A007++seq__3da1c0d65ae209028cb1__2023-04-20-14-36-16__O02@0203@00002__right__stage2__f2512/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__3da1c0d65ae209028cb1__2023-04-20-14-36-16",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__43581fd7e57e148306e4__2023-04-19-11-29-48__O02_0206_00001__right__stage3__f3218",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__43581fd7e57e148306e4__2023-04-19-11-29-48__O02@0206@00001__right__stage3__f3218/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__43581fd7e57e148306e4__2023-04-19-11-29-48",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__824966397a38080ca844__2023-04-20-15-39-19__O02_0203_00002__right__stage3__f2365",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__824966397a38080ca844__2023-04-20-15-39-19__O02@0203@00002__right__stage3__f2365/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__824966397a38080ca844__2023-04-20-15-39-19",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__8dc850cde33bfcf5a096__2023-04-19-10-53-08__O02_0206_00001__right__stage1__f1075",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A007++seq__8dc850cde33bfcf5a096__2023-04-19-10-53-08__O02@0206@00001__right__stage1__f1075/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__8dc850cde33bfcf5a096__2023-04-19-10-53-08",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__b4fca9769ed69768fdcd__2023-04-19-11-27-31__O02_0203_00002__right__stage5__f4334",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A007++seq__b4fca9769ed69768fdcd__2023-04-19-11-27-31__O02@0203@00002__right__stage5__f4334/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__b4fca9769ed69768fdcd__2023-04-19-11-27-31",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__c56852334cd7ee5ec868__2023-04-21-09-37-08__O02_0015_00025__right__stage0__f1325",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A007++seq__c56852334cd7ee5ec868__2023-04-21-09-37-08__O02@0015@00025__right__stage0__f1325/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__c56852334cd7ee5ec868__2023-04-21-09-37-08",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__c6e4ccbdd4e80572db97__2023-04-19-11-03-02__O02_0206_00001__right__stage0__f659",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__c6e4ccbdd4e80572db97__2023-04-19-11-03-02__O02@0206@00001__right__stage0__f659/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__c6e4ccbdd4e80572db97__2023-04-19-11-03-02",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__cfcc809e6a13f0d37c85__2023-04-19-10-56-05__O02_0206_00001__right__stage1__f1052",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A007++seq__cfcc809e6a13f0d37c85__2023-04-19-10-56-05__O02@0206@00001__right__stage1__f1052/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__cfcc809e6a13f0d37c85__2023-04-19-10-56-05",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__d4caf5e54f1c91438b57__2023-05-15-20-39-39__O02_0015_00022__right__stage3__f6044",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A007++seq__d4caf5e54f1c91438b57__2023-05-15-20-39-39__O02@0015@00022__right__stage3__f6044/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__d4caf5e54f1c91438b57__2023-05-15-20-39-39",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A007++seq__ff220c4666f169c19334__2023-04-19-11-43-56__O02_0203_00002__right__stage3__f1602",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A007++seq__ff220c4666f169c19334__2023-04-19-11-43-56__O02@0203@00002__right__stage3__f1602/metadata.json",
+      "source_sequence_id": "scene_03__A007++seq__ff220c4666f169c19334__2023-04-19-11-43-56",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A008++seq__0920ef008fac6fefdd88__2023-04-23-11-23-08__O02_0205_00001__right__stage0__f449",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_03__A008++seq__0920ef008fac6fefdd88__2023-04-23-11-23-08__O02@0205@00001__right__stage0__f449/metadata.json",
+      "source_sequence_id": "scene_03__A008++seq__0920ef008fac6fefdd88__2023-04-23-11-23-08",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_03__A008++seq__667a8e2bc0c080980b80__2023-05-09-19-58-57__O02_0206_00001__right__stage6__f9882",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_only",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_only/references/scene_03__A008++seq__667a8e2bc0c080980b80__2023-05-09-19-58-57__O02@0206@00001__right__stage6__f9882/metadata.json",
+      "source_sequence_id": "scene_03__A008++seq__667a8e2bc0c080980b80__2023-05-09-19-58-57",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_04__A007++seq__3841334c17e591cb9968__2023-04-19-10-32-34__O02_0025_00001__right__stage1__f1550",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_04__A007++seq__3841334c17e591cb9968__2023-04-19-10-32-34__O02@0025@00001__right__stage1__f1550/metadata.json",
+      "source_sequence_id": "scene_04__A007++seq__3841334c17e591cb9968__2023-04-19-10-32-34",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    },
+    {
+      "key": "scene_04__A008++seq__f93352845016c27d0fdc__2023-05-09-19-52-25__O02_0025_00001__right__stage1__f2288",
+      "dataset_root": "/home/ruoqu/crq_ws/dexx/sharpa_tac_rl/data/OakInk-v2",
+      "side": "right",
+      "batch": "human_wrist_expansion",
+      "metadata_file": "/home/ruoqu/crq_ws/env_dex_bench/env_pick_bench/results/hoi_engine/full_data_rl/full_training/human_wrist_expansion/references/scene_04__A008++seq__f93352845016c27d0fdc__2023-05-09-19-52-25__O02@0025@00001__right__stage1__f2288/metadata.json",
+      "source_sequence_id": "scene_04__A008++seq__f93352845016c27d0fdc__2023-05-09-19-52-25",
+      "reference_workflow": "MANO original finger actions preserved, wrist approach only rebuilt before retarget"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "spec": {
+    "protocol": "agent_bench_v1",
+    "episode_id": "46a9aa3b126f4b7c8f4022ca3f2be888",
+    "agent_id": "codex_no_pose_library",
+    "agent_version": "1",
+    "agent_config_sha256": "f84066d888e05d0ac9b19ff060b6b988d503825cea91fb4ce1cd074230dfe60f",
+    "task_id": "remote_operation",
+    "task_release_sha256": "e8a5e644015914e8ca6c0d6e696d9f0371ee4c8a801eb0404cb3b6e01753a6f1",
+    "evaluator_sha256": "d62133962b641c799cd3385aa27a33587bc87b5fa9b3e3b74f4dfce08bcf87d8",
+    "robot_id": "sharpa_w01_right",
+    "robot_asset_sha256": "36e7370339cc5a61035fd9f1b057324580b7b4a8286caeaa95c9eb4cf890aed4",
+    "physics_profile_sha256": "9adf1d10a8bff1c35a021e0e1a58239e2027cf5adececb1824959404927b3878",
+    "scene_variant": "original_v1",
+    "scene_sha256": "6ed22fd6bfd16d785478f773e877d2f10a7bce9ae4e402129cedc9bf854c691a",
+    "runtime_code_sha256": "48e8cbd4a7801c750dc374ccb6e8aa4c963b1bc6b77b97170d0cf3940f75f843",
+    "sensor_config_sha256": "42e17332a2de33de298f411cdd621b3ff9a731719ec13b721cec4ed34f13ba30",
+    "execution_environment_sha256": "511ef97818813788421d32b3a5e04b331e2e778f56f9652111973860cdf254f9",
+    "seed": 0,
+    "track": "free_tool_agent",
+    "observation_profile": "vision_proprio",
+    "execution_mode": "pause_physics_during_agent",
+    "instruction": "Task1 · 遥控电视开关机。用机器人手指完整按下并松开红色电源键开启电视；允许遥控器放在桌面或收纳架上，也允许拿在手中操作。电视显示10秒倒计时，到时自动关机。最后将遥控器按正确朝向放回收纳架，松手稳定至少0.300秒。",
+    "budgets": {
+      "sim_time_s": 120.0,
+      "wall_time_s": 1800.0,
+      "max_actions": 6000,
+      "max_model_calls": 256,
+      "max_action_sim_s": 5.0
+    },
+    "system0": {
+      "policy_id": "classical_fingertip",
+      "version": "1.9.0",
+      "implementation_sha256": "4524df8364f8cf209d73084646a5ae8760cccea8b374501632761a017070fac2",
+      "weights_sha256": null,
+      "trained": false,
+      "observation_profile": "vision_proprio",
+      "skills": [
+        "move_geometry",
+        "hold"
+      ],
+      "control_period_s": 0.02,
+      "geometry_inputs": [
+        "wrist_pose",
+        "fingertip_positions",
+        "hand_posture"
+      ],
+      "force_objectives": false,
+      "camera_observation_mode": "decision_only",
+      "supported_robot_ids": [
+        "sharpa_w01_right"
+      ],
+      "robot_posture_profile": {
+        "profile_id": "sharpa_dip_pip_v1",
+        "max_distal_minus_proximal_rad": 0.5,
+        "joint_pairs": [
+          {
+            "proximal_joint": "right_index_PIP",
+            "distal_joint": "right_index_DIP"
+          },
+          {
+            "proximal_joint": "right_middle_PIP",
+            "distal_joint": "right_middle_DIP"
+          },
+          {
+            "proximal_joint": "right_ring_PIP",
+            "distal_joint": "right_ring_DIP"
+          },
+          {
+            "proximal_joint": "right_pinky_PIP",
+            "distal_joint": "right_pinky_DIP"
+          }
+        ],
+        "scope": "requested_finger_goals_only",
+        "measured_state_projected": false,
+        "unselected_fingers": "preserve",
+        "grasp_success_guarantee": false
+      },
+      "hand_goal_semantics": {
+        "protocol": "accepted_hand_goal_retention_v2",
+        "scope": "move_geometry_and_hold",
+        "selected_fingers": "explicit_tip_keys_union_hand_posture_joint_chains",
+        "normal_omission": "previous_accepted_goal_or_persistent_fixed_drive",
+        "initial_omission": "measured_reference",
+        "recovery_omission": "committed_continuous_stop_fixed_drive_without_pi",
+        "selected_partial_posture_omission": "measured_reference",
+        "wrist_omission": "current_measured_pose",
+        "selected_tip_ik": "verified_position_may_change_redundant_joint_solution",
+        "simultaneous_tip_posture": "same_chain_posture_is_ik_reference_not_joint_objective",
+        "recovery_hold": "all_controlled_joints_fixed_drive",
+        "geometry_arm": "resume_tracking_requested_or_measured_wrist",
+        "fixed_hand_exit": "successful_explicit_chain_reselection_only",
+        "rejected_begin": "all_goal_mode_anchor_and_pending_state_unchanged",
+        "completion": {
+          "wrist": "requested_or_measured_maintained_pose",
+          "fingertips": "explicit_tip_fk_at_advertised_tolerance",
+          "joint_posture": "explicit_entries_on_chains_without_simultaneous_tip",
+          "unselected_hand": "maintenance_only_not_joint_completion",
+          "reference": "all_acknowledged_command_velocities_stationary"
+        },
+        "measured_reference": {
+          "epsilon_rad": 0.03,
+          "scope": "simulation_internal_reference_eligibility_not_hardware_safety",
+          "raw_feedback_projected": false,
+          "emitted_targets": "strict_urdf_bounds"
+        },
+        "feedback_protocol": "robot_execution_state_v1"
+      },
+      "geometry_tolerance_policy": {
+        "protocol": "geometry_tolerance_policy_v2",
+        "wrist_position_completion_cap_m": 0.003,
+        "wrist_orientation_completion_cap_rad": 0.04,
+        "fingertip_completion_m": 0.0015,
+        "joint_posture_completion_rad": 0.03,
+        "ik_verification_scale": 0.5,
+        "wrist_rule": "minimum_of_request_and_controller_cap",
+        "fingertip_ik_acceptance_m": 0.001,
+        "wrist_settle_speed_m_s": 0.002,
+        "stall_window_s": 0.3
+      },
+      "direct_control_handoff": {
+        "protocol": "acknowledged_direct_handoff_v1",
+        "direct_execution": "native_joint_target_bypass",
+        "direct_qva_smoothing": false,
+        "reentry_reference": "last_acknowledged_drive_and_discrete_velocity",
+        "unknown_velocity": "reject_classical_until_two_consecutive_command_acks",
+        "stale_goals": "replace_with_direct_drive_fixed_reference",
+        "integral": "freeze_until_continuous_stop_then_clear",
+        "reentry_limits": "original_classical_qva_and_braking_viability"
+      },
+      "hold_modes": [
+        "reference",
+        "acknowledged_drive"
+      ]
+    },
+    "split": "development"
+  },
+  "outcome": "infrastructure_error",
+  "elapsed_sim_s": 32.239999999971914,
+  "elapsed_wall_s": 1800.00143373,
+  "model_latency_s": 0.0,
+  "model_calls": 0,
+  "model_accounting": "unavailable",
+  "action_attempts": 18,
+  "completion_sim_s": null,
+  "completion_wall_s": null,
+  "physics_valid": false,
+  "evaluator_evidence_sha256": "9a5d19e30e7de72ed477c1b7331691b16d5e0522e0345b9c71dcf7fdec04b133",
+  "failure_detail": ""
+}

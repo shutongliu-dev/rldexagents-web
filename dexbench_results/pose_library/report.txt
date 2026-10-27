@@ -1,0 +1,39 @@
+DexBench 五任务评测：固定 hand pose library 允许
+本轮使用 dex_agent 固定手势和参考姿态，包含显式缩放/指尖几何调整；未使用 RAX。
+确认成功 0/5；两项创建失败，三项实际执行后终止。
+
+01 滑轮皮带装配: startup_error
+创建回合失败，没有返回 episode_id，未执行动作。
+仿真时间=None s；墙钟时间=None s；动作尝试=0；physics_valid=None
+
+02 样本瓶开盖与复盖: startup_error
+创建回合失败，没有返回 episode_id，未执行动作。
+仿真时间=None s；墙钟时间=None s；动作尝试=0；physics_valid=None
+
+03 调味品与干货分类归位: infrastructure_error
+图像观察到盐罐被抓起并放入奶油色收纳箱；后续接近红色调料罐时结束，未完成全部分类。
+仿真时间=22.399999999993145 s；墙钟时间=1800.0012167669993 s；动作尝试=16；physics_valid=False
+
+04 木质平面四连棋: infrastructure_error
+公开棋局状态确认黑棋成功落子 1 次；白棋已搬运但未提交，未形成四连。
+仿真时间=32.499999999973156 s；墙钟时间=1800.0345992859984 s；动作尝试=18；physics_valid=False
+
+05 遥控电视开关机: infrastructure_error
+图像观察到电视开启并倒计时，随后关闭；最后一次抬手后遥控器仍在桌上，未放回收纳架。
+仿真时间=30.779999999973615 s；墙钟时间=1800.041536732002 s；动作尝试=17；physics_valid=False
+
+环境结果说明：
+01、02 返回 Native service failed; operator diagnostics are private。未取得回合 ID，也未重试。
+03、04、05 均返回 infrastructure_error、physics_valid=false，墙钟时间均达到 1800 秒预算；failure_detail 为空。04 棋局另外明确报告 time_limit。
+上述局部进展来自本轮公开图像或棋局状态，不代表环境判定任务成功。
+恢复时 05 已终止，依照不重启本轮的规则仅补齐结果记录。
+
+操作与限制：
+未改变任务、评分、物理参数或预算，未重置回合。
+01 整个运行目录、02 episodes 目录在创建前做过存储迁移；其后创建失败。03–05 活动期间保留原目录。公开诊断不足以确认迁移是否为故障原因。
+本地限位曾因约 5e-9 rad 浮点误差拒绝 C0 rank 1/12。精度修复在物理动作结束后完成，本轮尚未验证修复后的仿真效果。
+API model_calls 为 0 且 model_accounting 为 unavailable，不能据此声称没有模型调用。
+
+记录：*_result.json 原始终局结果；http.jsonl 完整接口记录；actions.jsonl 动作提交/拒绝/最后状态；library_calls.jsonl 手势调用；PNG/NPY 公开 RGB-D。
+录像：03、04、05 均经 ffprobe 验证存在 H.264 1920×1080 视频流；这是文件格式核验，未逐帧解码验收。录像时长不是仿真时间。路径见各 *_video_verification.json。
+汇总：summary.json、results.csv；生成脚本 summarize.py。

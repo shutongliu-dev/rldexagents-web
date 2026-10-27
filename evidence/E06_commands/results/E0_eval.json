@@ -1,0 +1,702 @@
+[
+  {
+    "lift_success": true,
+    "lift_time_s": 2.4,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.010833333333333334,
+    "peak_tip_force_N": 24.3502197265625,
+    "max_lift_m": 0.2582297921180725,
+    "finite": true,
+    "task": 0,
+    "key": "dexycb_lifted/dexycb_01_right_024_bowl_20200709_150613_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 0
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.3333333333333335,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.021666666666666667,
+    "peak_tip_force_N": 23.33513641357422,
+    "max_lift_m": 0.2927864193916321,
+    "finite": true,
+    "task": 1,
+    "key": "dexycb_lifted/dexycb_07_right_009_gelatin_box_20200928_145424_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 0
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2,
+    "drop_after_lift": true,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.011666666666666667,
+    "peak_tip_force_N": 26.48303985595703,
+    "max_lift_m": 0.39069944620132446,
+    "finite": true,
+    "task": 2,
+    "key": "dexycb_fixed/dexycb_08_right_061_foam_brick_20201002_113031_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 0
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.1,
+    "drop_after_lift": true,
+    "hold_1s_success": true,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.005,
+    "peak_tip_force_N": 22.987627029418945,
+    "max_lift_m": 0.5215243101119995,
+    "finite": true,
+    "task": 3,
+    "key": "dexycb_fixed/dexycb_03_right_007_tuna_fish_can_20200820_140823_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 0
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2666666666666666,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.010833333333333334,
+    "peak_tip_force_N": 32.492218017578125,
+    "max_lift_m": 0.26978036761283875,
+    "finite": true,
+    "task": 4,
+    "key": "dexycb_lifted/dexycb_05_right_011_banana_20200908_145748_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 0
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2333333333333334,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.31416666666666665,
+    "peak_tip_force_N": 61.64938735961914,
+    "max_lift_m": 0.3652465343475342,
+    "finite": true,
+    "task": 5,
+    "key": "dexycb_lifted/dexycb_02_right_002_master_chef_can_20200813_145612_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 1
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2666666666666666,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.10416666666666667,
+    "peak_tip_force_N": 54.74140167236328,
+    "max_lift_m": 0.3227648138999939,
+    "finite": true,
+    "task": 6,
+    "key": "dexycb_lifted/dexycb_01_right_009_gelatin_box_20200709_144429_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 1
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2333333333333334,
+    "drop_after_lift": true,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 12.989110946655273,
+    "max_lift_m": 0.32019728422164917,
+    "finite": true,
+    "task": 7,
+    "key": "dexycb_lifted/dexycb_01_right_004_sugar_box_20200709_142802_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 1
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 12.437845230102539,
+    "max_lift_m": 0.027220480144023895,
+    "finite": true,
+    "task": 8,
+    "key": "dexycb_fixed/dexycb_03_right_025_mug_20200820_143504_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 1
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.533333333333333,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.010833333333333334,
+    "peak_tip_force_N": 41.87113571166992,
+    "max_lift_m": 0.2767537832260132,
+    "finite": true,
+    "task": 9,
+    "key": "dexycb_lifted/dexycb_01_right_011_banana_20200709_145401_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 2
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2333333333333334,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.0175,
+    "peak_tip_force_N": 30.02935218811035,
+    "max_lift_m": 0.401653915643692,
+    "finite": true,
+    "task": 10,
+    "key": "dexycb_lifted/dexycb_04_right_008_pudding_box_20200903_105238_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 2
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.466666666666667,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.12916666666666668,
+    "peak_tip_force_N": 59.89973068237305,
+    "max_lift_m": 0.29175734519958496,
+    "finite": true,
+    "task": 11,
+    "key": "dexycb_fixed/dexycb_01_right_035_power_drill_20200709_151415_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 2
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2333333333333334,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.17,
+    "peak_tip_force_N": 71.15776824951172,
+    "max_lift_m": 0.3613809645175934,
+    "finite": true,
+    "task": 12,
+    "key": "dexycb_lifted/dexycb_02_right_025_mug_20200813_153839_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 2
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 5.6415019035339355,
+    "max_lift_m": 0.004927929490804672,
+    "finite": true,
+    "task": 13,
+    "key": "dexycb_fixed/dexycb_07_right_007_tuna_fish_can_20200928_144714_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 2
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2,
+    "drop_after_lift": true,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 16.184019088745117,
+    "max_lift_m": 0.24409860372543335,
+    "finite": true,
+    "task": 14,
+    "key": "dexycb_lifted/dexycb_04_right_003_cracker_box_20200903_103904_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 3
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2666666666666666,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.025,
+    "peak_tip_force_N": 43.986366271972656,
+    "max_lift_m": 0.32504692673683167,
+    "finite": true,
+    "task": 15,
+    "key": "dexycb_fixed/dexycb_07_right_009_gelatin_box_20200928_145308_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 3
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0033333333333333335,
+    "peak_tip_force_N": 21.510778427124023,
+    "max_lift_m": 0.017941758036613464,
+    "finite": true,
+    "task": 16,
+    "key": "dexycb_fixed/dexycb_06_right_010_potted_meat_can_20200918_114814_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 3
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 0.0,
+    "max_lift_m": 0.005144782364368439,
+    "finite": true,
+    "task": 17,
+    "key": "dexycb_fixed/dexycb_02_right_005_tomato_soup_can_20200813_150535_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 3
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 2.755964994430542,
+    "max_lift_m": -0.0005149506032466888,
+    "finite": true,
+    "task": 18,
+    "key": "dexycb_lifted/dexycb_07_right_011_banana_20200928_145724_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 3
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.01,
+    "peak_tip_force_N": 64.61896514892578,
+    "max_lift_m": 0.2435111105442047,
+    "finite": true,
+    "task": 19,
+    "key": "dexycb_fixed/dexycb_09_right_009_gelatin_box_20201015_144510_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 4
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.5666666666666664,
+    "drop_after_lift": true,
+    "hold_1s_success": true,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.004166666666666667,
+    "peak_tip_force_N": 22.8529052734375,
+    "max_lift_m": 0.24021267890930176,
+    "finite": true,
+    "task": 20,
+    "key": "dexycb_fixed/dexycb_05_right_004_sugar_box_20200908_143905_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 4
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.3,
+    "drop_after_lift": true,
+    "hold_1s_success": true,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.034166666666666665,
+    "peak_tip_force_N": 47.466331481933594,
+    "max_lift_m": 0.3149925768375397,
+    "finite": true,
+    "task": 21,
+    "key": "dexycb_lifted/dexycb_02_right_007_tuna_fish_can_20200813_151117_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 4
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 14.906228065490723,
+    "max_lift_m": 0.0588001012802124,
+    "finite": true,
+    "task": 22,
+    "key": "dexycb_lifted/dexycb_06_right_021_bleach_cleanser_20200918_115517_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 4
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2666666666666666,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.18416666666666667,
+    "peak_tip_force_N": 45.209632873535156,
+    "max_lift_m": 0.32359322905540466,
+    "finite": true,
+    "task": 23,
+    "key": "dexycb_fixed/dexycb_01_right_025_mug_20200709_151032_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "general",
+    "grasp_id": 5
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.3333333333333335,
+    "drop_after_lift": true,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 13.712388038635254,
+    "max_lift_m": 0.18553262948989868,
+    "finite": true,
+    "task": 24,
+    "key": "dexycb_lifted/dexycb_01_right_024_bowl_20200709_150906_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 5
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.2666666666666666,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.13583333333333333,
+    "peak_tip_force_N": 33.20504379272461,
+    "max_lift_m": 0.3280855119228363,
+    "finite": true,
+    "task": 25,
+    "key": "dexycb_fixed/dexycb_02_right_008_pudding_box_20200813_151204_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 5
+  },
+  {
+    "lift_success": false,
+    "lift_time_s": null,
+    "drop_after_lift": false,
+    "hold_1s_success": false,
+    "hold_5s_success": false,
+    "force_over_20N_fraction": 0.0,
+    "peak_tip_force_N": 0.0,
+    "max_lift_m": 3.5688281059265137e-06,
+    "finite": true,
+    "task": 26,
+    "key": "dexycb_fixed/dexycb_10_right_009_gelatin_box_20201022_112409_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 5
+  },
+  {
+    "lift_success": true,
+    "lift_time_s": 2.6,
+    "drop_after_lift": false,
+    "hold_1s_success": true,
+    "hold_5s_success": true,
+    "force_over_20N_fraction": 0.034166666666666665,
+    "peak_tip_force_N": 29.136676788330078,
+    "max_lift_m": 0.2581052780151367,
+    "finite": true,
+    "task": 27,
+    "key": "dexycb_lifted/dexycb_05_right_035_power_drill_20200908_151058_00",
+    "case": 0,
+    "perturbation": {
+      "kind": "nominal",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    "teacher": "object",
+    "grasp_id": 5
+  }
+]

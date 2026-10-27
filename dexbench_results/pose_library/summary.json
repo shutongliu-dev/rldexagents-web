@@ -1,0 +1,168 @@
+{
+  "configuration": {
+    "seed": 0,
+    "hand_pose_library": "dex_agent fixed gestures",
+    "controller": "public HTTP",
+    "rax_used": false
+  },
+  "confirmed_successes": 0,
+  "episode_creation_failures": 2,
+  "executed_episodes": 3,
+  "default_budgets_unchanged": true,
+  "tasks": [
+    {
+      "task": "01",
+      "name": "滑轮皮带装配",
+      "episode_id": null,
+      "outcome": "startup_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": null,
+      "elapsed_wall_s": null,
+      "action_attempts": 0,
+      "physics_valid": null,
+      "progress": "创建回合失败，没有返回 episode_id，未执行动作。",
+      "result_file": "01_result.json"
+    },
+    {
+      "task": "02",
+      "name": "样本瓶开盖与复盖",
+      "episode_id": null,
+      "outcome": "startup_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": null,
+      "elapsed_wall_s": null,
+      "action_attempts": 0,
+      "physics_valid": null,
+      "progress": "创建回合失败，没有返回 episode_id，未执行动作。",
+      "result_file": "02_result.json"
+    },
+    {
+      "task": "03",
+      "name": "调味品与干货分类归位",
+      "episode_id": "decfa40bd89948a29c34b49b78bcb33e",
+      "outcome": "infrastructure_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": 22.399999999993145,
+      "elapsed_wall_s": 1800.0012167669993,
+      "action_attempts": 16,
+      "physics_valid": false,
+      "progress": "图像观察到盐罐被抓起并放入奶油色收纳箱；后续接近红色调料罐时结束，未完成全部分类。",
+      "result_file": "03_result.json",
+      "video": {
+        "path": "/data/ruoqu/dexbench_20261027_pose_library/20261027_045317_736216_03/episodes/decfa40bd89948a29c34b49b78bcb33e/private/demo_recording/demo.mp4",
+        "returncode": 0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "1736.150000",
+            "size": "53803617"
+          }
+        },
+        "error": ""
+      }
+    },
+    {
+      "task": "04",
+      "name": "木质平面四连棋",
+      "episode_id": "7141c79b3d464cf7af3389f9f5a397df",
+      "outcome": "infrastructure_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": 32.499999999973156,
+      "elapsed_wall_s": 1800.0345992859984,
+      "action_attempts": 18,
+      "physics_valid": false,
+      "progress": "公开棋局状态确认黑棋成功落子 1 次；白棋已搬运但未提交，未形成四连。",
+      "result_file": "04_result.json",
+      "board_state": {
+        "protocol": "bench_board_game_state_v1",
+        "task_id": "connect_four_5x5",
+        "turn_index": 1,
+        "current_player": null,
+        "terminal": true,
+        "winner": null,
+        "draw": false,
+        "pending_move": {
+          "player_id": "player_1",
+          "piece_id": "white_00",
+          "q": 1,
+          "r": 3,
+          "turn_index": 1,
+          "attempt_index": 2
+        },
+        "status": {
+          "outcome": "truncated",
+          "end_reason": "time_limit",
+          "recovery_required": false,
+          "evidence_unavailable": false,
+          "reason": "piece_not_at_board_height",
+          "retryable": false
+        },
+        "settlement_dwell_s": 0.0,
+        "commit_count": 1
+      },
+      "video": {
+        "path": "/data/ruoqu/dexbench_20261027_pose_library/20261027_052527_143446_04/episodes/7141c79b3d464cf7af3389f9f5a397df/private/demo_recording/demo.mp4",
+        "returncode": 0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "1805.050000",
+            "size": "62042500"
+          }
+        },
+        "error": ""
+      }
+    },
+    {
+      "task": "05",
+      "name": "遥控电视开关机",
+      "episode_id": "b76c4a97fa084c9ab7c753f559160d64",
+      "outcome": "infrastructure_error",
+      "confirmed_success": false,
+      "elapsed_sim_s": 30.779999999973615,
+      "elapsed_wall_s": 1800.041536732002,
+      "action_attempts": 17,
+      "physics_valid": false,
+      "progress": "图像观察到电视开启并倒计时，随后关闭；最后一次抬手后遥控器仍在桌上，未放回收纳架。",
+      "result_file": "05_result.json",
+      "video": {
+        "path": "/home/ruoqu/crq_ws/dexx/dex_interface_bench/dexbench-selected-runs/20261027_055728_677372_05/episodes/b76c4a97fa084c9ab7c753f559160d64/private/demo_recording/demo.mp4",
+        "returncode": 0,
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1920,
+              "height": 1080
+            }
+          ],
+          "format": {
+            "duration": "1805.500000",
+            "size": "101066745"
+          }
+        },
+        "error": ""
+      }
+    }
+  ],
+  "model_accounting": "unavailable; API model_calls=0 does not measure actual agent calls",
+  "library_usage": "dex_agent fixed families and cluster references; explicit scaled joint targets and fingertip adaptations were also used",
+  "precision_fix": "Applied after all physical actions; CPU tests passed, not exercised in this simulation round.",
+  "storage_note": "Task 01 run directory and task 02 episodes directory were relocated before creation; both creations failed. Tasks 03–05 kept the original layout while active. Causality was not established through public diagnostics.",
+  "resume_note": "Public result queried on resume: task 05 is terminal at 1800.041536732002 wall seconds; no reset, restart, or further motion was performed."
+}

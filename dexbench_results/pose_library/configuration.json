@@ -1,0 +1,6 @@
+{
+  "seed": 0,
+  "hand_pose_library": "dex_agent fixed gestures",
+  "controller": "public HTTP",
+  "rax_used": false
+}

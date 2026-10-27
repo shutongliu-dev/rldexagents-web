@@ -1,0 +1,6 @@
+{
+  "updates": 300,
+  "elapsed_s": 996.3248407840729,
+  "checkpoint": "/mnt/cpfs/workspace/rq_ws/outputs/link_near_cluster_distill_20261026/mixed_ppo_v1/final/student.pt",
+  "complete": true
+}

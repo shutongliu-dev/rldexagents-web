@@ -1,0 +1,34 @@
+/* Shared DEX-X identity for the interactive supplementary pages. */
+@import url('template-fonts.css');
+:root{--paper:#fdfaf4;--ink:#1b1b1b;--muted:#555;--line:#ccc;--accent:#1b1b1b;background:#fdfaf4;color:#1b1b1b;font-family:'Playfair Display',Georgia,'Times New Roman',serif}body{background:#fdfaf4;color:#1b1b1b}.hero{background:#fdfaf4;color:#1b1b1b;padding-top:60px}.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:700}.hero h1 em,.hero .eyebrow,.hero .lead,.stats span{color:#555}.eyebrow,.badge,nav,button,select,input,figcaption,.mono,code,table,.hint,.medoid,.axisnote,.stats,.control,.checkrow,.detail,.legend{font-family:'Roboto Mono',monospace}.stats{border-top-color:#ccc}.stats strong{color:#1b1b1b}.hero .eyebrow{color:#8a5b2a}nav{background:#fdfaf4;border-color:#ccc;backdrop-filter:none}a,nav a,summary{color:#1b1b1b}main{max-width:1100px}section{border-color:#ccc}.section-title{margin-bottom:25px}.section-title h2{font:400 22px/1.5 'Roboto Mono',monospace;background:#000;color:#fff;padding:8px 16px}.section-title>span{color:#777}.note,.takeaway{background:rgba(27,27,27,.03);border:1.5px solid #1b1b1b;border-radius:15px;font-weight:400}button,.downloads a{background:#1b1b1b;color:#fdfaf4;border:1.5px solid #1b1b1b;border-radius:999px}button:hover,.downloads a:hover{background:#fdfaf4;color:#1b1b1b}select,input{border-color:#aaa;color:#1b1b1b;background:#fdfaf4}.selected,.cluster-card,.demo-card,.conclusions article,details{background:#fdfaf4;border-color:#aaa;border-radius:15px}.badge{background:#eae5da;color:#333}.tablewrap{background:#fdfaf4;border-color:#ccc}th{background:#ece7de}tbody tr:hover{background:#f3eee4}iframe{border:1.5px solid #1b1b1b;border-radius:15px}.highlight{outline-color:#8a5b2a}.demo-card video{background:#000}header{background:#fdfaf4;border-color:#ccc}header h1{font-family:'Playfair Display',Georgia,serif;font-size:28px}header p{color:#555}.card,.control{background:#fdfaf4;border-color:#ccc;box-shadow:none}.control label,.hint,.medoid,.axisnote{color:#666}.control select{background:#fdfaf4;color:#1b1b1b}.checkrow label{border-color:#ccc}.detail .key{color:#1b1b1b}.tooltip{background:#1b1b1b}.chart canvas{background:#fdfaf4}input[type=checkbox]{accent-color:#1b1b1b}
+.demo-snapshots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:15px}.demo-snapshots img{width:100%;display:block;border-radius:5px}.demo-snapshots small{font:10px 'Roboto Mono',monospace;color:#555}.demo-snapshots a{min-width:0}
+
+/* Keep the manifold's wide source table inside its sidebar card. */
+.side{min-width:0}
+.side>.card{box-sizing:border-box;min-width:0;max-width:100%}
+#crossTable{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
+#crossTable table{min-width:680px}
+#crossTable:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* Selected-sample details: compact identifiers, then readable metadata. */
+.sample-card{padding:18px}
+.sample-card>h2{margin-bottom:16px!important}
+#detail{min-height:0;font:13px/1.55 system-ui,-apple-system,'Segoe UI',sans-serif}
+#detail .sample-key{margin-bottom:12px;font:500 12px/1.6 'Roboto Mono',monospace;overflow-wrap:anywhere;color:var(--ink)}
+.sample-tags{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:18px}
+.sample-tag{display:inline-flex;align-items:center;padding:3px 9px;border:1px solid #ddd6ca;border-radius:999px;font-size:11px;line-height:1.5;background:#f1ece3}
+.sample-tag-cluster{font-family:'Roboto Mono',monospace;font-weight:600}
+.sample-object{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.sample-object strong{color:var(--ink);font-weight:500}
+.sample-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;margin:0}
+.sample-field{min-width:0}
+.sample-field-wide{grid-column:1/-1}
+.sample-fields dt{margin:0 0 3px;color:#777;font-size:10px;line-height:1.5;letter-spacing:.035em}
+.sample-fields dd{margin:0;color:var(--ink);font-size:12px;line-height:1.55;overflow-wrap:anywhere}
+.sample-fields .sample-mono{font:11px/1.65 'Roboto Mono',monospace;font-variant-numeric:tabular-nums}
+#medoids{margin-top:18px;padding-top:14px;border-top:1px solid #ded8ce}
+.sample-medoid-label{display:block;margin-bottom:9px;font:11px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif;color:#777}
+.sample-medoid-links{display:flex;flex-wrap:wrap;gap:7px}
+#medoids a{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:32px;min-height:28px;padding:3px 7px;border:1px solid #d8d1c5;border-radius:6px;color:var(--ink);font:11px/1.4 'Roboto Mono',monospace;text-decoration:none;transition:background .15s,border-color .15s}
+#medoids a:hover{background:#eae3d7;border-color:#a79b87}
+#medoids a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}

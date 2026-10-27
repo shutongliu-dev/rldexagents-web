@@ -1,0 +1,13 @@
+三轮 DexBench 实验结果
+
+每轮目录包含：
+report.txt：中文实验报告。
+results.csv：五任务结果表。
+summary.json：详细结果、指标及原始记录/录像位置。
+01_result.json 至 05_result.json：原始终局结果；创建失败的任务保存创建错误。
+configuration.json、record_check.json 等文件按原实验实际存在情况复制。
+
+视频副本位于 ../dexbench_videos/ 对应实验目录。summary.json 保留原始路径，不改写原始结果。
+三轮均无完整任务成功判定；固定手势库轮01、02未创建成功，其余回合最终physics_valid=false。局部进展不能替代整体成功判定。
+全部工具轮04录像恢复说明见 all_tools/04_recording_recovery.json。
+原始大体积HTTP、动作日志和RGB-D留在 experiments/20261027_five_tasks_*，本目录收录报告与结果。

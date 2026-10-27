@@ -1,0 +1,33 @@
+/* Report-specific additions to the original local DEX-X template. */
+h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margin:0 0 24px;color:var(--fg-muted);font-style:italic}.report-hero>figure{margin:25px 0 30px}.report-hero>figure>img{width:100%;display:block;border:1.5px solid var(--fg);border-radius:15px;background:white}.report-hero .figure-caption{margin-bottom:25px}.section p{margin:0 0 22px}.section h2.tagline{font-weight:400;line-height:1.5;max-width:100%;margin:40px 0 28px}.section h3{font-family:var(--serif);font-size:26px;font-weight:700;line-height:1.4;margin:32px 0 20px}.section a{color:var(--fg);text-underline-offset:4px}.section li{margin-bottom:8px}.section ul{padding-left:25px}.section code,.section pre{font-family:var(--mono);font-size:13px;overflow-wrap:anywhere}.section pre{white-space:pre-wrap;background:rgba(27,27,27,.03);border:1.5px solid var(--fg);border-radius:15px;padding:22px;line-height:1.65}.section table{width:100%;border-collapse:collapse;font:12px/1.6 var(--mono);border-top:1.5px solid var(--fg);border-bottom:1.5px solid var(--fg);margin:24px 0 12px}.section th,.section td{text-align:left;vertical-align:top;padding:10px 8px}.section thead{border-bottom:1px solid var(--fg)}.section tbody tr+tr{border-top:1px solid #dedbd4}.section table+p{font:13px/1.7 var(--mono);color:var(--fg-muted);margin-bottom:35px}.section figure{margin:25px 0 35px}.section figure>img{width:100%;height:auto;display:block;background:white;border:1.5px solid var(--fg);border-radius:15px}.figure-caption{font-size:12px;overflow-wrap:anywhere}.equation{text-align:center;overflow-x:auto;margin:25px 0 30px}.equation img{height:46px;width:auto;max-width:none}.citation{font-family:var(--mono);font-size:11px;white-space:nowrap}.interactive-evidence{border-top:1px solid var(--rule);padding-top:10px;margin-top:35px}.interactive-evidence>p{font:13px/1.7 var(--mono);color:var(--fg-muted)}.interactive-evidence iframe{width:100%;height:1000px;border:1.5px solid var(--fg);border-radius:15px;background:var(--bg)}.video-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.video-grid figure{margin:0}.video-grid video{aspect-ratio:16/10;object-fit:contain}.toc{top:130px;max-height:calc(100vh - 160px);overflow-y:auto;scrollbar-width:thin}.toc a{font-size:11px}.toc li{margin-bottom:10px}.toc h3{font-size:24px}.footer{font-size:12px}
+@media(min-width:1400px){.toc{left:max(24px,calc((100vw - 960px)/2 - 210px));width:175px}}
+@media(max-width:900px){.report-subtitle{font-size:18px}.section h3{font-size:23px}.section h2.tagline{font-size:19px}.video-grid{grid-template-columns:1fr}.interactive-evidence iframe{height:900px}}
+@media(max-width:600px){body{padding:30px 18px}.hero-text{font-size:43px}.sub-hero-text{font-size:26px}.authors{font-size:12px}.venue{font-size:12px}.link-pill{font-size:12px;padding:10px 15px}.section table{display:block;overflow-x:auto;font-size:11px}.section th,.section td{min-width:90px}.figure-caption{padding:0;font-size:11px}.equation img{height:34px}}
+@media print{body{padding:0;background:white}.toc,.quick-links,.interactive-evidence{display:none}.main-content{max-width:none}.section{font-size:10pt;line-height:1.45}.hero-text{font-size:32pt}.sub-hero-text{font-size:20pt}.section h2.tagline{font-size:14pt;margin:20px 0}figure,table{break-inside:avoid}figure img{max-height:220px;object-fit:contain}.figure-caption{font-size:8pt}.footer{font-size:8pt}}
+/* Optional interactive details preserve the short research narrative. */
+.interactive-evidence,.demo-playback{border:1px solid var(--rule);border-radius:12px;padding:14px 18px;margin:25px 0 35px}.interactive-evidence summary,.demo-playback summary{font:13px/1.6 var(--mono);cursor:pointer}.interactive-evidence[open] summary,.demo-playback[open] summary{margin-bottom:18px}.demo-playback>p,.demo-playback .video-grid p{font:12px/1.6 var(--mono);overflow-wrap:anywhere;margin-top:10px}.demo-playback .video-grid{margin-bottom:15px}.demo-playback small{font-size:10px}.interactive-evidence iframe{height:1000px}@media print{.demo-playback{display:none}}
+.report-hero>figure>a{display:block}.report-hero>figure>a>img{display:block;width:100%;height:auto;border:1.5px solid var(--fg);border-radius:15px;background:white;cursor:zoom-in}
+.cluster-rollout h4{font:14px/1.5 var(--mono);margin:0 0 8px}.cluster-rollout>a{font:11px var(--mono)}
+
+/* Let the interface diagram sit directly on the paper background. */
+.section figure>img[src*="main03_distillation"]{background:transparent;border:0;border-radius:0}
+.section figure>img[src*="main04_demonstrations"]{background:transparent;border:0;border-radius:0}
+
+/* Quiet editor styling in the same warm paper palette as the report. */
+.code-example{margin:26px 0 30px;overflow:hidden;border:1px solid #d8d0c2;border-radius:10px;background:#f3eee5}
+.code-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 20px;border-bottom:1px solid #e0d8cb;background:#eee8dd;line-height:1.5}
+.code-language{font:500 10px/1.5 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#686154}
+.code-caption{font:11px/1.5 var(--mono);color:#928777}
+.section .code-example pre{margin:0;padding:18px 22px 20px;overflow-x:auto;border:0;border-radius:0;background:transparent;white-space:pre;line-height:1.85;tab-size:4;scrollbar-width:thin;scrollbar-color:#c9bfaf transparent}
+.section .code-example code{display:block;padding:0;background:transparent;color:#35332e;font:13px/1.85 var(--mono);white-space:pre;overflow-wrap:normal;word-break:normal}
+.code-example .tok-string{color:#477163}
+.code-example .tok-number{color:#a16a36}
+.code-example .tok-function{color:#526c87}
+.code-example .tok-keyword{color:#80617c}
+.code-example .tok-comment{color:#8b8377;font-style:italic}
+.code-example ::selection{background:#ded4c2}
+@media(max-width:600px){.code-toolbar{padding:9px 15px}.section .code-example pre{padding:15px}.section .code-example code{font-size:12px}}
+@media print{.code-example{break-inside:avoid}.code-toolbar{padding:6px 12px}.section .code-example pre{padding:10px 12px}.section .code-example code{font-size:8pt}}
+
+/* Temporarily hide the document shortcut links; keep markup and files intact. */
+.report-hero .quick-links[hidden]{display:none}

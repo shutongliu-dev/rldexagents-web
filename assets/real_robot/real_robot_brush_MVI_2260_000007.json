@@ -1,0 +1,16 @@
+{
+  "source_video": "D:\\demos\\MVI_2260.MP4",
+  "timestamp_s": 7.0,
+  "source_fps": 25,
+  "frame_index_zero_based": 175,
+  "full_frame": "real_robot_brush_MVI_2260_000007_full.png",
+  "square_crop": "real_robot_brush_MVI_2260_000007_square.png",
+  "crop_xywh": [
+    600,
+    150,
+    850,
+    850
+  ],
+  "processing": "Direct frame extraction and rectangular crop only; no object or scene modification.",
+  "description": "Physical dexterous hand holding a wooden brush. This still illustrates hand posture, not a measured success rate."
+}

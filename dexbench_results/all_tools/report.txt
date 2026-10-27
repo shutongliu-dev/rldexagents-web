@@ -1,0 +1,45 @@
+DexBench 五任务评测：允许全部本地工具
+本轮新建五个回合，环境确认成功 0/5。所有回合 physics_valid=false，不作为有效成功成绩。
+允许 RAX、固定手势库等全部本地工具；实际使用公开 HTTP 控制、RGB-D/几何计算、IK、触觉、固定手势与参考姿态，未调用 RAX。
+本地限位精度修复已被本轮 C0 参考姿态解析和实际动作使用。
+
+01 滑轮皮带装配：infrastructure_error
+多次尝试夹持小带轮；首次抬升后带轮仍在台面，未完成带轮或皮带装配。
+仿真 16.44 秒；墙钟 1800.00 秒；动作尝试 9；physics_valid=False
+
+02 样本瓶开盖与复盖：safety_stop
+已接近岛台样本瓶；下降过程中环境 safety_stop，未开盖、复盖或归位。
+仿真 8.10 秒；墙钟 365.07 秒；动作尝试 4；physics_valid=False
+
+03 调味品与干货分类归位：infrastructure_error
+盐罐抓取失败并倒下；随后红椒粉罐被抓起，搬运途中环境终止，未完成分类。
+仿真 38.62 秒；墙钟 1750.44 秒；动作尝试 20；physics_valid=False
+
+04 木质平面四连棋：infrastructure_error
+裁判确认黑棋、白棋各落子一次（commit_count=2）；第二枚黑棋未提交，无赢家。
+仿真 39.24 秒；墙钟 1800.05 秒；动作尝试 26；physics_valid=False
+
+05 遥控电视开关机：infrastructure_error
+图像显示按键后电视开机并倒计时，后续关闭；遥控器抬起后曾滑落，重新侧向夹持后再次抬起，未归位。
+仿真 28.86 秒；墙钟 1800.03 秒；动作尝试 17；physics_valid=False
+
+环境终局解释：
+01、04、05 墙钟时间达到约 1800 秒；04 棋局明确返回 time_limit。
+02 返回 safety_stop，公开故障详情为空，不推断具体安全触发原因。
+03 在约 1750 秒返回 infrastructure_error，早于墙钟上限，公开故障详情为空，不能记为确定的预算耗尽。
+局部进展来自公开图像、机器人反馈和棋局状态，不代表整体任务成功。
+API model_accounting=unavailable；model_calls=0 不能用于声称没有模型调用。
+
+实验范围与记录：
+没有重置或重启同一回合，没有修改任务、资产、物理参数、评分或预算。
+默认预算：120 秒仿真、1800 秒墙钟、6000 次动作、256 次模型调用、单动作 5 秒。模型调用计量未接入。
+http.jsonl：完整公共接口请求与响应；actions.jsonl：动作提交、拒绝与最后观察状态；library_calls.jsonl：手势来源、边界精度归一化及目标值。
+*_result.json：原始终局结果；PNG/NPY：公开 RGB-D；runs.json：服务运行目录。
+summary.json、results.csv：结构化汇总；summarize.py：生成脚本。
+
+录像与存储说明：
+任务 04 的运行目录归档与后台录像合成并发，导致自动编码失败。这是本次记录处理的问题。
+已保留原始三路图像和原错误信息，将 4 张缺失、1 张损坏的合成帧仅用同帧原始 RGB 恢复，按原时间表重新编码 demo_recovered.mp4；未生成或插值仿真画面。
+录像恢复在任务04结束后读取了录制元数据；首帧中含 placed_count/required_count=null、success=false 字段，未将其用于机器人控制或结果判定。
+恢复脚本 recover_board_video.py；恢复记录 04_recording_recovery.json；残留目录保留作核对。
+各段视频位置和 ffprobe 结果见 *_video_verification.json。视频墙钟时长不等于仿真时间，格式核验不代表物理审计通过。

@@ -1,0 +1,16 @@
+﻿experiment,task,file,status,source
+无手势库,01,no_pose_library/task_01.mp4,已复制并核对大小,/home/ruoqu/crq_ws/dexx/dex_interface_bench/dexbench-selected-runs/20261027_015044_841217_01/episodes/5201ab70ec9d4a5aad6cc92aeebf33d1/private/demo_recording/demo.mp4
+无手势库,02,no_pose_library/task_02.mp4,已复制并核对大小,/home/ruoqu/crq_ws/dexx/dex_interface_bench/dexbench-selected-runs/20261027_022532_347672_02/episodes/472ffa411162447a85f4864c89da1274/private/demo_recording/demo.mp4
+无手势库,03,no_pose_library/task_03.mp4,已复制并核对大小,/home/ruoqu/crq_ws/dexx/dex_interface_bench/dexbench-selected-runs/20261027_030036_092640_03/episodes/cec092917605404a8ad4ca91b77cf096/private/demo_recording/demo.mp4
+无手势库,04,no_pose_library/task_04.mp4,已复制并核对大小,/home/ruoqu/crq_ws/dexx/dex_interface_bench/dexbench-selected-runs/20261027_031513_364459_04/episodes/6d5c9c462d4f43ecac99c77bbce76d68/private/demo_recording/demo.mp4
+无手势库,05,no_pose_library/task_05.mp4,已复制并核对大小,/home/ruoqu/crq_ws/dexx/dex_interface_bench/dexbench-selected-runs/20261027_033754_510844_05/episodes/46a9aa3b126f4b7c8f4022ca3f2be888/private/demo_recording/demo.mp4
+固定手势库,01,,无视频：回合创建失败,
+固定手势库,02,,无视频：回合创建失败,
+固定手势库,03,pose_library/task_03.mp4,已复制并核对大小,/data/ruoqu/dexbench_20261027_pose_library/20261027_045317_736216_03/episodes/decfa40bd89948a29c34b49b78bcb33e/private/demo_recording/demo.mp4
+固定手势库,04,pose_library/task_04.mp4,已复制并核对大小,/data/ruoqu/dexbench_20261027_pose_library/20261027_052527_143446_04/episodes/7141c79b3d464cf7af3389f9f5a397df/private/demo_recording/demo.mp4
+固定手势库,05,pose_library/task_05.mp4,已复制并核对大小,/home/ruoqu/crq_ws/dexx/dex_interface_bench/dexbench-selected-runs/20261027_055728_677372_05/episodes/b76c4a97fa084c9ab7c753f559160d64/private/demo_recording/demo.mp4
+全部工具,01,all_tools/task_01.mp4,已复制并核对大小,/data/ruoqu/dexbench_20261027_all_tools/20261027_064722_086887_01/episodes/5bff1ee5f10246fa81130901a4aac909/private/demo_recording/demo.mp4
+全部工具,02,all_tools/task_02.mp4,已复制并核对大小,/data/ruoqu/dexbench_20261027_all_tools/20261027_071857_154524_02/episodes/e2a0222334284bb1b80f13df2c8aaeaf/private/demo_recording/demo.mp4
+全部工具,03,all_tools/task_03.mp4,已复制并核对大小,/data/ruoqu/dexbench_20261027_all_tools/20261027_072558_106847_03/episodes/0992adeaba014da1af409b2d17bcde0f/private/demo_recording/demo.mp4
+全部工具,04,all_tools/task_04.mp4,已复制并核对大小；原始RGB恢复合成帧后重新编码版本,/data/ruoqu/dexbench_20261027_all_tools/20261027_075633_216805_04/episodes/76c7cbd8e8ae4d13a4ee6f383bd3d723/private/demo_recording/demo_recovered.mp4
+全部工具,05,all_tools/task_05.mp4,已复制并核对大小,/data/ruoqu/dexbench_20261027_all_tools/20261027_082839_364211_05/episodes/8b5f615f90ba4389aaa971651e3dccae/private/demo_recording/demo.mp4

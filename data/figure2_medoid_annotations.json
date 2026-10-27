@@ -1,0 +1,114 @@
+{
+  "method": "link_near_and_distance_joint",
+  "camera": {
+    "yaw": 0.72,
+    "pitch": 0.42
+  },
+  "source_palette": {
+    "DexCanvas": "#e76f51",
+    "DexterHand": "#7954a1",
+    "HOT3D": "#238a83",
+    "DexYCB": "#377eb8",
+    "OakInk": "#e5ad36",
+    "HRDexDB": "#8c564b",
+    "OakInk (wrist-adapted)": "#e377c2"
+  },
+  "medoids": [
+    {
+      "cluster": 0,
+      "medoid_index": 2259,
+      "key": "dexcanvas/traj_00016388#segment2",
+      "dataset": "DexCanvas",
+      "source_color": "#e76f51",
+      "pca_coordinates": [
+        -0.4261,
+        -1.0535,
+        0.3112
+      ],
+      "projected_xy": [
+        -0.030890833620226404,
+        -0.3143990781814516
+      ]
+    },
+    {
+      "cluster": 1,
+      "medoid_index": 2652,
+      "key": "dexcanvas/traj_00018497#segment0",
+      "dataset": "DexCanvas",
+      "source_color": "#e76f51",
+      "pca_coordinates": [
+        1.2257,
+        0.7956,
+        -0.3894
+      ],
+      "projected_xy": [
+        0.16101808343707258,
+        0.2847163197442009
+      ]
+    },
+    {
+      "cluster": 2,
+      "medoid_index": 4334,
+      "key": "dexycb_lifted/dexycb_02_right_004_sugar_box_20200813_145951_00",
+      "dataset": "DexYCB",
+      "source_color": "#377eb8",
+      "pca_coordinates": [
+        -0.4039,
+        1.1255,
+        1.1904
+      ],
+      "projected_xy": [
+        0.16561758499075394,
+        0.19069794912934476
+      ]
+    },
+    {
+      "cluster": 3,
+      "medoid_index": 5637,
+      "key": "oakink_native/scene_01__A003++seq__5a5d66e7a358b59c9fee__2023-04-21-20-23-45/stage21/part0",
+      "dataset": "OakInk",
+      "source_color": "#e5ad36",
+      "pca_coordinates": [
+        -1.7741,
+        -0.3342,
+        -1.0441
+      ],
+      "projected_xy": [
+        -0.5570175177661154,
+        -0.1272785699461698
+      ]
+    },
+    {
+      "cluster": 4,
+      "medoid_index": 2120,
+      "key": "dexcanvas/traj_00015753#segment2",
+      "dataset": "DexCanvas",
+      "source_color": "#e76f51",
+      "pca_coordinates": [
+        0.9441,
+        -1.7686,
+        -0.1195
+      ],
+      "projected_xy": [
+        0.13984527521422757,
+        -0.2935309079489385
+      ]
+    },
+    {
+      "cluster": 5,
+      "medoid_index": 4391,
+      "key": "dexycb_lifted/dexycb_05_right_003_cracker_box_20200908_143617_00",
+      "dataset": "DexYCB",
+      "source_color": "#377eb8",
+      "pca_coordinates": [
+        -0.0905,
+        1.2414,
+        0.3984
+      ],
+      "projected_xy": [
+        0.05922901115927576,
+        0.300326142505678
+      ]
+    }
+  ]
+}

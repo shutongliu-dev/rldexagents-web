@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="575.28pt" height="189.144pt" viewBox="0 0 575.28 189.144" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-27T13:53:42.366702</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 189.144 
+L 575.28 189.144 
+L 575.28 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 8.64 80.712 
+L 153.72 80.712 
+L 153.72 19.728 
+L 8.64 19.728 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #ffffff; stroke: #263746; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 203.94 80.712 
+L 360.18 80.712 
+L 360.18 19.728 
+L 203.94 19.728 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #ffffff; stroke: #263746; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 410.4 80.712 
+L 555.48 80.712 
+L 555.48 19.728 
+L 410.4 19.728 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #ffffff; stroke: #263746; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 155.721566 50.22 
+Q 178.831628 50.22 200.823656 50.22 
+" clip-path="url(#p1712823d8e)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 196.023656 47.82 
+L 200.823656 50.22 
+L 196.023656 52.62 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 362.181566 50.22 
+Q 385.291628 50.22 407.283656 50.22 
+" clip-path="url(#p1712823d8e)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 402.483656 47.82 
+L 407.283656 50.22 
+L 402.483656 52.62 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 8.64 177.732 
+L 153.72 177.732 
+L 153.72 116.748 
+L 8.64 116.748 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #ffffff; stroke: #26756b; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 203.94 177.732 
+L 360.18 177.732 
+L 360.18 116.748 
+L 203.94 116.748 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #ffffff; stroke: #26756b; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 410.4 177.732 
+L 555.48 177.732 
+L 555.48 116.748 
+L 410.4 116.748 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #ffffff; stroke: #26756b; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 155.721566 147.24 
+Q 178.831628 147.24 200.823656 147.24 
+" clip-path="url(#p1712823d8e)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 196.023656 144.84 
+L 200.823656 147.24 
+L 196.023656 149.64 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 362.181566 147.24 
+Q 385.291628 147.24 407.283656 147.24 
+" clip-path="url(#p1712823d8e)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 402.483656 144.84 
+L 407.283656 147.24 
+L 402.483656 149.64 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 480.986881 81.146944 
+Q 402.03163 98.729637 324.16768 116.069306 
+" clip-path="url(#p1712823d8e)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 329.374593 117.368559 
+L 324.16768 116.069306 
+L 328.33123 112.683328 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 480.989861 116.29821 
+Q 404.817247 98.729365 329.734064 81.411792 
+" clip-path="url(#p1712823d8e)" style="fill: none; stroke: #555555; stroke-linecap: round"/>
+    <path d="M 333.871882 84.829169 
+L 329.734064 81.411792 
+L 334.950657 80.151965 
+z
+" clip-path="url(#p1712823d8e)" style="fill: #555555; stroke: #555555; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #263746" x="81.18" y="38.953055" transform="rotate(-0 81.18 38.953055)">Reference teacher</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(26.22418 57.814718)">Hand / object / wrist state</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(19.96207 69.27046)">Six future reference samples</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #263746" x="282.06" y="38.953055" transform="rotate(-0 282.06 38.953055)">Teacher action labels</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(219.100234 57.814718)">Original teacher observations</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(208.958672 69.27046)">Evaluate at visited simulator state</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #263746" x="482.94" y="38.953055" transform="rotate(-0 482.94 38.953055)">Mixed optimization</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(431.457891 57.814718)">Teacher imitation + PPO</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(432.406836 69.27046)">Privileged training critic</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26756b" x="81.18" y="135.933992" transform="rotate(-0 81.18 135.933992)">Deployable feedback</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(15.532773 154.834718)">Eight frames: joints / velocities</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(10.201016 166.29046)">Previous actions / fingertip forces</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26756b" x="282.06" y="135.973055" transform="rotate(-0 282.06 135.973055)">Command-conditioned student</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(219.526563 154.834718)">Fixed payload + phase + age</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(211.942969 166.29046)">Frame MLP → GRU → action head</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26756b" x="482.94" y="135.973055" transform="rotate(-0 482.94 135.973055)">Closed-loop hand control</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(422.137109 154.834718)">22 normalized finger actions</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'" transform="translate(420.387305 166.29046)">Decode / smooth / joint limits</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle" x="282.06" y="97.344" transform="rotate(-0 282.06 97.344)">Student controls the rollout; teacher labels its visited states</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1712823d8e">
+   <rect x="8.64" y="8.64" width="558" height="171.864"/>
+  </clipPath>
+ </defs>
+</svg>
