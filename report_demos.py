@@ -40,6 +40,7 @@ def promote_demos(page, root):
     section = (
         '<section id="demos" class="featured-demos" aria-labelledby="demos-heading">'
         '<div class="featured-demos-heading"><h2 id="demos-heading">Demos</h2></div>'
+        '<p class="demo-editing-note">Videos are edited for brevity, with extended planning and reasoning pauses shortened or omitted.</p>'
         + ''.join(groups) + '</section>'
     )
     if 'class="featured-demos"' in page:

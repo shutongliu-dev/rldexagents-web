@@ -59,6 +59,7 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 .featured-demos-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:12px}
 .featured-demos-heading h2{margin:0;font:700 38px/1.25 var(--serif);letter-spacing:-.025em;background:none;color:var(--fg)}
 .featured-demos-heading>span{font:10px/1.6 var(--mono);color:#927c58;text-align:right}
+.section .featured-demos .demo-editing-note{font:13px/1.7 system-ui,-apple-system,'Segoe UI',sans-serif;color:#82735e;margin:0 0 24px;max-width:780px}
 .section .featured-demos .demo-lead{font-size:19px;line-height:1.7;max-width:800px;color:#665d50;margin:0 0 25px}
 .featured-demo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 18px}
 .featured-demo{min-width:0}
