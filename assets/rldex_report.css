@@ -54,3 +54,5 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 .method-detail-body>figure{margin-left:0;margin-right:0}
 @media(max-width:600px){.section p.method-overview{font-size:17px}.method-details>summary{padding:13px 15px}.method-detail-body{padding:18px 15px 0}.method-summary-description{font-size:11px}}
 .section .tldr p{margin:0}
+.section .tldr strong{font-weight:700}
+.section .tldr em.tldr-emphasis{font-weight:400;font-style:italic}
