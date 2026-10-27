@@ -8,7 +8,7 @@ FAVICON_LINKS = (
 
 
 def add_site_icons(page):
-    page = re.sub(r'href="assets/rldex_report.css(?:\?[^\"]*)?"', 'href="assets/rldex_report.css?v=real-world-1"', page)
+    page = re.sub(r'href="assets/rldex_report.css(?:\?[^\"]*)?"', 'href="assets/rldex_report.css?v=simulation-1"', page)
     if 'favicon.ico' not in page:
         page = page.replace('</head>', FAVICON_LINKS + '</head>', 1)
     return page

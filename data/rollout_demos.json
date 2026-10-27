@@ -42,5 +42,17 @@
     "duration_s": 109.933333,
     "width": 960,
     "height": 540
+  },
+  {
+    "id": "chess-three-views",
+    "group": "simulation",
+    "title": "Chess manipulation",
+    "video": "demos/sim/chess_three_views_2880x1440.mp4",
+    "poster": "assets/rollout_posters/chess-three-views.jpg",
+    "poster_time_s": 29.9,
+    "duration_s": 38.36,
+    "width": 2880,
+    "height": 1440,
+    "caption": "Three camera views of the same simulated rollout."
   }
 ]
