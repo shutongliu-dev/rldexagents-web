@@ -180,7 +180,8 @@ for key in ['santello1998','ross2011','schulman2017','pinto2018','qi2023','ichte
 # Optional exploration does not interrupt the four-figure main narrative.
 explorer='<section class="interactive-evidence" id="interactive-manifold"><h3>Explore the hand manifold</h3><p>Rotate the 3D view, color points by dataset source, and switch source filters to compare coverage. <b>OakInk (wrist-adapted)</b> contains 68 OakInk-v2 right-hand references with reconstructed pre-contact wrist motion.</p><iframe src="manifold.html" title="Interactive hand-object manifold by dataset source" loading="eager"></iframe><p><a href="manifold.html" target="_blank" rel="noopener">Open full-size 3D viewer</a> · <a href="pose_hoi_manifold.html">Pose and replay gallery</a> · <a href="data/wrist_adapted_source_audit.json">Source audit</a></p></section>'
 # Keep source exploration visible at the top, before the report abstract.
-body=body.replace('<h2 id="abstract">',explorer+'<h2 id="abstract">')
+tldr='<h2 id="tldr">TL;DR</h2><div class="tldr"><p><em>RLDexAgents</em> turns diverse human and robot hand motions into an extensible toolkit of agent-callable dexterous skills. Pose banks organize candidates, RL teachers provide physically executed demonstrations, and command-conditioned students use local feedback for closed-loop finger control. Experiments show better geometric coverage and identify contact establishment and the teacher–student performance gap as key challenges for reliable skill reuse.</p></div>'
+body=body.replace('<h2 id="abstract">',explorer+tldr+'<h2 id="abstract">')
 demos=read('data/cluster_teacher_demos.json');videos=''
 for d in demos:
  display=d.get('display_media',d)

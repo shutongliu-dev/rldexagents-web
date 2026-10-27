@@ -35,3 +35,4 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 
 /* Temporarily hide the document shortcut links; keep markup and files intact. */
 .report-hero .quick-links[hidden]{display:none}
+.section .tldr p{margin:0}
