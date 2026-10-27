@@ -124,7 +124,7 @@ Likewise, no formal end-to-end agent success rate is reported here. A valid comm
 
 ## 6. Experiments and Key Findings
 
-We focus on three questions: whether pose organization improves coverage, whether command conditioning improves stable execution, and how command expressivity affects distillation. Detailed protocols, historical experiments and per-source breakdowns are retained in the [supplementary report](supplementary_report.html) and [experiment log](experiment_index.md).
+We focus on three questions: whether pose organization improves coverage, whether command conditioning improves stable execution, and how command expressivity affects distillation. Detailed protocols, historical experiments and per-source breakdowns are retained in the [supplementary report](supplementary_report.html).
 
 ### Result A: structured banks improve geometric coverage
 
@@ -176,7 +176,7 @@ RLDexAgents provides a working path from hand motion structure to executable, ag
 
 ## Supplementary Material
 
-The [extended evidence report](supplementary_report.html) contains full dataset accounting, teacher configurations, historical distillation comparisons, expanded selection evaluation and contact-survival analysis. The [experiment log](experiment_index.md) maps claims to configurations and raw results. The [interactive gallery](pose_hoi_manifold.html) contains the complete 3D manifold, representative poses and replay videos. [Open questions](open_questions.md) list proposed verification experiments. These materials preserve the detailed evidence without interrupting the main narrative.
+The [extended evidence report](supplementary_report.html) contains full dataset accounting, teacher configurations, historical distillation comparisons, expanded selection evaluation and contact-survival analysis. The [interactive gallery](pose_hoi_manifold.html) contains the complete 3D manifold, representative poses and replay videos. [Open questions](open_questions.md) list proposed verification experiments. These materials preserve the detailed evidence without interrupting the main narrative.
 
 ## References
 
