@@ -175,7 +175,7 @@ hmd=re.sub(r'\$\$(.*?)\$\$',eq_html,md,flags=re.S)
 hmd=re.sub(r'\[@(\w+)\]',lambda m:f'<a class="citation" href="#ref-{m[1]}">[{m[1]}]</a>',hmd)
 body=markdown.markdown(hmd,extensions=['tables','fenced_code','toc'],extension_configs={'toc':{'permalink':False}})
 body=style_code_blocks(body)
-body=re.sub(r'<p><img alt="(Figure [^"]+)" src="([^"]+)" /></p>',lambda m:f'<figure><img loading="lazy" src="{m[2].replace(".png",".svg")}" alt="{m[1]}"><figcaption>{m[1]}</figcaption></figure>',body)
+body=re.sub(r'<p><img alt="(Figure [^"]+)" src="([^"]+)" /></p>',lambda m:f'<figure><img loading="lazy" src="{m[2].replace(".png",".svg")}{"?v=method-20261027" if m[2].endswith("method_overview.png") else ""}" alt="{m[1]}"><figcaption>{m[1]}</figcaption></figure>',body)
 # Only figures produced here have SVG versions; embedded photos are inside their figure SVG.
 for key in ['santello1998','ross2011','schulman2017','pinto2018','qi2023','ichter2023']:
  body=body.replace(f'<li><a class="citation" href="#ref-{key}">',f'<li id="ref-{key}"><a class="citation" href="#ref-{key}">')
