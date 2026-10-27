@@ -1,0 +1,27 @@
+@import url('template-fonts.css');
+:root{color:#27241f;background:#fdfaf4;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}body{margin:0;padding:18px 12px 12px}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:0 8px}
+h1{font:700 clamp(18px,2.6vw,25px)/1.4 'Playfair Display',Georgia,serif;margin:0 0 7px}
+.subtitle{font:10px/1.7 'Roboto Mono',monospace;color:#8a7d68;margin:0}
+.tools{display:flex;gap:6px;flex:none;padding-top:3px}
+button{font:11px/1.4 system-ui,sans-serif;border:1px solid #d9cfbd;background:transparent;border-radius:6px;padding:6px 10px;color:#655943;cursor:pointer}
+button:hover{background:#eee6d8}button:focus-visible,canvas:focus-visible{outline:2px solid #95815b;outline-offset:3px}
+.stage{position:relative;width:100%;height:clamp(470px,68vw,650px);isolation:isolate}
+canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
+canvas.dragging{cursor:grabbing}
+.pose{position:absolute;transform:translate(-50%,-50%);width:clamp(70px,13%,126px);padding:6px 7px 8px;background:#fdfaf4eF;border:1px solid #dfd7c8;border-radius:9px;box-shadow:0 2px 5px #64513208;z-index:2;color:#27241f}
+.pose img{display:block;width:100%;aspect-ratio:1;object-fit:contain;mix-blend-mode:multiply;pointer-events:none}
+.pose strong{display:block;font:700 15px/1.4 'Playfair Display',Georgia,serif;text-align:center}
+.pose:hover,.pose[aria-pressed=true]{background:#f4eddf;border-color:#99805b;box-shadow:0 0 0 1px #99805b30}
+.pose.is-muted{opacity:.3}
+.legend{display:flex;justify-content:center;flex-wrap:wrap;gap:5px 13px;padding:5px 12px 12px}
+.legend button{display:inline-flex;align-items:center;gap:6px;padding:4px 0;border:0;border-radius:0;font:10px/1.5 'Roboto Mono',monospace;background:none;color:#706451}
+.legend i{width:8px;height:8px;border-radius:50%;display:inline-block;background:var(--source)}
+.legend button[aria-pressed=false]{opacity:.35;text-decoration:line-through}
+.hint{text-align:center;font:10px/1.7 'Roboto Mono',monospace;color:#94856e;margin:0 0 10px}
+.selection{border-top:1px solid #e1d7c7;padding:10px 12px;min-height:55px;font:10px/1.7 'Roboto Mono',monospace;color:#776950;overflow-wrap:anywhere}
+.selection strong{font-weight:500;color:#3a3328}
+.tooltip{position:absolute;display:none;pointer-events:none;z-index:3;background:#302d27;color:#fdfaf4;padding:6px 9px;border-radius:5px;font:10px/1.5 'Roboto Mono',monospace;max-width:240px}
+@media(max-width:600px){body{padding:12px 4px}header{gap:10px}.tools{gap:4px}.tools button{padding:5px 7px}h1{font-size:18px}.subtitle{font-size:9px}.stage{height:490px}.pose{width:78px;padding:4px}.pose strong{font-size:13px}.legend{gap:4px 10px}.legend button,.hint{font-size:9px}}
+@media print{.tools,.hint{display:none}}

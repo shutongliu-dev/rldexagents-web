@@ -4,6 +4,7 @@ Does not run simulations, modify checkpoints, or rewrite the older supplement.
 """
 from pathlib import Path
 from site_assets import add_site_icons
+from representative_viewer import build_viewer, embed_viewer
 import json,re,html,shutil
 import numpy as np
 import matplotlib
@@ -200,7 +201,8 @@ if overview:
 links=[('RLDexAgents_Technical_Report.md','Report'),('RLDexAgents_Technical_Report.tex','LaTeX'),('method.pdf','Method Figure'),('supplementary_report.html','Supplementary'),('pose_hoi_manifold.html','Interactive Gallery'),('references.bib','References'),('open_questions.md','Open Questions')]
 quick=''.join(f'<a class="link-pill" href="{url}">{label}</a>' for url,label in links)
 page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RLDexAgents — Technical Report</title><meta name="description" content="Hand motion structure, executable skill distillation and an extensible agentic dexterous toolkit."><link rel="stylesheet" href="assets/template-fonts.css"><link rel="stylesheet" href="assets/dexx-template.css"><link rel="stylesheet" href="assets/rldex_report.css"></head><body><nav class="toc" aria-label="Report contents"><h3>Content</h3><hr><ul>{nav}</ul></nav><main class="main-content"><header class="report-hero"><h1 class="hero-text">RLDexAgents</h1><div class="sub-hero-text">An Extensible Dexterous Skill Toolkit for LLM Agents</div><p class="report-subtitle">From Hand Pose Manifolds to Interface-Conditioned Skill Distillation and Agentic Manipulation</p><div class="venue">Technical Report · 27 October 2026</div><div class="authors">Sharpa right-hand implementation · Audited experiment records</div>{herofigure}<div class="quick-links" hidden>{quick}</div></header><article class="section">{body}</article><footer class="footer">Audited project evidence · 27 October 2026.<br>Local figures and media · <a href="production_checks.md">Production notes</a><br>Page template adapted from the local DEX-X project page.</footer></main></body></html>'''
-(ROOT/'index.html').write_text(add_site_icons(page),encoding='utf-8')
+build_viewer(ROOT)
+(ROOT/'index.html').write_text(add_site_icons(embed_viewer(page)),encoding='utf-8')
 
 # Minimal deterministic Markdown-to-LaTeX renderer for this report's constructs.
 def esc(s):
