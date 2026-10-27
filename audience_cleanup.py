@@ -10,10 +10,11 @@ CAPTIONS = {
 
 AUTHOR_BLOCK = ('<div class="authors project-authors">'
                 '<div class="author-names">Ruoqi Chen<sup>1,2</sup>, Shutong Liu<sup>1</sup>, '
-                'Feixiang Ruan<sup>3</sup>, Weili Fu<sup>1</sup>, Zihao Wang<sup>1</sup>, '
+                'Feixiang Ruan<sup>3</sup>, Weili Fu<sup>4</sup>, Zihao Wang<sup>1</sup>, '
                 'Mengdi Xu<sup>1,†</sup></div>'
                 '<div class="author-affiliations"><sup>1</sup> IIIS, Tsinghua University · '
                 '<sup>2</sup> Shanghai Qizhi Institute · <sup>3</sup> Peking University · '
+                '<sup>4</sup> Department of Automation, Tsinghua University · '
                 '<sup>†</sup> Corresponding author</div></div>')
 
 
