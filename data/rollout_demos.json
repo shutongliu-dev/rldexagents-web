@@ -54,5 +54,17 @@
     "width": 2880,
     "height": 1440,
     "caption": "Three camera views of the same simulated rollout."
+  },
+  {
+    "id": "kitchen-food-sorting",
+    "group": "simulation",
+    "title": "Kitchen food sorting",
+    "video": "demos/sim/厨房食品分类_腕部方向修正_demo.mp4",
+    "poster": "assets/rollout_posters/kitchen-food-sorting.jpg",
+    "poster_time_s": 17.5,
+    "duration_s": 35.0,
+    "width": 2880,
+    "height": 1440,
+    "caption": "Three camera views of a simulated kitchen sorting rollout with wrist-direction correction."
   }
 ]
