@@ -22,6 +22,7 @@ canvas.dragging{cursor:grabbing}
 .hint{text-align:center;font:10px/1.7 'Roboto Mono',monospace;color:#94856e;margin:0 0 10px}
 .selection{border-top:1px solid #e1d7c7;padding:10px 12px;min-height:55px;font:10px/1.7 'Roboto Mono',monospace;color:#776950;overflow-wrap:anywhere}
 .selection strong{font-weight:500;color:#3a3328}
+.selection:empty{display:none}
 .tooltip{position:absolute;display:none;pointer-events:none;z-index:3;background:#302d27;color:#fdfaf4;padding:6px 9px;border-radius:5px;font:10px/1.5 'Roboto Mono',monospace;max-width:240px}
 @media(max-width:600px){body{padding:12px 4px}header{gap:10px}.tools{gap:4px}.tools button{padding:5px 7px}h1{font-size:18px}.subtitle{font-size:9px}.stage{height:490px}.pose{width:78px;padding:4px}.pose strong{font-size:13px}.legend{gap:4px 10px}.legend button,.hint{font-size:9px}}
 @media print{.tools,.hint{display:none}}

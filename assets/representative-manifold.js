@@ -78,8 +78,8 @@ function select(c) {
   poses.forEach((button,i) => button.setAttribute('aria-pressed',String(i===c)));
   const m=D.medoids[c];
   selection.replaceChildren();
-  const title=document.createElement('strong');title.textContent=`C${c} / ${m.dataset} / frame ${m.frame}`;
-  selection.append(title,document.createElement('br'),document.createTextNode(m.key));
+  const title=document.createElement('strong');title.textContent=`C${c} / ${m.dataset}`;
+  selection.append(title);
   schedule();
 }
 poses.forEach((button,c) => button.addEventListener('click',()=>select(c)));

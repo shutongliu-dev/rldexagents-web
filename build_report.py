@@ -1,6 +1,7 @@
 """Assemble existing measured results into a portable offline HTML report."""
 from pathlib import Path
 from site_assets import add_site_icons
+from audience_cleanup import clean_manifold
 import csv, json, re, shutil, html
 import numpy as np
 import matplotlib
@@ -171,4 +172,6 @@ body=f'''
 shutil.copy2(OUT/'index.html',OUT/'pose_hoi_manifold.html')
 from gallery_english import localize_gallery
 localize_gallery(OUT/'pose_hoi_manifold.html')
+viewer_path=OUT/'manifold.html'
+viewer_path.write_text(clean_manifold(viewer_path.read_text(encoding='utf-8')),encoding='utf-8')
 print('Report assembled:',OUT,'videos',len(videos),'scene images',len(scenes))

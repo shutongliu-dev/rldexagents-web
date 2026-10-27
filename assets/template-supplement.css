@@ -9,6 +9,7 @@
 #crossTable{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
 #crossTable table{min-width:680px}
 #crossTable:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+[data-maintenance][hidden]{display:none!important}
 
 /* Selected-sample details: compact identifiers, then readable metadata. */
 .sample-card{padding:18px}

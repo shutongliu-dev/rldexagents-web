@@ -55,8 +55,8 @@ function renderDemos() {
       <div class="text">
         <span class="badge">C${v.final_cluster} / Isaac Sim teacher</span>
         <h3>${esc(v.object)}</h3>
-        <p class="mono">${esc(v.key)}</p>
-        <dl class="demo-metrics">
+        <p class="mono" data-maintenance hidden>${esc(v.key)}</p>
+        <dl class="demo-metrics" data-maintenance hidden>
           <div><dt>Clip length</dt><dd>${media.duration_s.toFixed(2)} s</dd></div>
           <div><dt>Original lift</dt><dd>${v.recorded_rollout_lift_success ? 'Yes' : 'No'}</dd></div>
           <div><dt>Original tail stability</dt><dd>${(v.tail_stable_fraction * 100).toFixed(0)}%</dd></div>
@@ -68,12 +68,12 @@ function renderDemos() {
         <div class="demo-snapshots">${Object.entries(media.snapshots).map(([key, path]) =>
           `<a href="${esc(path)}"><img loading="lazy" src="${esc(path)}" alt="C${v.final_cluster} ${esc(key)} snapshot"><small>${esc(key.charAt(0).toUpperCase() + key.slice(1))}</small></a>`).join('')}</div>
         <details>
-          <summary>Recording details &amp; original measurements</summary>
-          <p>Color footage is matched to the same reference. The outcome and force measurements below describe the original audited recording.</p>
+          <summary>Trajectory details</summary>
+          <p data-maintenance hidden>Color footage is matched to the same reference. The outcome and force measurements below describe the original audited recording.</p>
           <p>Peak force: ${v.peak_force_N.toFixed(2)} N. Frames above 20 N: ${(v.force_over_20N_fraction * 100).toFixed(1)}%.</p>
           <p>${esc(v.success_definition)}</p>
           <a href="${esc(v.trajectory_npz)}" download>Original states &amp; teacher actions / NPZ</a>
-          <p class="mono">${esc(v.checkpoint)}</p>
+          <p class="mono" data-maintenance hidden>${esc(v.checkpoint)}</p>
         </details>
       </div>
     </article>`;
@@ -105,7 +105,7 @@ function renderHoi() {
       <a href="${esc(x.image)}"><img loading="lazy" style="width:100%;display:block" src="${esc(x.image)}" alt="HOI scene for cluster C${x.final_cluster}"></a>
       <div class="text">
         <span class="badge">C${x.final_cluster} / HOI scene</span>
-        <p class="mono">${esc(x.key)}</p>
+        <p class="mono" data-maintenance hidden>${esc(x.key)}</p>
         <p>Object: ${esc(x.object)} / Saved HOLD frame: ${esc(x.hold_frame_index)}</p>
       </div>
     </article>`).join('') : '<div class="empty">No saved scene snapshots for this cluster.</div>';

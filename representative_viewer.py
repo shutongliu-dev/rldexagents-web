@@ -5,6 +5,7 @@ import json
 import re
 from PIL import Image
 from site_assets import add_site_icons
+from audience_cleanup import refresh_assets
 
 
 def build_viewer(root):
@@ -48,19 +49,19 @@ def build_viewer(root):
         '<title>Interactive hand-object representatives</title>'
         '<link rel="stylesheet" href="assets/representative-manifold.css"></head><body>'
         '<header><div><h1>Hand-object manifold &amp; representative configurations</h1>'
-        '<p class="subtitle">6,241 configurations / colors indicate dataset sources / link-near + distance</p></div>'
+        '<p class="subtitle">6,241 hand–object configurations</p></div>'
         '<div class="tools"><button data-zoom-out aria-label="Zoom out">−</button>'
         '<button data-zoom-in aria-label="Zoom in">+</button><button data-reset>Reset view</button></div></header>'
         '<div class="stage"><canvas tabindex="0" aria-label="Interactive 3D hand-object point cloud. Drag to rotate, scroll to zoom, or use the arrow keys."></canvas>'
         + cards + '<div class="tooltip" role="tooltip"></div></div>'
         '<div class="legend" aria-label="Dataset source filters">' + legend + '</div>'
-        '<p class="hint">Drag to rotate / scroll to zoom / select a hand to inspect its medoid / toggle sources below the plot</p>'
-        '<div class="selection" aria-live="polite">Each hand is linked to its observed medoid. Geometric groups are not validated functional grasp categories.</div>'
+        '<p class="hint">Drag to rotate · Scroll to zoom · Select a representative hand</p>'
+        '<div class="selection" aria-live="polite"></div>'
         '<script id="pointData" type="application/json">'
         + json.dumps(payload, separators=(',', ':'), ensure_ascii=False).replace('</', '<\\/')
         + '</script><script src="assets/representative-manifold.js"></script></body></html>'
     )
-    (root / 'representative_manifold.html').write_text(add_site_icons(page), encoding='utf-8', newline='\n')
+    (root / 'representative_manifold.html').write_text(add_site_icons(refresh_assets(page)), encoding='utf-8', newline='\n')
 
 
 def embed_viewer(page):
