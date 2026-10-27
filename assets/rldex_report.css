@@ -35,4 +35,22 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 
 /* Temporarily hide the document shortcut links; keep markup and files intact. */
 .report-hero .quick-links[hidden]{display:none}
+
+/* Short method overviews with optional, initially collapsed technical detail. */
+.section p.method-overview{font-size:19px;line-height:1.8;color:#625b4f;margin:0 0 20px;max-width:950px}
+.method-details{margin:18px 0 34px;border:1px solid #ded5c6;border-radius:9px;background:transparent;overflow:hidden}
+.method-details>summary{display:flex;align-items:center;gap:18px;padding:14px 18px;cursor:pointer;list-style:none;color:#3f382d}
+.method-details>summary::-webkit-details-marker{display:none}
+.method-details>summary::after{content:'+';margin-left:auto;font:300 22px/1 system-ui,sans-serif;color:#9b8b70;flex:none}
+.method-details[open]>summary::after{content:'−'}
+.method-details>summary:hover{background:#f3ede2}
+.method-details>summary:focus-visible{outline:2px solid #9e8863;outline-offset:-3px}
+.method-summary-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.method-summary-title{font:12px/1.6 var(--mono)}
+.method-summary-description{font:12px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;color:#92836e}
+.method-details[open]>summary{border-bottom:1px solid #e8dfd1}
+.method-detail-body{padding:22px 22px 0}
+.method-detail-body>:first-child{margin-top:0}
+.method-detail-body>figure{margin-left:0;margin-right:0}
+@media(max-width:600px){.section p.method-overview{font-size:17px}.method-details>summary{padding:13px 15px}.method-detail-body{padding:18px 15px 0}.method-summary-description{font-size:11px}}
 .section .tldr p{margin:0}
