@@ -7,6 +7,8 @@ const tooltip = document.querySelector('.tooltip');
 const selection = document.querySelector('.selection');
 const enabled = new Set(D.datasets.map((_, i) => i));
 const poses = [...document.querySelectorAll('.pose')];
+const homePositions = poses.map(button => [button.style.left, button.style.top]);
+let cardDrag = null;
 let yaw = .72, pitch = .42, zoom = 1, panX = 0, panY = 0, mode = 'rotate', drag = null, selected = null;
 let width = 1, height = 1, fit = 1, projected = [], framePending = false;
 
@@ -39,7 +41,13 @@ function resize() {
   canvas.width = Math.round(width*ratio); canvas.height = Math.round(height*ratio);
   ctx.setTransform(ratio,0,0,ratio,0,0);
   fit = Math.min(width*.57/(bounds[1]-bounds[0]), height*.74/(bounds[3]-bounds[2]));
+  poses.forEach(button => movePose(button,parseFloat(button.style.left)/100,parseFloat(button.style.top)/100));
   schedule();
+}
+function movePose(button,x,y) {
+  const halfW=Math.min(.5,button.offsetWidth/(2*width)),halfH=Math.min(.5,button.offsetHeight/(2*height));
+  button.style.left=`${Math.max(halfW,Math.min(1-halfW,x))*100}%`;
+  button.style.top=`${Math.max(halfH,Math.min(1-halfH,y))*100}%`;
 }
 function draw() {
   ctx.clearRect(0,0,width,height);
@@ -65,7 +73,7 @@ function draw() {
     const q = projected[m.index], card = poses[c].getBoundingClientRect();
     const cx=card.left-stageBox.left+card.width/2,cy=card.top-stageBox.top+card.height/2;
     const dx=q[0]-cx,dy=q[1]-cy;
-    const edge=Math.min((card.width/2+3)/Math.max(Math.abs(dx),.01),(card.height/2+3)/Math.max(Math.abs(dy),.01));
+    const edge=Math.min(1,(card.width/2+3)/Math.max(Math.abs(dx),.01),(card.height/2+3)/Math.max(Math.abs(dy),.01));
     ctx.strokeStyle=selected===c?'#7b6546':'#aaa08f';ctx.lineWidth=selected===c?1.4:.85;
     ctx.beginPath();ctx.moveTo(cx+dx*edge,cy+dy*edge);ctx.lineTo(q[0],q[1]);ctx.stroke();
     ctx.fillStyle='#fdfaf4';ctx.beginPath();ctx.arc(q[0],q[1],selected===c?8:6,0,Math.PI*2);ctx.fill();
@@ -82,13 +90,56 @@ function select(c) {
   selection.append(title);
   schedule();
 }
-poses.forEach((button,c) => button.addEventListener('click',()=>select(c)));
+poses.forEach((button,c) => {
+  let suppressClick=false;
+  button.addEventListener('pointerdown',e=>{
+    if(e.button!==0||cardDrag||drag)return;
+    suppressClick=false;
+    cardDrag={id:e.pointerId,button,x:e.clientX,y:e.clientY,left:parseFloat(button.style.left)/100,top:parseFloat(button.style.top)/100};
+    button.setPointerCapture(e.pointerId);
+    tooltip.style.display='none';
+  });
+  button.addEventListener('pointermove',e=>{
+    if(!cardDrag||cardDrag.button!==button||cardDrag.id!==e.pointerId)return;
+    const dx=e.clientX-cardDrag.x,dy=e.clientY-cardDrag.y;
+    if(!suppressClick&&Math.hypot(dx,dy)<4)return;
+    suppressClick=true;
+    button.classList.add('is-dragging');
+    movePose(button,cardDrag.left+dx/width,cardDrag.top+dy/height);
+    schedule();
+  });
+  function stopCard(e){
+    if(cardDrag&&cardDrag.button===button&&cardDrag.id===e.pointerId){cardDrag=null;button.classList.remove('is-dragging');}
+  }
+  button.addEventListener('pointerup',stopCard);
+  button.addEventListener('pointercancel',stopCard);
+  button.addEventListener('lostpointercapture',stopCard);
+  button.addEventListener('click',e=>{
+    if(suppressClick&&e.detail!==0){suppressClick=false;e.preventDefault();return;}
+    select(c);
+  });
+  button.addEventListener('keydown',e=>{
+    if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home'].includes(e.key))return;
+    e.preventDefault();
+    if(e.key==='Home'){movePose(button,parseFloat(homePositions[c][0])/100,parseFloat(homePositions[c][1])/100);}
+    else{
+      const step=e.shiftKey?30:10;
+      movePose(button,parseFloat(button.style.left)/100+(e.key==='ArrowLeft'?-step:e.key==='ArrowRight'?step:0)/width,
+        parseFloat(button.style.top)/100+(e.key==='ArrowUp'?-step:e.key==='ArrowDown'?step:0)/height);
+    }
+    schedule();
+  });
+});
 document.querySelectorAll('[data-source]').forEach(button => button.addEventListener('click',()=>{
   const i=Number(button.dataset.source);
   if(enabled.has(i))enabled.delete(i);else enabled.add(i);
   button.setAttribute('aria-pressed',String(enabled.has(i)));schedule();
 }));
-function reset(){yaw=.72;pitch=.42;zoom=1;panX=0;panY=0;tooltip.style.display='none';schedule();}
+function reset(){
+  yaw=.72;pitch=.42;zoom=1;panX=0;panY=0;
+  poses.forEach((button,c)=>movePose(button,parseFloat(homePositions[c][0])/100,parseFloat(homePositions[c][1])/100));
+  tooltip.style.display='none';schedule();
+}
 document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click',()=>{
   mode=button.dataset.mode;
   document.querySelectorAll('[data-mode]').forEach(item=>item.setAttribute('aria-pressed',String(item.dataset.mode===mode)));
@@ -98,7 +149,7 @@ document.querySelector('[data-reset]').addEventListener('click',reset);
 document.querySelector('[data-zoom-in]').addEventListener('click',()=>{zoom=Math.min(2,zoom*1.15);schedule();});
 document.querySelector('[data-zoom-out]').addEventListener('click',()=>{zoom=Math.max(.55,zoom/1.15);schedule();});
 canvas.addEventListener('pointerdown',e=>{
-  if(drag||![0,2].includes(e.button))return;
+  if(drag||cardDrag||![0,2].includes(e.button))return;
   const moving=mode==='move'||e.shiftKey||e.button===2;
   drag={id:e.pointerId,x:e.clientX,y:e.clientY,yaw,pitch,panX,panY,moving};canvas.setPointerCapture(e.pointerId);canvas.classList.add('dragging');tooltip.style.display='none';
 });

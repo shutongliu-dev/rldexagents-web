@@ -35,7 +35,8 @@ def build_viewer(root):
     }
     positions = [(25, 80), (80, 20), (89, 52), (10, 52), (79, 80), (24, 20)]
     cards = ''.join(
-        f'<button class="pose" style="left:{x}%;top:{y}%" aria-label="Show C{c} representative" aria-pressed="false">'
+        f'<button class="pose" style="left:{x}%;top:{y}%" aria-label="Show C{c} representative" aria-pressed="false" '
+        'aria-description="Drag to reposition. Arrow keys move the hand; Home restores its position.">'
         f'<img draggable="false" src="assets/representative-poses/cluster_{c}.png" alt="">'
         f'<strong>C{c}</strong></button>' for c, (x, y) in enumerate(positions)
     )
@@ -58,14 +59,14 @@ def build_viewer(root):
         '<div class="stage"><canvas tabindex="0" aria-label="Interactive 3D hand-object point cloud. Drag to rotate; select Move or hold Shift and drag to reposition. Scroll to zoom. Arrow keys rotate; Shift plus arrow keys move."></canvas>'
         + cards + '<div class="tooltip" role="tooltip"></div></div>'
         '<div class="legend" aria-label="Dataset source filters">' + legend + '</div>'
-        '<p class="hint">Drag to rotate · Shift + drag to move · Scroll to zoom</p>'
+        '<p class="hint">Drag cloud to rotate · Shift + drag to move cloud · Drag hands to rearrange · Scroll to zoom</p>'
         '<div class="selection" aria-live="polite"></div>'
         '<script id="pointData" type="application/json">'
         + json.dumps(payload, separators=(',', ':'), ensure_ascii=False).replace('</', '<\\/')
         + '</script><script src="assets/representative-manifold.js"></script></body></html>'
     )
     page = add_site_icons(refresh_assets(page))
-    page = re.sub(r'(assets/representative-manifold\.(?:css|js))\?[^"\s]*', r'\1?v=pan-20261027', page)
+    page = re.sub(r'(assets/representative-manifold\.(?:css|js))\?[^"\s]*', r'\1?v=hands-20261027', page)
     (root / 'representative_manifold.html').write_text(page, encoding='utf-8', newline='\n')
 
 
@@ -73,7 +74,7 @@ def embed_viewer(page):
     def replace(match):
         return (
             '<figure class="representative-manifold-figure">'
-            '<iframe class="representative-manifold" src="representative_manifold.html?v=pan-20261027" '
+            '<iframe class="representative-manifold" src="representative_manifold.html?v=hands-20261027" '
             'title="Rotate the 3D hand-object manifold and inspect six representative hand configurations" loading="lazy"></iframe>'
             '<noscript><img src="figures/main02_manifold.svg" alt="Static hand-object manifold and six representative hand configurations"></noscript>'
             + match.group(1) + '</figure>'
