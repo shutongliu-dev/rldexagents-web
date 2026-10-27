@@ -29,7 +29,6 @@ def promote_demos(page, root):
         '<div class="featured-demos-heading"><h2 id="demos-heading">Demos</h2>'
         '<span>Rollout demonstrations</span></div>' + content + '</section>'
     )
-    page = re.sub(r'<details\b[^>]*class="demo-playback"[^>]*>.*?</details>', '', page, count=1, flags=re.S)
     if 'class="featured-demos"' in page:
         page, count = re.subn(r'<section id="demos" class="featured-demos"[^>]*>.*?</section>', lambda _: section, page, count=1, flags=re.S)
         if count != 1:
