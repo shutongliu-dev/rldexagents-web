@@ -118,3 +118,8 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 .open-questions-table table{min-width:980px;margin:0;font-size:12px}
 .open-questions-table th{white-space:nowrap}
 .open-questions-page .report-hero{margin-bottom:18px}
+.project-authors{font-family:var(--serif);font-size:18px;line-height:1.65;color:#27241f;margin:18px 0 28px;text-align:center}
+.project-authors .author-names{font-weight:700}
+.project-authors sup{font:600 .62em/0 var(--mono);vertical-align:super;letter-spacing:0}
+.project-authors .author-affiliations{font:13px/1.7 var(--mono);color:#81735f;margin-top:5px}
+@media(max-width:600px){.project-authors{font-size:15px;line-height:1.7}.project-authors .author-affiliations{font-size:10px;line-height:1.8}}

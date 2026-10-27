@@ -8,6 +8,14 @@ CAPTIONS = {
     4: 'Figure 4 — Toolkit execution and six selected Isaac Sim teacher interactions, one per cluster. Finger control is closed-loop; wrist motion follows the reference.',
 }
 
+AUTHOR_BLOCK = ('<div class="authors project-authors">'
+                '<div class="author-names">Ruoqi Chen<sup>1,2</sup>, Shutong Liu<sup>1</sup>, '
+                'Feixiang Ruan<sup>3</sup>, Weili Fu<sup>1</sup>, Zihao Wang<sup>1</sup>, '
+                'Mengdi Xu<sup>1,†</sup></div>'
+                '<div class="author-affiliations"><sup>1</sup> IIIS, Tsinghua University · '
+                '<sup>2</sup> Shanghai Qizhi Institute · <sup>3</sup> Peking University · '
+                '<sup>†</sup> Corresponding author</div></div>')
+
 
 def refresh_assets(page):
     return re.sub(
@@ -23,7 +31,7 @@ def hide_internal(tag):
 
 
 def clean_main(page):
-    page = re.sub(r'<div class="authors"[^>]*>', lambda m: hide_internal(m[0]), page)
+    page = re.sub(r'<div class="authors"[^>]*>.*?</div>', AUTHOR_BLOCK, page, count=1, flags=re.S)
     page = re.sub(r'<footer class="footer"[^>]*>', lambda m: hide_internal(m[0]), page)
     for match in list(re.finditer(r'<figcaption[^>]*>(Figure ([1-4])\s*[—–-].*?)</figcaption>', page, re.S)):
         # Update matching image alt text too; keep the original report sources intact.
