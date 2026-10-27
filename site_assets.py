@@ -7,6 +7,7 @@ FAVICON_LINKS = (
 
 
 def add_site_icons(page):
+    page = page.replace('href="assets/rldex_report.css"', 'href="assets/rldex_report.css?v=method-folds-1"')
     if 'favicon.ico' not in page:
         page = page.replace('</head>', FAVICON_LINKS + '</head>', 1)
     return page
