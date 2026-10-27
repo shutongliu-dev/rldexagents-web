@@ -2,6 +2,12 @@
 
 A self-contained research website for **An Extensible Dexterous Skill Toolkit for LLM Agents**. This repository includes the technical report, interactive hand-pose and HOI manifold, figures, color demonstration videos, source documents, and bundled experimental evidence.
 
+## Project page
+
+**Live website:** https://shutongliu-dev.github.io/rldexagents-web/
+
+GitHub Pages publishes the static website from the root of `main`. The source repository remains private; the deployed project page is publicly accessible.
+
 ## View locally
 
 Open `index.html` for the main report, `pose_hoi_manifold.html` for the English interactive gallery, or `supplementary_report.html` for the extended evidence report.
@@ -34,7 +40,7 @@ Saved HTML and assets are the current distributable website. Python builders and
 
 Original recordings and evidence remain included. Color presentation media is tracked separately from original rollout measurements. The hidden shortcut row remains in the main page markup and can be restored later.
 
-The repository includes large local videos and is intended to preserve the complete website package. It has not been configured for public hosting.
+The repository includes large local videos and is intended to preserve the complete website package. The project page is hosted on GitHub Pages.
 
 ## Evidence scope
 
