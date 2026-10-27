@@ -4,8 +4,10 @@ Does not run simulations, modify checkpoints, or rewrite the older supplement.
 """
 from pathlib import Path
 from site_assets import add_site_icons
+from audience_cleanup import clean_main
 from representative_viewer import build_viewer, embed_viewer
 from report_sections import fold_method_sections
+from report_demos import promote_demos
 import json,re,html,shutil
 import numpy as np
 import matplotlib
@@ -153,8 +155,6 @@ def draw_execution_figure():
    ax.add_patch(clip);image.set_clip_path(clip)
    ax.set_title(f'C{d["final_cluster"]}  /  {d["object"]}',fontsize=12,fontfamily='STIXGeneral',
                 weight='bold',loc='left',pad=10,color='#1b1b1b')
-  f.text(.5,.022,'Selected Isaac Sim teacher interactions · one example per cluster · not agent-level success statistics',
-         ha='center',fontsize=9,color='#807665',fontfamily='DejaVu Sans')
   for ext in ['png','svg','pdf']:
    f.savefig(FIG/f'main04_demonstrations.{ext}',dpi=180,bbox_inches='tight',pad_inches=.08,transparent=True)
   plt.close(f)
@@ -204,7 +204,7 @@ links=[('RLDexAgents_Technical_Report.md','Report'),('RLDexAgents_Technical_Repo
 quick=''.join(f'<a class="link-pill" href="{url}">{label}</a>' for url,label in links)
 page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RLDexAgents — Technical Report</title><meta name="description" content="Hand motion structure, executable skill distillation and an extensible agentic dexterous toolkit."><link rel="stylesheet" href="assets/template-fonts.css"><link rel="stylesheet" href="assets/dexx-template.css"><link rel="stylesheet" href="assets/rldex_report.css"></head><body><nav class="toc" aria-label="Report contents"><h3>Content</h3><hr><ul>{nav}</ul></nav><main class="main-content"><header class="report-hero"><h1 class="hero-text">RLDexAgents</h1><div class="sub-hero-text">An Extensible Dexterous Skill Toolkit for LLM Agents</div><p class="report-subtitle">From Hand Pose Manifolds to Interface-Conditioned Skill Distillation and Agentic Manipulation</p><div class="venue">Technical Report · 27 October 2026</div><div class="authors">Sharpa right-hand implementation · Audited experiment records</div>{herofigure}<div class="quick-links" hidden>{quick}</div></header><article class="section">{body}</article><footer class="footer">Audited project evidence · 27 October 2026.<br>Local figures and media · <a href="production_checks.md">Production notes</a><br>Page template adapted from the local DEX-X project page.</footer></main></body></html>'''
 build_viewer(ROOT)
-(ROOT/'index.html').write_text(add_site_icons(fold_method_sections(embed_viewer(page))),encoding='utf-8')
+(ROOT/'index.html').write_text(add_site_icons(promote_demos(fold_method_sections(embed_viewer(page)), ROOT)),encoding='utf-8')
 
 # Minimal deterministic Markdown-to-LaTeX renderer for this report's constructs.
 def esc(s):
