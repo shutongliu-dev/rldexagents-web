@@ -4,12 +4,14 @@
 header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:0 8px}
 h1{font:700 clamp(18px,2.6vw,25px)/1.4 'Playfair Display',Georgia,serif;margin:0 0 7px}
 .subtitle{font:10px/1.7 'Roboto Mono',monospace;color:#8a7d68;margin:0}
-.tools{display:flex;gap:6px;flex:none;padding-top:3px}
+.tools{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:6px;max-width:290px;padding-top:3px}
 button{font:11px/1.4 system-ui,sans-serif;border:1px solid #d9cfbd;background:transparent;border-radius:6px;padding:6px 10px;color:#655943;cursor:pointer}
 button:hover{background:#eee6d8}button:focus-visible,canvas:focus-visible{outline:2px solid #95815b;outline-offset:3px}
 .stage{position:relative;width:100%;height:clamp(470px,68vw,650px);isolation:isolate}
 canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
 canvas.dragging{cursor:grabbing}
+canvas.move-mode{cursor:move}
+.tools button[aria-pressed=true]{background:#eee6d8;border-color:#99805b;color:#3a3328}
 .pose{position:absolute;transform:translate(-50%,-50%);width:clamp(70px,15%,144px);padding:6px 7px 8px;background:#fdfaf4ef;border:1px solid #dfd7c8;border-radius:9px;box-shadow:0 2px 5px #64513208;z-index:2;color:#27241f}
 .pose img{display:block;width:100%;aspect-ratio:1;object-fit:contain;mix-blend-mode:multiply;pointer-events:none}
 .pose strong{display:block;font:700 15px/1.4 'Playfair Display',Georgia,serif;text-align:center}

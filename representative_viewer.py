@@ -50,25 +50,30 @@ def build_viewer(root):
         '<link rel="stylesheet" href="assets/representative-manifold.css"></head><body>'
         '<header><div><h1>Hand-object manifold &amp; representative configurations</h1>'
         '<p class="subtitle">6,241 hand–object configurations</p></div>'
-        '<div class="tools"><button data-zoom-out aria-label="Zoom out">−</button>'
+        '<div class="tools" role="group" aria-label="Point cloud controls">'
+        '<button data-mode="rotate" aria-pressed="true">Rotate</button>'
+        '<button data-mode="move" aria-pressed="false">Move</button>'
+        '<button data-zoom-out aria-label="Zoom out">−</button>'
         '<button data-zoom-in aria-label="Zoom in">+</button><button data-reset>Reset view</button></div></header>'
-        '<div class="stage"><canvas tabindex="0" aria-label="Interactive 3D hand-object point cloud. Drag to rotate, scroll to zoom, or use the arrow keys."></canvas>'
+        '<div class="stage"><canvas tabindex="0" aria-label="Interactive 3D hand-object point cloud. Drag to rotate; select Move or hold Shift and drag to reposition. Scroll to zoom. Arrow keys rotate; Shift plus arrow keys move."></canvas>'
         + cards + '<div class="tooltip" role="tooltip"></div></div>'
         '<div class="legend" aria-label="Dataset source filters">' + legend + '</div>'
-        '<p class="hint">Drag to rotate · Scroll to zoom · Select a representative hand</p>'
+        '<p class="hint">Drag to rotate · Shift + drag to move · Scroll to zoom</p>'
         '<div class="selection" aria-live="polite"></div>'
         '<script id="pointData" type="application/json">'
         + json.dumps(payload, separators=(',', ':'), ensure_ascii=False).replace('</', '<\\/')
         + '</script><script src="assets/representative-manifold.js"></script></body></html>'
     )
-    (root / 'representative_manifold.html').write_text(add_site_icons(refresh_assets(page)), encoding='utf-8', newline='\n')
+    page = add_site_icons(refresh_assets(page))
+    page = re.sub(r'(assets/representative-manifold\.(?:css|js))\?[^"\s]*', r'\1?v=pan-20261027', page)
+    (root / 'representative_manifold.html').write_text(page, encoding='utf-8', newline='\n')
 
 
 def embed_viewer(page):
     def replace(match):
         return (
             '<figure class="representative-manifold-figure">'
-            '<iframe class="representative-manifold" src="representative_manifold.html" '
+            '<iframe class="representative-manifold" src="representative_manifold.html?v=pan-20261027" '
             'title="Rotate the 3D hand-object manifold and inspect six representative hand configurations" loading="lazy"></iframe>'
             '<noscript><img src="figures/main02_manifold.svg" alt="Static hand-object manifold and six representative hand configurations"></noscript>'
             + match.group(1) + '</figure>'

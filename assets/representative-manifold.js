@@ -7,7 +7,7 @@ const tooltip = document.querySelector('.tooltip');
 const selection = document.querySelector('.selection');
 const enabled = new Set(D.datasets.map((_, i) => i));
 const poses = [...document.querySelectorAll('.pose')];
-let yaw = .72, pitch = .42, zoom = 1, drag = null, selected = null;
+let yaw = .72, pitch = .42, zoom = 1, panX = 0, panY = 0, mode = 'rotate', drag = null, selected = null;
 let width = 1, height = 1, fit = 1, projected = [], framePending = false;
 
 function rotate(q, a = yaw, b = pitch) {
@@ -25,7 +25,7 @@ const center = [(bounds[0]+bounds[1])/2, (bounds[2]+bounds[3])/2];
 
 function project(q) {
   const p = rotate(q);
-  return [width*.51+(p[0]-center[0])*fit*zoom, height*.48-(p[1]-center[1])*fit*zoom, p[2]];
+  return [width*(.51+panX)+(p[0]-center[0])*fit*zoom, height*(.48+panY)-(p[1]-center[1])*fit*zoom, p[2]];
 }
 function schedule() {
   if (!framePending) {
@@ -88,15 +88,27 @@ document.querySelectorAll('[data-source]').forEach(button => button.addEventList
   if(enabled.has(i))enabled.delete(i);else enabled.add(i);
   button.setAttribute('aria-pressed',String(enabled.has(i)));schedule();
 }));
-function reset(){yaw=.72;pitch=.42;zoom=1;schedule();}
+function reset(){yaw=.72;pitch=.42;zoom=1;panX=0;panY=0;tooltip.style.display='none';schedule();}
+document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click',()=>{
+  mode=button.dataset.mode;
+  document.querySelectorAll('[data-mode]').forEach(item=>item.setAttribute('aria-pressed',String(item.dataset.mode===mode)));
+  canvas.classList.toggle('move-mode',mode==='move');
+}));
 document.querySelector('[data-reset]').addEventListener('click',reset);
 document.querySelector('[data-zoom-in]').addEventListener('click',()=>{zoom=Math.min(2,zoom*1.15);schedule();});
 document.querySelector('[data-zoom-out]').addEventListener('click',()=>{zoom=Math.max(.55,zoom/1.15);schedule();});
 canvas.addEventListener('pointerdown',e=>{
-  drag={id:e.pointerId,x:e.clientX,y:e.clientY,yaw,pitch};canvas.setPointerCapture(e.pointerId);canvas.classList.add('dragging');tooltip.style.display='none';
+  if(drag||![0,2].includes(e.button))return;
+  const moving=mode==='move'||e.shiftKey||e.button===2;
+  drag={id:e.pointerId,x:e.clientX,y:e.clientY,yaw,pitch,panX,panY,moving};canvas.setPointerCapture(e.pointerId);canvas.classList.add('dragging');tooltip.style.display='none';
 });
 canvas.addEventListener('pointermove',e=>{
-  if(drag){yaw=drag.yaw+(e.clientX-drag.x)*.008;pitch=Math.max(-1.4,Math.min(1.4,drag.pitch+(e.clientY-drag.y)*.008));schedule();return;}
+  if(drag){
+    if(e.pointerId!==drag.id)return;
+    if(drag.moving){panX=drag.panX+(e.clientX-drag.x)/width;panY=drag.panY+(e.clientY-drag.y)/height;}
+    else{yaw=drag.yaw+(e.clientX-drag.x)*.008;pitch=Math.max(-1.4,Math.min(1.4,drag.pitch+(e.clientY-drag.y)*.008));}
+    schedule();return;
+  }
   const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
   let nearest=-1,distance=10;
   projected.forEach((q,i)=>{if(!enabled.has(D.sourceIds[i]))return;const d=Math.hypot(q[0]-x,q[1]-y);if(d<distance){distance=d;nearest=i;}});
@@ -104,15 +116,21 @@ canvas.addEventListener('pointermove',e=>{
   tooltip.textContent=`${D.datasets[D.sourceIds[nearest]]} / C${D.labels[nearest]}`;
   tooltip.style.left=`${Math.max(0,Math.min(width-190,x+12))}px`;tooltip.style.top=`${Math.max(0,y-32)}px`;tooltip.style.display='block';
 });
-function stop(){drag=null;canvas.classList.remove('dragging');}
-canvas.addEventListener('pointerup',stop);canvas.addEventListener('pointercancel',stop);
+function stop(e){if(drag&&e.pointerId===drag.id){drag=null;canvas.classList.remove('dragging');}}
+canvas.addEventListener('pointerup',stop);canvas.addEventListener('pointercancel',stop);canvas.addEventListener('lostpointercapture',stop);
+canvas.addEventListener('contextmenu',e=>e.preventDefault());
 canvas.addEventListener('pointerleave',()=>{tooltip.style.display='none';});
 canvas.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.55,Math.min(2,zoom*Math.exp(-e.deltaY*.001)));schedule();},{passive:false});
 canvas.addEventListener('keydown',e=>{
   if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','+','=','-','0'].includes(e.key))return;
   e.preventDefault();
-  if(e.key==='ArrowLeft')yaw-=.12;if(e.key==='ArrowRight')yaw+=.12;
-  if(e.key==='ArrowUp')pitch=Math.max(-1.4,pitch-.12);if(e.key==='ArrowDown')pitch=Math.min(1.4,pitch+.12);
+  if(e.shiftKey||mode==='move'){
+    if(e.key==='ArrowLeft')panX-=20/width;if(e.key==='ArrowRight')panX+=20/width;
+    if(e.key==='ArrowUp')panY-=20/height;if(e.key==='ArrowDown')panY+=20/height;
+  }else{
+    if(e.key==='ArrowLeft')yaw-=.12;if(e.key==='ArrowRight')yaw+=.12;
+    if(e.key==='ArrowUp')pitch=Math.max(-1.4,pitch-.12);if(e.key==='ArrowDown')pitch=Math.min(1.4,pitch+.12);
+  }
   if(e.key==='+'||e.key==='=')zoom=Math.min(2,zoom*1.1);if(e.key==='-')zoom=Math.max(.55,zoom/1.1);if(e.key==='0')reset();
   schedule();
 });
