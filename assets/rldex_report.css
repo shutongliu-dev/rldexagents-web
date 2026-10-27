@@ -112,3 +112,9 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 .section .tldr strong{font-weight:700}
 .section .tldr em.tldr-emphasis{font-weight:400;font-style:italic}
 [data-maintenance][hidden]{display:none!important}
+
+/* Standalone research-agenda table. */
+.open-questions-table{max-width:100%;overflow-x:auto;margin:24px 0 42px}
+.open-questions-table table{min-width:980px;margin:0;font-size:12px}
+.open-questions-table th{white-space:nowrap}
+.open-questions-page .report-hero{margin-bottom:18px}

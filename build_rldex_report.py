@@ -6,6 +6,7 @@ from pathlib import Path
 from site_assets import add_site_icons
 from audience_cleanup import clean_main
 from project_links import add_project_links
+from open_questions_page import build_open_questions_page
 from representative_viewer import build_viewer, embed_viewer
 from report_sections import fold_method_sections
 from report_demos import promote_demos
@@ -201,10 +202,11 @@ herofigure=overview.group(0) if overview else ''
 if overview:
  body=body.replace(herofigure,'',1)
  herofigure=herofigure.replace('<img ', '<a href="method.pdf" target="_blank" rel="noopener" title="Open original method PDF"><img ',1).replace('<figcaption', '</a><figcaption',1)
-links=[('RLDexAgents_Technical_Report.md','Report'),('RLDexAgents_Technical_Report.tex','LaTeX'),('method.pdf','Method Figure'),('supplementary_report.html','Supplementary'),('pose_hoi_manifold.html','Interactive Gallery'),('references.bib','References'),('open_questions.md','Open Questions')]
+links=[('RLDexAgents_Technical_Report.md','Report'),('RLDexAgents_Technical_Report.tex','LaTeX'),('method.pdf','Method Figure'),('supplementary_report.html','Supplementary'),('pose_hoi_manifold.html','Interactive Gallery'),('references.bib','References'),('open_questions.html','Open Questions')]
 quick=''.join(f'<a class="link-pill" href="{url}">{label}</a>' for url,label in links)
 page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RLDexAgents — Technical Report</title><meta name="description" content="Hand motion structure, executable skill distillation and an extensible agentic dexterous toolkit."><link rel="stylesheet" href="assets/template-fonts.css"><link rel="stylesheet" href="assets/dexx-template.css"><link rel="stylesheet" href="assets/rldex_report.css"></head><body><nav class="toc" aria-label="Report contents"><h3>Content</h3><hr><ul>{nav}</ul></nav><main class="main-content"><header class="report-hero"><h1 class="hero-text">RLDexAgents</h1><div class="sub-hero-text">An Extensible Dexterous Skill Toolkit for LLM Agents</div><p class="report-subtitle">From Hand Pose Manifolds to Interface-Conditioned Skill Distillation and Agentic Manipulation</p><div class="venue">Technical Report · 27 October 2026</div><div class="authors">Sharpa right-hand implementation · Audited experiment records</div>{herofigure}<div class="quick-links" hidden>{quick}</div></header><article class="section">{body}</article><footer class="footer">Audited project evidence · 27 October 2026.<br>Local figures and media · <a href="production_checks.md">Production notes</a><br>Page template adapted from the local DEX-X project page.</footer></main></body></html>'''
 build_viewer(ROOT)
+build_open_questions_page(ROOT)
 (ROOT/'index.html').write_text(add_project_links(add_site_icons(clean_main(promote_demos(fold_method_sections(embed_viewer(page)), ROOT)))),encoding='utf-8')
 
 # Minimal deterministic Markdown-to-LaTeX renderer for this report's constructs.

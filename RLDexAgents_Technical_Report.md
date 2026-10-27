@@ -176,7 +176,7 @@ RLDexAgents provides a working path from hand motion structure to executable, ag
 
 ## Supplementary Material
 
-The [extended evidence report](supplementary_report.html) contains full dataset accounting, teacher configurations, historical distillation comparisons, expanded selection evaluation and contact-survival analysis. The [interactive gallery](pose_hoi_manifold.html) contains the complete 3D manifold, representative poses and replay videos. [Open questions](open_questions.md) list proposed verification experiments. These materials preserve the detailed evidence without interrupting the main narrative.
+The [extended evidence report](supplementary_report.html) contains full dataset accounting, teacher configurations, historical distillation comparisons, expanded selection evaluation and contact-survival analysis. The [interactive gallery](pose_hoi_manifold.html) contains the complete 3D manifold, representative poses and replay videos. [Open questions](open_questions.html) list proposed verification experiments. These materials preserve the detailed evidence without interrupting the main narrative.
 
 ## References
 
