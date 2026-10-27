@@ -36,6 +36,15 @@ h1.hero-text{margin-top:0}.report-subtitle{font-size:21px;line-height:1.55;margi
 /* Temporarily hide the document shortcut links; keep markup and files intact. */
 .report-hero .quick-links[hidden]{display:none}
 
+/* Main public resources, above the overview figure. */
+.project-links{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:24px 0 34px}
+.project-links .link-pill{gap:10px;padding:13px 22px;font-size:16px;line-height:1.2;white-space:nowrap}
+.project-links .link-pill svg{width:20px;height:20px}
+.project-links [aria-disabled=true]{cursor:default}
+.project-links .link-pill:focus-visible{outline:2px solid #968362;outline-offset:4px}
+@media(max-width:600px){.project-links{gap:10px;margin:20px 0 28px}.project-links .link-pill{padding:12px 17px;font-size:14px}.project-links .link-pill svg{width:18px;height:18px}}
+@media print{.project-links{display:none}}
+
 /* Short method overviews with optional, initially collapsed technical detail. */
 .section p.method-overview{font-size:19px;line-height:1.8;color:#625b4f;margin:0 0 20px;max-width:950px}
 .method-details{margin:18px 0 34px;border:1px solid #ded5c6;border-radius:9px;background:transparent;overflow:hidden}
