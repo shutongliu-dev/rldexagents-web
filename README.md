@@ -57,7 +57,7 @@ The reports document the Sharpa right-hand setup and the recorded evaluation pro
 
 - [HTML 主入口](index.html)
 - [精简主报告 Markdown](RLDexAgents_Technical_Report.md) / [LaTeX 源码](RLDexAgents_Technical_Report.tex) / [参考文献](references.bib)
-- [实验索引](experiment_index.md) / [待核实问题](open_questions.md) / [制作与验证记录](production_checks.md)
+- [制作与验证记录](production_checks.md)
 
 - [扩展证据与历史实验补充报告](supplementary_report.html) / [补充报告 Markdown](RLDexAgents_Supplementary_Report.md)
 

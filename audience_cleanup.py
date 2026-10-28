@@ -2,14 +2,14 @@
 import re
 
 CAPTIONS = {
-    1: 'Figure 1 — Toolkit overview: motion organization, teacher-to-student distillation, agent interfaces, and a proposed skill-expansion loop.',
-    2: 'Figure 2 — Hand–object manifold and representative configurations C0–C5. Colors indicate dataset sources; each hand is linked to its observed medoid. These groups describe geometry rather than validated grasp functions.',
-    3: 'Figure 3 — Four command interfaces share hand-local feedback, a recurrent architecture, and the same action space. A privileged teacher labels states visited by the student.',
-    4: 'Figure 4 — Toolkit execution and six selected Isaac Sim teacher interactions, one per cluster. Finger control is closed-loop; wrist motion follows the reference.',
+    1: 'Figure 1 — RLDexAgents overview: motion organization, RL teacher-to-student distillation, agent interfaces, and bank expansion. The pose bank stores hand configurations; the skill bank stores trained policies.',
+    2: 'Figure 2 — Hand–object manifold and representative configurations C0–C5. Colors indicate dataset sources; each hand is linked to its medoid.',
+    3: 'Figure 3 — Mixed DAgger/PPO distillation of the final Cluster + phase student. The teacher labels student-visited states, and the recurrent student controls the fingers using local feedback.',
+    4: 'Figure 4 — Toolkit execution and six Isaac Sim teacher interactions, one per cluster. The teacher controls the fingers while the wrist follows its reference.',
 }
 
 AUTHOR_BLOCK = ('<div class="authors project-authors">'
-                '<div class="author-names">Ruoqi Chen<sup>1,2</sup>, Shutong Liu<sup>1</sup>, '
+                '<div class="author-names">Ruoqu Chen<sup>1,2</sup>, Shutong Liu<sup>1</sup>, '
                 'Feixiang Ruan<sup>3</sup>, Weili Fu<sup>4</sup>, Zihao Wang<sup>1</sup>, '
                 'Mengdi Xu<sup>1,†</sup></div>'
                 '<div class="author-affiliations"><sup>1</sup> IIIS, Tsinghua University · '

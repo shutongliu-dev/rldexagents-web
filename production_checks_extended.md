@@ -8,8 +8,6 @@ Completed: 2026-10-27.
 - `RLDexAgents_Technical_Report.md`: approximately 7,486 whitespace-separated words, Executive Summary, 11 main sections, reproduction appendix and references.
 - `RLDexAgents_Technical_Report.tex`: two-column publication-style source generated from the same Markdown. Seven main figure PDFs and eight tables.
 - `references.bib`: six verified publication records; PPO explicitly identified as a preprint. Bibliography keys match the report.
-- `experiment_index.md`: E01–E11 with populations, input/action definitions, budgets, evaluation criteria, primary paths and limitations.
-- `open_questions.md`: unresolved evidence and concrete verification experiments.
 - `figures/`: seven main scientific/architecture figures in PNG/SVG/PDF, actual medoid images, local equation SVGs, human/Wuji analysis and original contact-analysis supplements.
 - `evidence/`: copied numeric summaries, selected per-episode results, configuration/code evidence and original source locations.
 - `pose_hoi_manifold.html`, `manifold.html`, and existing media: preserved interactive supplementary report.

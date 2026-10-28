@@ -4,7 +4,7 @@
 
 The main report follows motion data → pose structure → executable RL interactions → command-conditioned distillation → agent toolkit. It contains a 148-word abstract, seven numbered sections, four main figures and two core tables. Markdown is approximately 3,700 whitespace-separated words, targeting a 6–8-page main text; final LaTeX page count remains unverified.
 
-The previous detailed text and experimental breakdowns are preserved in `supplementary_report.html`, `RLDexAgents_Supplementary_Report.md`, `RLDexAgents_Supplementary_Report.tex`, and `experiment_index.md`. Prior production notes are in `production_checks_extended.md`. Historical metrics and artifacts have not been discarded.
+The previous detailed text and experimental breakdowns are preserved in `supplementary_report.html`, `RLDexAgents_Supplementary_Report.md`, and `RLDexAgents_Supplementary_Report.tex`. Prior production notes are in `production_checks_extended.md`. Historical metrics and artifacts have not been discarded.
 
 ## Main visual structure
 

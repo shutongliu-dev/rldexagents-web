@@ -6,7 +6,6 @@ from pathlib import Path
 from site_assets import add_site_icons
 from audience_cleanup import clean_main, AUTHOR_BLOCK
 from project_links import add_project_links
-from open_questions_page import build_open_questions_page
 from representative_viewer import build_viewer, embed_viewer
 from report_sections import fold_method_sections
 from report_demos import promote_demos
@@ -101,7 +100,7 @@ def draw_distillation_figure():
   def connector(a,b):
    ax.add_patch(FancyArrowPatch(a,b,arrowstyle='->',mutation_scale=10,color='#a49b8b',lw=.85))
   stages=[(1.95,'01','Privileged teacher','Object state + future reference','Labels student-visited states'),
-          (6,'02','Online learning','Teacher-action imitation + PPO','Teacher labels + task rewards'),
+          (6,'02','Online learning','Mixed DAgger / PPO loss','Teacher labels + task rewards'),
           (10.05,'03','Student rollout','Student executes finger actions','Contacts produce the next state')]
   for x,n,title,line1,line2 in stages:
    text(x,4.02,n,size=8,color=muted)
@@ -110,18 +109,19 @@ def draw_distillation_figure():
    text(x,3.12,line2,size=9,color=muted)
   connector((3.55,3.7),(4.4,3.7));connector((7.6,3.7),(8.45,3.7))
   ax.plot([.35,11.65],[2.77,2.77],color=rule,lw=.7)
-  text(6,2.52,'FOUR ALTERNATIVE COMMANDS',size=8,color=muted)
-  commands=[('Cluster','C0–C5','Configuration family'),('Joint','22 joint targets','Hand posture'),
-            ('Fingertip','5 × 3 palm-frame targets','Endpoint geometry'),('Hybrid','Cluster + fingertips','Prior + geometry')]
-  for x,(title,payload,meaning) in zip([1.5,4.5,7.5,10.5],commands):
+  text(6,2.52,'FINAL STUDENT: CLUSTER + PHASE',size=8,color=muted)
+  commands=[('Cluster','Grasp family','Agent-selected intent'),
+            ('Phase','Execution stage + timing','Runtime coordination'),
+            ('Local feedback','Proprioception + fingertip force','Closed-loop sensing')]
+  for x,(title,payload,meaning) in zip([2,6,10],commands):
    text(x,2.13,title,size=14,color=accent,weight='bold',serif=True)
    text(x,1.78,payload,size=10)
    text(x,1.51,meaning,size=9,color=muted)
    ax.plot([x,x],[1.24,1.05],color=rule,lw=.8)
-  ax.plot([1.5,10.5],[1.05,1.05],color=rule,lw=.8)
+  ax.plot([2,10],[1.05,1.05],color=rule,lw=.8)
   connector((6,1.05),(6,.81))
-  text(6,.61,'Shared student architecture',size=13,weight='bold',serif=True)
-  text(6,.27,'8-frame hand feedback + command / phase  →  recurrent policy  →  22 finger actions',size=10)
+  text(6,.61,'Recurrent hand controller',size=13,weight='bold',serif=True)
+  text(6,.27,'Finger actions from local feedback  /  Wrist motion from the external controller',size=10)
   for ext in ['png','svg','pdf']:
    f.savefig(FIG/f'main03_distillation.{ext}',dpi=180,bbox_inches='tight',pad_inches=.08,transparent=True)
   plt.close(f)
@@ -178,12 +178,12 @@ body=markdown.markdown(hmd,extensions=['tables','fenced_code','toc'],extension_c
 body=style_code_blocks(body)
 body=re.sub(r'<p><img alt="(Figure [^"]+)" src="([^"]+)" /></p>',lambda m:f'<figure><img loading="lazy" src="{m[2].replace(".png",".svg")}{"?v=method-20261027" if m[2].endswith("method_overview.png") else ""}" alt="{m[1]}"><figcaption>{m[1]}</figcaption></figure>',body)
 # Only figures produced here have SVG versions; embedded photos are inside their figure SVG.
-for key in ['santello1998','ross2011','schulman2017','pinto2018','qi2023','ichter2023']:
+for key in ['santello1998','ross2011','chen2026dexx','schulman2017','pinto2018','qi2023','ichter2023']:
  body=body.replace(f'<li><a class="citation" href="#ref-{key}">',f'<li id="ref-{key}"><a class="citation" href="#ref-{key}">')
 # Optional exploration does not interrupt the four-figure main narrative.
 explorer='<section class="interactive-evidence" id="interactive-manifold"><h3>Explore the hand manifold</h3><p>Rotate the 3D view, color points by dataset source, and switch source filters to compare coverage. <b>OakInk (wrist-adapted)</b> contains 68 OakInk-v2 right-hand references with reconstructed pre-contact wrist motion.</p><iframe src="manifold.html" title="Interactive hand-object manifold by dataset source" loading="eager"></iframe><p><a href="manifold.html" target="_blank" rel="noopener">Open full-size 3D viewer</a> · <a href="pose_hoi_manifold.html">Pose and replay gallery</a> · <a href="data/wrist_adapted_source_audit.json">Source audit</a></p></section>'
 # Keep source exploration visible at the top, before the report abstract.
-tldr='<h2 id="tldr">TL;DR</h2><div class="tldr"><p><strong>RLDexAgents</strong> bridges large-scale hand motion data and executable dexterous skills for LLM agents. We analyze over <strong>1 million robotic hand poses</strong> to organize diverse hand configurations into structured pose banks, and leverage large-scale RL training and distillation to turn representative motions into <strong>reusable, closed-loop manipulation skills</strong>. Through an <strong>extensible skill toolkit</strong>, agents can retrieve, specify, and execute manipulation behaviors using different levels of abstraction, including discrete grasp categories, joint configurations, and fingertip goals, without directly generating high-dimensional control trajectories. Our experiments demonstrate the feasibility of this approach and highlight how skill representations and command interfaces influence dexterous execution.</p></div>'
+tldr='<h2 id="tldr">TL;DR</h2><div class="tldr"><p><strong>RLDexAgents</strong> connects large-scale hand motion data to agent-callable dexterous control through two complementary banks: a <strong>pose bank</strong> of quasi-static hand references and a <strong>skill bank</strong> of trained, executable policies. Motion analysis organizes representative configurations; RL teacher interactions and command-conditioned distillation provide closed-loop controllers. Agents can retrieve a functional pose or invoke a compatible skill without generating high-dimensional joint trajectories. Task-specific pose registration expands the pose bank for future reuse; adding an executable policy extends the skill bank.</p></div>'
 body=body.replace('<h2 id="abstract">',explorer+tldr+'<h2 id="abstract">')
 demos=read('data/cluster_teacher_demos.json');videos=''
 for d in demos:
@@ -202,11 +202,10 @@ herofigure=overview.group(0) if overview else ''
 if overview:
  body=body.replace(herofigure,'',1)
  herofigure=herofigure.replace('<img ', '<a href="method.pdf" target="_blank" rel="noopener" title="Open original method PDF"><img ',1).replace('<figcaption', '</a><figcaption',1)
-links=[('RLDexAgents_Technical_Report.md','Report'),('RLDexAgents_Technical_Report.tex','LaTeX'),('method.pdf','Method Figure'),('supplementary_report.html','Supplementary'),('pose_hoi_manifold.html','Interactive Gallery'),('references.bib','References'),('open_questions.html','Open Questions')]
+links=[('RLDexAgents_Technical_Report.md','Report'),('RLDexAgents_Technical_Report.tex','LaTeX'),('method.pdf','Method Figure'),('supplementary_report.html','Supplementary'),('pose_hoi_manifold.html','Interactive Gallery'),('references.bib','References')]
 quick=''.join(f'<a class="link-pill" href="{url}">{label}</a>' for url,label in links)
 page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RLDexAgents — Technical Report</title><meta name="description" content="Hand motion structure, executable skill distillation and an extensible agentic dexterous toolkit."><link rel="stylesheet" href="assets/template-fonts.css"><link rel="stylesheet" href="assets/dexx-template.css"><link rel="stylesheet" href="assets/rldex_report.css"></head><body><nav class="toc" aria-label="Report contents"><h3>Content</h3><hr><ul>{nav}</ul></nav><main class="main-content"><header class="report-hero"><h1 class="hero-text">RLDexAgents</h1><div class="sub-hero-text">An Extensible Dexterous Skill Toolkit for LLM Agents</div><p class="report-subtitle">From Hand Pose Manifolds to Interface-Conditioned Skill Distillation and Agentic Manipulation</p><div class="venue">Technical Report · 27 October 2026</div>{AUTHOR_BLOCK}{herofigure}<div class="quick-links" hidden>{quick}</div></header><article class="section">{body}</article><footer class="footer">Audited project evidence · 27 October 2026.<br>Local figures and media · <a href="production_checks.md">Production notes</a><br>Page template adapted from the local DEX-X project page.</footer></main></body></html>'''
 build_viewer(ROOT)
-build_open_questions_page(ROOT)
 (ROOT/'index.html').write_text(add_project_links(add_site_icons(clean_main(promote_demos(fold_method_sections(embed_viewer(page)), ROOT)))),encoding='utf-8')
 
 # Minimal deterministic Markdown-to-LaTeX renderer for this report's constructs.

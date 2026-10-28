@@ -4,14 +4,14 @@ import re
 
 SECTIONS = {
     '3-learning-executable-dexterous-skills': {
-        'overview': 'Reference-conditioned RL teachers turn retargeted motion into physically executed interactions. Successful lift-and-hold rollouts provide demonstrations for the command-conditioned students.',
+        'overview': 'A SONIC-style teacher adapts Dex-X training to hand-only control. The policy controls the fingers while an external controller supplies wrist motion; successful interactions support command-conditioned distillation.',
         'label': 'Read training details',
-        'description': 'Teacher setup, successful-rollout selection and limitations',
+        'description': 'SONIC-style teacher, hand-only training and wrist execution',
     },
     '4-interface-conditioned-skill-distillation': {
-        'overview': 'Cluster, Joint, Fingertip and Hybrid commands condition four students with the same control architecture. Students learn from teacher actions on their own rollouts, combined with task PPO in the matched interface study.',
+        'overview': 'The final student combines Cluster + phase commands with local sensor feedback. Mixed DAgger/PPO training uses teacher action labels on student rollouts together with physical task rewards.',
         'label': 'Read distillation details',
-        'description': 'Feedback inputs, command formats and teacher–student training',
+        'description': 'Cluster + phase conditioning and mixed DAgger/PPO training',
     },
 }
 
