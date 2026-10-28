@@ -11,56 +11,15 @@
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.15em}
 \setlength{\textfloatsep}{12pt}
-\title{RLDexAgents: An Extensible Dexterous Skill Toolkit for LLM Agents\\[5pt]\large From Hand Pose Manifolds to Interface-Conditioned Skill Distillation and Agentic Manipulation}
-\author{Project technical report}
+\title{RLDexAgents: Supplementary Report}
+\author{Ruoqu Chen et al.}
 \date{Evidence audit: 27 October 2026}
+\renewcommand{\thefigure}{S\arabic{figure}}
 \begin{document}
 \maketitle
 
 
 
-
-\section*{Executive Summary}
-
-Dexterous manipulation requires continuous coordination of many joints, object-dependent contacts and feedback-driven corrections. An LLM agent can select an intention or a grasp candidate, but neither a language instruction nor a plausible static hand pose determines the control needed to establish and maintain a grasp. RLDexAgents investigates an intermediate layer: heterogeneous human and robot motion is organized into pose representations, evaluated through reinforcement-learning (RL) teachers, distilled into command-conditioned hand controllers, and exposed through a skill registry and execution runtime.
-
-The implemented pipeline includes large-scale pose analysis, a six-cluster hand--object proximity representation, pose and demonstration retrieval, reference-tracking teachers, recurrent students, simulator evaluation, and an agent-facing hand-control toolkit. The agent chooses commands and the external controller moves the wrist; an eight-frame student controls 22 finger joints at 30 Hz. Object state and future references available to the teacher are absent from the student's deployment feedback. This report addresses three questions: how motion is structured across sources and embodiments (RQ1), how that structure can guide executable skill distillation (RQ2), and how the resulting controllers can become reusable agent tools (RQ3).
-
-Five findings summarize the current evidence. First, among 1,029,112 indexed Sharpa poses, 1,015,044 satisfy URDF joint limits. A 24-entry joint-space representative bank obtains 0.2263 rad source-macro median coverage error versus 0.2597 rad for random selection, a 12.9\% reduction in this metric. Second, 14 PCA components retain 96.1\% of variance in the source-balanced fitting experiment but still incur 10.1 mm mean fingertip reconstruction error after joint-limit clipping. Third, manifold-guided demonstration selection does not improve the expanded grasp test: 343/2,365 successes versus 354/2,365 for quota-matched random selection, with a paired-parent difference interval spanning zero. Fourth, on 68 parent-held-out student tasks, the common teacher achieves 64 grasps and 54 five-second HOLD successes; the four students achieve 34--41 grasps and 22--26 five-second HOLD successes. Fifth, a 28-task command ablation finds that both fixed random groups and pose-cluster commands improve some outcomes over no command, but does not establish that geometric clusters are superior to random grouping.
-
-These results support structured pose retrieval and a closed-loop agent toolkit. The main challenges are contact establishment, teacher--student observation differences and command sensitivity. Next experiments will study additional training seeds, independently generated commands and repeated physical trials.
-
-\section{Introduction}
-
-A dexterous hand exposes a difficult interface to a language-based agent. Even when an agent identifies the correct object and intended action, it must resolve an end-effector approach, a compatible hand configuration, contact establishment, load transfer and subsequent stabilization. A full joint trajectory is cumbersome to specify and fragile to geometric error. A static grasp library is easier to retrieve, but does not encode how the hand reacts when contact differs from expectation. A task-specific RL policy can supply feedback, yet usually binds the controller to a narrow objective or scene.
-
-We investigate a middle representation between motion data and executable robotic skills using two complementary banks. A \textbf{pose bank} stores quasi-static hand pose references and their source or task context. A \textbf{skill bank} contains trained, executable feedback policies, together with command semantics and runtime metadata. A \textbf{registered tool} exposes pose retrieval or policy execution through a callable agent interface. A pose specifies a configuration; a policy determines feedback-driven actions. Multiple pose entries can be used with one compatible policy.
-
-Hand-synergy research motivates analyzing structured variation in posture \citep{santello1998}. DAgger addresses the mismatch between demonstration states and states visited by a learned policy through online expert labeling \citep{ross2011}. Asymmetric actor--critic methods motivate using training information unavailable to the deployed actor \citep{pinto2018}. Language-grounded skill selection motivates separating high-level choice from low-level feasibility \citep{ichter2023}. RLDexAgents applies these ideas to an existing Isaac Lab, Sharpa and PPO codebase.
-
-The research questions are:
-
-\begin{itemize}
-\item \textbf{RQ1:} How are hand poses structured across datasets and embodiments, and how effectively do representative banks cover them?
-\item \textbf{RQ2:} How can structured representations guide command-conditioned distillation, and where does successful teacher execution fail to transfer?
-\item \textbf{RQ3:} Which runtime interfaces make these controllers usable by agents, and which claimed capabilities remain unverified?
-
-\end{itemize}
-The contribution is an integrated research implementation and a traceable set of positive and negative findings. We provide source-balanced geometric analysis, contact-proximity clustering with interactive examples, reference-conditioned teacher training, several student recipes, a matched four-interface comparison, and a local skill runtime.
-
-\section{System Overview}
-
-The pipeline separates representation, learning and execution. Data adapters preserve motion, object references and source identity. PCA and interaction-aware clustering organize representative hand configurations in the pose bank. RL teachers ground motion references in physical interaction, and successful rollouts support command-conditioned policy distillation. Trained policies populate the skill bank with their supported interfaces. The toolkit retrieves poses or policies, compiles compatible commands, executes the selected controller and reports outcomes. A separate pose-registration workflow can add task-specific functional configurations discovered during execution without retraining a policy.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth,height=0.245\textheight,keepaspectratio]{figures/fig01_overview.pdf}
-\caption{RLDexAgents pipeline. Solid arrows denote implemented data/control paths. Automatic policy acquisition and autonomous verification remain research extensions.}
-\end{figure*}
-
-The wrist and hand have separate responsibilities. In the reported simulator distillation experiments, the wrist follows an external reference; in agent-facing use, an external arm controller must produce a feasible approach and subsequent motion. The student does not output arm actions. At each 30 Hz hand tick it receives local feedback and the active command, then emits 22 normalized finger actions. The runtime decodes those actions into bounded physical joint targets.
-
-Evidence is organized by protocol, not date. E01--E03 concern representations, E04 teacher continuation, E05--E08 student execution, E09 runtime integration E10 demonstration selection and E11 student-only RL. ``Held out'' refers to a specified training stage; ``success'' always has a temporal and physical criterion. The report's interactive supplement preserves all 6,241 HOI points, representative gestures and localized videos, while the main figures emphasize the mechanisms and comparisons needed to interpret the results.
 
 \section{Large-Scale Hand Motion Data and Pose Manifold Analysis}
 
@@ -163,20 +122,6 @@ The final six groups contain 2,278 / 1,560 / 624 / 644 / 374 / 761 records. Link
 
 Wuji Hand 2 provides a cross-embodiment probe (E03): 175 episodes, 95,890 frames, and 1,400 sampled poses. Twenty right-hand joints are mapped through Wuji FK to landmarks and independently fitted to Sharpa's 22 joints. Mean fingertip fit error is 4.13 mm, and the fitted poses populate several regions of the Sharpa joint-pose space. These results support geometry-based pose transfer across embodiments.
 
-\section{Structured Pose and Skill Banks}
-
-A pose cluster groups nearby representations. The \textbf{pose bank} stores quasi-static hand references: observed representatives from motion data and task-specific functional configurations discovered during agent execution. An entry may provide a joint configuration such as \texttt{q\_seed}, derived fingertip targets and associated task context. A successful contact configuration additionally records the physical setting in which that pose was useful.
-
-The \textbf{skill bank} stores trained, executable policies with their command, observation and action interfaces. Policy execution maps the active command and current feedback to actions over time. A retrieved pose may condition a compatible policy or be passed to a supported pose-execution interface. Pose and skill entries therefore have a many-to-one or many-to-many relationship.
-
-Pose-bank retrieval returns a configuration, its source or task context and associated examples. Skill-bank retrieval returns a trained controller with its checkpoint, command representation, joint ordering, preprocessing, supported wrist execution and initialization conditions. Evaluation records describe the objects, success criteria and known failures for that controller. The shared toolkit presents these distinct entry types through compatible agent-facing operations.
-
-For pose-bank expansion, the rule-based registration workflow evaluates episode outcome, pose novelty and bank compatibility before storing a new functional pose for reuse. Extending the skill bank with a new controller requires a trained policy, a compatible runtime and execution evaluation.
-
-For successful demonstration retrieval, the evidence must refer to the executed object and hand trajectory, not just the reference. E02's twelve localized successful replay videos have matching historical pick-and-pose success labels. They were selected under a PhysX-contact partition and then remapped by exact trajectory identity into the final link-near partition. Their final counts are 4 / 2 / 4 / 0 / 0 / 2. We retain the absence of successful video examples for C3 and C4 instead of substituting an unverified replay. The supplement also provides six medoid poses and additional scene snapshots; these illustrate geometry without implying demonstrated success.
-
-Static poses can fail because of scale mismatch, inaccessible wrist placement, initial penetration, unsuitable contact normals or insufficient friction. A small joint-space distance does not bound object-relative fingertip displacement or force closure. E10 tests the stronger hypothesis that manifold-guided demonstration selection improves execution; its negative expanded result is a necessary qualification on using geometric coverage as a skill-selection objective.
-
 \section{Reinforcement Learning Teacher Training}
 
 \subsection{Reference-conditioned learning}
@@ -198,12 +143,6 @@ The reference representation contains hand configuration, object pose, fingertip
 \textbf{External wrist execution.} In simulation, a separate controller sends the reference wrist position and orientation to the wrist actuators at each control step. This moves the hand through the prescribed approach and manipulation trajectory while the learned policy adjusts the fingers from feedback. The matched teacher--student evaluation uses the same reference wrist trajectory for each policy and holds the final target during post-reference retention.
 
 \textbf{Agent execution.} The arm controller supplies wrist motion for approach, lifting, transport and orientation changes. The hand policy remains responsible for finger control, using local motion and tactile feedback to respond as the arm moves. This division allows the hand controller to operate within an agent-directed arm--hand system.
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth,height=0.245\textheight,keepaspectratio]{figures/fig03_distillation.pdf}
-\caption{Teacher--student information asymmetry. The teacher retains its original reference observations when labeling student-visited states; the student's command is not substituted into the teacher's reference stream in the matched interface experiment.}
-\end{figure*}
 
 \subsection{Object-goal continuation and curricula}
 
@@ -299,12 +238,6 @@ Bank size & Best tested clustering coverage, rad & Random coverage, rad \\
 Leave-one-source-out evaluation is harder: at K=24, source-averaged medians are approximately 0.2583 rad for joint KMeans and 0.2848 for random selection; at K=96 they are 0.2292 and 0.2423. At K=24, mean pairwise range-normalized diversity is 1.688 for random selection, 1.591 for joint KMeans, 1.544 for PCA-14 KMeans and 1.507 for PCA-14 medoids. Random selection has greater spread here despite worse coverage: diversity alone need not improve coverage of dense modes. Full diversity curves are included in the numeric bank metrics and supplementary plots. No bank undergoes comprehensive simulator self-collision or grasp feasibility validation in E01. Kinematic validity here means joint-limit validity and measured FK error, not physical executability.
 
 \subsection{RQ2: selection and full-data execution}
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth,height=0.245\textheight,keepaspectratio]{figures/fig05_interface_results.pdf}
-\caption{Matched four-interface results on 68 student-held-out parents. Teacher and student bars use the same evaluation protocol. The gap persists across grasp and HOLD; the highest-performing interface depends on the metric.}
-\end{figure*}
 
 E05 balances final link-near labels at 374 records/class. Its 2,244-reference evaluation obtains 362 sustained dual-finger lifts among 1,645 references containing at least a 2 cm lift target (22.0\%). Strict last-window pose success is 35/2,244. A balanced geometric partition therefore does not produce a balanced or reliably executable grasp curriculum. Some classes contain predominantly small motions or little object contact.
 
@@ -439,12 +372,6 @@ The toolkit supports model loading, pose retrieval, command dispatch, local feed
 
 The local physical workflow record confirms three active cameras and hand connectivity but records \texttt{motion\_sent=false} and the hand disabled. It supports read-only integration evidence. Separate user feedback reports good physical behavior of the earlier link-near mixed-PPO student; object identities, trial counts, HOLD duration and synchronized checkpoint-linked recordings were not preserved in the audited record. We report that feedback qualitatively and do not assign a real-world success rate to it or to the new four-interface policies.
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth,height=0.245\textheight,keepaspectratio]{figures/fig07_runtime.pdf}
-\caption{Runtime boundary and physical observation. The image is an actual local camera record from the read-only workflow, not a successful grasp demonstration. Repeated, checkpoint-linked physical trials remain required.}
-\end{figure*}
-
 \section{Agentic Toolkit Implementation}
 
 \subsection{Registry, retrieval and command compilation}
@@ -477,20 +404,6 @@ The older API exposes \texttt{set\_grasp}, \texttt{execute\_phase} and \texttt{g
 
 Outcome verification combines the intended task criterion with observable evidence: object displacement and retention in simulation, or appropriate calibrated sensing on hardware. In the rule-based pose-registration workflow, this outcome is considered alongside pose novelty and compatibility with the target bank. An accepted entry adds a retrievable functional pose; it does not alter a trained policy. Skill-bank registration instead adds an executable controller with compatible preprocessing and execution semantics. Automatic training of missing policies, learned interface selection, Real2Sim verification and verified grasp-to-in-hand transitions remain research extensions.
 
-\section{Discussion}
-
-\textbf{Geometric structure helps organize posture but does not define function.} E01 demonstrates better coverage than random representatives, while E02 gives reproducible link-proximity partitions. E10 does not show a corresponding grasp-success gain from the tested guided selection. These observations are compatible: nearest-pose error and successful contact acquisition optimize different objectives.
-
-\textbf{Stable conditioning may help without physically meaningful labels.} E06's random groups perform comparably to pose clusters and sometimes retain contact longer. A group can disambiguate training contexts without describing a natural grasp type. The experiment does not demonstrate that the learned categories transfer to independently chosen new gestures or objects.
-
-\textbf{Expressive commands are necessary only when the learner can use them.} A 15D fingertip target specifies more geometry than a class ID, but can still omit object scale, contact location and approach history. E07 gives little evidence that this extra information improves target adherence under the current recipe. Fixed-state interventions and multiple feasible commands for the same object are needed to distinguish unused inputs from ambiguous or infeasible commands.
-
-\textbf{Teacher success does not make distillation identifiable.} The teacher can react to object pose and future references that the student never sees. Two states with nearly identical hand feedback and command can require different actions because the object or impending wrist motion differs. Squared-action supervision can average incompatible actions. This is a hypothesis supported by the interface design and performance gap, not a measured decomposition of error. A useful next experiment would match commands and task context while selectively removing teacher information.
-
-\textbf{Initialization and phase semantics are part of the task.} Open-start grasp evaluation changes the conditions of pre-grasped in-hand references. FORM-as-opening and FORM-as-contact-establishment are different behavior specifications. A larger dataset cannot resolve that mismatch by itself. Contact-aware organization should include the transition into a grasp and its subsequent load-bearing behavior, not only a peak-frame posture.
-
-The current evidence therefore favors a narrower scientific claim: structured hand priors can organize retrieval and condition controllers, but contact-consistent execution and observation sufficiency remain the main obstacles to reusable agent skills. The negative results constrain the next experiments rather than invalidate pose analysis as an organizational tool.
-
 \section{Limitations and Future Work}
 
 Dataset imbalance remains substantial, and source balancing for geometric analysis does not automatically balance successful interactions. Retargeting and collision geometry can create source-dependent errors. Source-level generalization should be complemented by object- and parent-disjoint execution tests. Human landmarks, Wuji joints and Sharpa joints require representation-specific interpretation, and cross-hand contact equivalence has not been demonstrated.
@@ -502,10 +415,6 @@ Most learning comparisons use one training seed and limited optimization. Paired
 Deployment removes object truth and future references while relying on tactile calibration, accurate hand kinematics and externally generated EEF trajectories. Perturbation tests with known references do not establish robustness to independently planned approaches. A new-tool experiment should report command validity, physical feasibility, conditional student execution and complete agent success separately.
 
 Real-robot evidence needs repeated trials with named objects, checkpoint identity, synchronized sensor/video records, failure definitions and HOLD durations. Automatic policy acquisition, incremental policy updates, agent-selected command interfaces and Real2Sim outcome verification remain open engineering and research tasks.
-
-\section{Conclusion}
-
-RLDexAgents connects heterogeneous hand motion to pose analysis, reference-conditioned RL, command-conditioned distillation and an agent-facing execution runtime. Current evidence shows that representative banks improve geometric coverage and that compact commands can drive closed-loop hand policies. It also shows that geometric categories, successful teachers and richer commands do not by themselves yield reliable general grasping. Progress toward reusable agentic dexterity requires aligning commands with observable contact-dependent behavior, validating execution under the intended initialization, and distinguishing retrieval, policy control and verified task completion.
 
 \nocite{qi2023}
 \bibliographystyle{plainnat}

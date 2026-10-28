@@ -5,7 +5,7 @@ Does not run simulations, modify checkpoints, or rewrite the older supplement.
 from pathlib import Path
 from site_assets import add_site_icons
 from audience_cleanup import AUTHOR_BLOCK
-from supplementary_diagrams import draw_overview, draw_distillation, draw_interfaces, draw_runtime
+from supplementary_diagrams import draw_interfaces
 import json,re,html,shutil
 import numpy as np
 import matplotlib
@@ -26,7 +26,6 @@ def panel(ax,xy,w,h,title,body,color=colors[0]):
  x,y=xy;ax.add_patch(Rectangle((x,y),w,h,fc='white',ec=color,lw=1.2));ax.text(x+w/2,y+h*.73,title,ha='center',va='center',weight='bold',fontsize=10,color=color);ax.text(x+w/2,y+h*.32,body,ha='center',va='center',fontsize=8.5,linespacing=1.5)
 def arrow(ax,a,b):ax.add_patch(FancyArrowPatch(a,b,arrowstyle='-|>',mutation_scale=12,color='#555',lw=1))
 # Figure 1: Report-matched diagram.
-draw_overview()
 # Figure 2: original numeric results.
 d=read('evidence/E01_pose_bank/summary.json');f,axs=plt.subplots(1,3,figsize=(11,3.05))
 for i,(k,label) in enumerate([('sharpa_all_limit_valid','Sharpa: all'),('sharpa_hoi_limit_valid','Sharpa: HOI'),('sharpadex_free_hand','Sharpa: freehand'),('human_keypoints_60d','Human: landmarks')]):
@@ -37,16 +36,8 @@ for i,(m,label) in enumerate([('random','Random'),('joint_kmeans_22d','Joint KMe
 axs[1].set(xscale='log',xlabel='Bank size (log scale)',ylabel='Macro-median joint RMS (rad)',title='(b) Coverage improves with bank size');axs[1].set_xticks([6,12,24,48,96,192],labels=['6','12','24','48','96','192']);axs[1].legend(fontsize=7)
 rs=d['reconstruction'];axs[2].plot([x['dimensions'] for x in rs],[x['fingertip_fk_error_mm']['mean'] for x in rs],'-o',color=colors[1],label='Mean');axs[2].plot([x['dimensions'] for x in rs],[x['fingertip_fk_error_mm']['p95'] for x in rs],'-o',color=colors[2],label='95th percentile');axs[2].set(xlabel='Reconstruction components',ylabel='Fingertip FK error (mm)',title='(c) Variance is not precision');axs[2].legend();f.tight_layout(w_pad=2);save(f,'fig02_pose_analysis')
 # Figure 3. Report-matched diagram.
-draw_distillation()
 # Figure 4. Report-matched diagram.
 draw_interfaces()
-# Figure 5.
-f,axs=plt.subplots(1,2,figsize=(9.8,3.1),gridspec_kw={'width_ratios':[1.45,1]});ms=['teacher','cluster','joint','fingertip','hybrid'];stats=[read(f'evidence/E07_interfaces/eval_{m}_test/summary.json')['summary']['overall'] for m in ms];x=np.arange(5)
-for k,(field,label) in enumerate([('lift_success','Lift'),('hold_1s_success','HOLD 1 s'),('hold_5s_success','HOLD 5 s')]):
- vals=[v[field] for v in stats];axs[0].bar(x+(k-1)*.24,np.array(vals)/68*100,.23,color=colors[k],label=label)
- for xx,v in zip(x+(k-1)*.24,vals):axs[0].text(xx,v/68*100+1,str(v),ha='center',fontsize=7)
-axs[0].set(xticks=x,xticklabels=[m.title() for m in ms],ylabel='Success (% of 68 tasks)',ylim=(0,110),title='(a) Common held-out evaluation');axs[0].legend(loc='upper right',fontsize=7,ncol=1)
-axs[1].bar(x,[v['hold_tip_goal_error_m_mean']*100 for v in stats],color=[colors[0]]+[colors[1]]*4,width=.65);axs[1].set(xticks=x,xticklabels=[m.title() for m in ms],ylabel='Mean fingertip error (cm)',ylim=(0,6.8),title='(b) Static target adherence');axs[1].tick_params(axis='x',rotation=20);f.tight_layout(w_pad=2);save(f,'fig05_interface_results')
 # Figure 6.
 c=read('evidence/E06_commands/contact_analysis/analysis.json');f,axs=plt.subplots(1,2,figsize=(9.5,3))
 for i,(key,label) in enumerate([('teacher','Teacher'),('E0','No command'),('E1','Random groups'),('E2','Pose clusters')]):
@@ -54,12 +45,6 @@ for i,(key,label) in enumerate([('teacher','Teacher'),('E0','No command'),('E1',
  axs[0].step(t,v*100,where='post',label=label,color=colors[i]);axs[1].step(t,v*c['summary'][key]['lifted']/308*100,where='post',label=label,color=colors[i])
 for ax,title,y in zip(axs,['(a) Conditional on successful lift','(b) All attempted rollouts'],['Post-lift survival (%)','Unconditional success (%)']):ax.set(xlim=(0,5),ylim=(40,101),xlabel='Seconds after first confirmed lift',ylabel=y,title=title);ax.grid(alpha=.15)
 axs[0].legend(fontsize=8);f.tight_layout(w_pad=2);save(f,'fig06_contacts')
-# Figure 7: Report-matched diagram.
-draw_runtime()
-# Supplement: actual robot pose renders.
-f,axs=plt.subplots(2,3,figsize=(10,6))
-for i,ax in enumerate(axs.flat):ax.imshow(plt.imread(ROOT/f'assets/poses/link_near_and_distance_joint/cluster_{i}.png'));ax.axis('off');ax.set_title(f'C{i}: geometric medoid',fontsize=10)
-f.tight_layout();save(f,'figS01_medoids')
 # Build HTML and publication-style LaTeX from the same Markdown.
 md=(ROOT/'RLDexAgents_Supplementary_Report.md').read_text();equations=[]
 def eq_html(m):
@@ -80,25 +65,15 @@ for diagram in ['fig01_overview', 'fig03_distillation', 'fig04_interfaces', 'fig
 # Only figures produced here have SVG versions; embedded photos are inside their figure SVG.
 for key in ['santello1998','ross2011','chen2026dexx','schulman2017','pinto2018','qi2023','ichter2023']:
  body=body.replace(f'<li><a class="citation" href="#ref-{key}">',f'<li id="ref-{key}"><a class="citation" href="#ref-{key}">')
-# Inline local media supplement with complete scientific labels.
-demos=read('data/successful_demos_remapped.json'); media=''
-for cidx in [0,1,2,5]:
- d=next(x for x in demos if x['final_cluster']==cidx)
- media+=f'<figure><video controls preload="none" poster="{d["poster"]}"><source src="{d["video"]}" type="video/mp4"></video><figcaption><b>C{cidx} · Simulation replay</b><br>{html.escape(d["key"])}<br>Historical pick-and-pose success label; teacher 3200.</figcaption></figure>'
-interactive=f'''<section class="interactive-evidence" id="interactive-manifold"><h3>Interactive evidence · poses, sources and executed demonstrations</h3><p>Rotate and zoom the 6,241-point projection, change the representation, and inspect source/cluster labels. A 3D projection is descriptive; use full-space metrics for quantitative comparison.</p><iframe src="manifold.html" title="Interactive hand-object manifold" loading="lazy"></iframe><p><a href="pose_hoi_manifold.html">Open the complete pose / HOI supplement</a> · <a href="manifold.html">Open 3D viewer separately</a></p><figure><img loading="lazy" src="figures/figS01_medoids.png" alt="Six actual geometric medoids"><figcaption>Actual representative Sharpa configurations. These are geometric medoids, not six verified functional grasp types.</figcaption></figure><div class="video-grid">{media}</div><p>No localized successful replay is available for final C3 or C4 in this selection. Older video filenames use their original partition; labels above use the final link-near-and-distance mapping.</p></section>'''
-body=body.replace('<h2 id="4-structured-pose-and-skill-banks">',interactive+'<h2 id="4-structured-pose-and-skill-banks">')
 heads=re.findall(r'<h2 id="([^"]+)">(.*?)</h2>',body)
 nav=''.join(f'<li><a href="#{a}">{b}</a></li>' for a,b in heads)
 # Reuse the DEX-X hero, quick links, section-label and media structure.
 body=re.sub(r'<h1.*?</h1>\s*<p>.*?</p>\s*<p>.*?</p>', '', body, count=1, flags=re.S)
 body=re.sub(r'<h2 id="([^"]+)">',r'<h2 class="tagline" id="\1">',body)
 body=body.replace('<figcaption>','<figcaption class="figure-caption">')
-overview=re.search(r'<figure><img[^>]+src="figures/fig01_overview.svg".*?</figure>',body,re.S)
-herofigure=overview.group(0) if overview else ''
-if overview:body=body.replace(herofigure,'',1)
-links=[('RLDexAgents_Supplementary_Report.md','Report'),('RLDexAgents_Supplementary_Report.tex','LaTeX'),('pose_hoi_manifold.html','Interactive Gallery'),('references.bib','References')]
+links=[('RLDexAgents_Supplementary_Report.md','Report'),('RLDexAgents_Supplementary_Report.tex','LaTeX'),('references.bib','References')]
 quick=''.join(f'<a class="link-pill" href="{url}">{label}</a>' for url,label in links)
-page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RLDexAgents — Technical Report</title><meta name="description" content="Hand motion structure, executable skill distillation and an extensible agentic dexterous toolkit."><link rel="stylesheet" href="assets/template-fonts.css"><link rel="stylesheet" href="assets/dexx-template.css"><link rel="stylesheet" href="assets/rldex_report.css"></head><body><nav class="toc" aria-label="Report contents"><h3>Content</h3><hr><ul>{nav}</ul></nav><main class="main-content"><header class="report-hero"><h1 class="hero-text">RLDexAgents</h1><div class="sub-hero-text">An Extensible Dexterous Skill Toolkit for LLM Agents</div><p class="report-subtitle">From Hand Pose Manifolds to Interface-Conditioned Skill Distillation and Agentic Manipulation</p><div class="venue">Technical Report · 27 October 2026</div>{AUTHOR_BLOCK}{herofigure}<div class="quick-links">{quick}</div></header><article class="section">{body}</article><footer class="footer">Audited project evidence · 27 October 2026.<br>Local figures and media · <a href="production_checks.md">Production notes</a><br>Page template adapted from the local DEX-X project page.</footer></main></body></html>'''
+page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RLDexAgents — Technical Report</title><meta name="description" content="Hand motion structure, executable skill distillation and an extensible agentic dexterous toolkit."><link rel="stylesheet" href="assets/template-fonts.css"><link rel="stylesheet" href="assets/dexx-template.css"><link rel="stylesheet" href="assets/rldex_report.css"></head><body><nav class="toc" aria-label="Report contents"><h3>Content</h3><hr><ul>{nav}</ul></nav><main class="main-content"><header class="report-hero"><h1 class="hero-text">Supplementary Report</h1><div class="sub-hero-text">RLDexAgents</div><p class="report-subtitle">Dataset details, training procedures and extended experiments</p><p><a href="index.html">← Main report</a></p><div class="quick-links">{quick}</div></header><article class="section">{body}</article><footer class="footer">Audited project evidence · 27 October 2026.<br>Local figures and media · <a href="production_checks.md">Production notes</a><br>Page template adapted from the local DEX-X project page.</footer></main></body></html>'''
 (ROOT/'supplementary_report.html').write_text(add_site_icons(page),encoding='utf-8')
 
 # Minimal deterministic Markdown-to-LaTeX renderer for this report's constructs.
@@ -129,9 +104,10 @@ tex=[r'''\documentclass[10pt,twocolumn]{article}
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.15em}
 \setlength{\textfloatsep}{12pt}
-\title{RLDexAgents: An Extensible Dexterous Skill Toolkit for LLM Agents\\[5pt]\large From Hand Pose Manifolds to Interface-Conditioned Skill Distillation and Agentic Manipulation}
-\author{Project technical report}
+\title{RLDexAgents: Supplementary Report}
+\author{Ruoqu Chen et al.}
 \date{Evidence audit: 27 October 2026}
+\renewcommand{\thefigure}{S\arabic{figure}}
 \begin{document}
 \maketitle
 ''']
@@ -139,7 +115,7 @@ lines=md.splitlines();i=0;in_list=False;eqid=0
 while i<len(lines):
  line=lines[i]
  if line.startswith('## References'):break
- if line.startswith('# ') or line.startswith('*From Hand Pose') or line.startswith('Technical report ·'):i+=1;continue
+ if line.startswith('# ') or line.startswith('*Dataset details') or line.startswith('Supplementary material ·'):i+=1;continue
  if line.startswith('```'):
   if in_list:tex.append(r'\end{itemize}');in_list=False
   i+=1;code=[]
@@ -163,7 +139,7 @@ while i<len(lines):
   t.append(r'\end{table*}');tex.append('\n'.join(t));continue
  m=re.match(r'!\[(.*?)\]\((.*?)\)',line)
  if m:
-  label,path=m.groups();label=re.sub(r'^Figure \d+ — ','',label);path=path.replace('.png','.pdf')
+  label,path=m.groups();label=re.sub(r'^Figure S?\d+ — ','',label);path=path.replace('.png','.pdf')
   tex.append('\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=\\textwidth,height=0.245\\textheight,keepaspectratio]{'+path+'}\n\\caption{'+inline(label)+'}\n\\end{figure*}');i+=1;continue
  if line.startswith('- '):
   if not in_list:tex.append(r'\begin{itemize}');in_list=True
@@ -179,4 +155,4 @@ while i<len(lines):
 if in_list:tex.append(r'\end{itemize}')
 tex.extend([r'\nocite{qi2023}',r'\bibliographystyle{plainnat}',r'\bibliography{references}',r'\end{document}'])
 (ROOT/'RLDexAgents_Supplementary_Report.tex').write_text('\n'.join(tex))
-print('Built 7 main figures, medoid supplement,',len(equations),'equations, HTML and LaTeX')
+print('Built supplementary assets,',len(equations),'equations, HTML and LaTeX')
