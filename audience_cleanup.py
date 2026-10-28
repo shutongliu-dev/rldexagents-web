@@ -9,7 +9,7 @@ CAPTIONS = {
 }
 
 AUTHOR_BLOCK = ('<div class="authors project-authors">'
-                '<div class="author-names">ruoquchen<sup>1,2</sup>, Shutong Liu<sup>1</sup>, '
+                '<div class="author-names">Ruoqu Chen<sup>1,2</sup>, Shutong Liu<sup>1</sup>, '
                 'Feixiang Ruan<sup>3</sup>, Weili Fu<sup>4</sup>, Zihao Wang<sup>1</sup>, '
                 'Mengdi Xu<sup>1,†</sup></div>'
                 '<div class="author-affiliations"><sup>1</sup> IIIS, Tsinghua University · '
