@@ -11,7 +11,7 @@
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.15em}
 \setlength{\textfloatsep}{12pt}
-\title{RLDexAgents: Supplementary Report}
+\title{DexSkill: Supplementary Report}
 \author{Ruoqu Chen et al.}
 \date{Evidence audit: 27 October 2026}
 \renewcommand{\thefigure}{S\arabic{figure}}
@@ -158,7 +158,7 @@ The reference representation contains hand configuration, object pose, fingertip
 
 \textbf{Successful interaction collection.} We retain teacher rollouts that lift the object with sustained multi-finger contact and maintain it after the reference ends. Their action labels support command-conditioned student learning under the same externally supplied wrist motion.
 
-\subsection{Teacher evaluation and adaptation limits}
+\subsection{Teacher evaluation and transfer limits}
 
 Reference-tracking success asks whether an execution follows a prescribed motion from its intended initialization. Goal-conditioned grasp success asks whether a hand can establish and retain a grasp from an open approach under a compact command. Changing the initialization can invalidate the first task without changing the controller itself. A reference that begins with a supported in-hand object is not automatically a tabletop acquisition demonstration.
 
@@ -376,7 +376,7 @@ The local physical workflow record confirms three active cameras and hand connec
 
 \subsection{Registry, retrieval and command compilation}
 
-The local \texttt{gesture\_grasp\_tool} package exposes pose references and trained controllers through agent tools. Pose-bank retrieval selects a hand configuration; skill-bank retrieval selects a policy and its supported command interface. A retrieved pose can supply a Joint or Fingertip command for a compatible controller, while a Cluster command selects a conditioning label within a trained policy. Command compilation validates input shapes and converts physical units into network normalization. A joint goal conditions the policy rather than overwriting its actions. Fingertip commands use palm-frame meters.
+The local \texttt{gesture\_grasp\_tool} package exposes pose references and trained controllers through agent tools. Pose Bank retrieval selects a hand configuration; Skill Bank retrieval selects a policy and its supported command interface. A retrieved pose can supply a Joint or Fingertip command for a compatible controller, while a Cluster command selects a conditioning label within a trained policy. Command compilation validates input shapes and converts physical units into network normalization. A joint goal conditions the policy rather than overwriting its actions. Fingertip commands use palm-frame meters.
 
 An illustrative supported call sequence is:
 
@@ -402,7 +402,7 @@ The inspected runtime applies one action-smoothing stage, joint bounds and measu
 
 The older API exposes \texttt{set\_grasp}, \texttt{execute\_phase} and \texttt{get\_status}, with optional contact-triggered automatic HOLD. The newer link-near command tool uses explicit phases. These APIs should not be described as interchangeable state machines. Status can report force, phase and execution state, but hand load alone cannot identify the contacted object or certify that it was lifted. In particular, the old hand-only status leaves grasp success unknown unless an external outcome check supplies evidence.
 
-Outcome verification combines the intended task criterion with observable evidence: object displacement and retention in simulation, or appropriate calibrated sensing on hardware. In the rule-based pose-registration workflow, this outcome is considered alongside pose novelty and compatibility with the target bank. An accepted entry adds a retrievable functional pose; it does not alter a trained policy. Skill-bank registration instead adds an executable controller with compatible preprocessing and execution semantics. Automatic training of missing policies, learned interface selection, Real2Sim verification and verified grasp-to-in-hand transitions remain research extensions.
+Outcome verification combines the intended task criterion with observable evidence: object displacement and retention in simulation, or appropriate calibrated sensing on hardware. In the rule-based pose-registration workflow, this outcome is considered alongside pose novelty and compatibility with the target bank. An accepted entry adds a retrievable functional pose; it does not alter a trained policy. Skill Bank registration instead adds an executable controller with compatible preprocessing and execution semantics. Automatic training of missing policies, learned interface selection, Real2Sim verification and verified grasp-to-in-hand transitions remain research extensions.
 
 \section{Limitations and Future Work}
 

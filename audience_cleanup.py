@@ -2,7 +2,7 @@
 import re
 
 CAPTIONS = {
-    1: 'Figure 1 — RLDexAgents overview: motion organization, RL teacher-to-student distillation, agent interfaces, and bank expansion. The pose bank stores hand configurations; the skill bank stores trained policies.',
+    1: 'Figure 1 — DexSkill overview: motion organization, RL teacher-to-student distillation, agent interfaces, and bank expansion. The Pose Bank stores hand configurations; the Skill Bank stores trained policies.',
     2: 'Figure 2 — Hand–object manifold and representative configurations C0–C5. Colors indicate dataset sources; each hand is linked to its medoid.',
     3: 'Figure 3 — Mixed DAgger/PPO distillation of the final Cluster + phase student. The teacher labels student-visited states, and the recurrent student controls the fingers using local feedback.',
     4: 'Figure 4 — Toolkit execution and six Isaac Sim teacher interactions, one per cluster. The teacher controls the fingers while the wrist follows its reference.',

@@ -1,0 +1,17 @@
+.project-subtitle {
+  margin: 14px 0 10px;
+  font-size: clamp(18px, 2.3vw, 28px);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-transform: none;
+  overflow-wrap: break-word;
+}
+.project-description {
+  margin: 0 0 20px;
+  font-size: clamp(14px, 1.4vw, 18px);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+header:not(.hero):not(.report-hero) .project-subtitle { font-size: 16px; margin: 6px 0; }
+header:not(.hero):not(.report-hero) .project-description { font-size: 12px; margin: 0 0 10px; }

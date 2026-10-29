@@ -9,7 +9,7 @@ Story: diverse hand motions → structured pose space and quasi-static pose refe
 | 2 From Hand Motions to Pose Manifolds | What structure exists, and how do pose references differ from executable policies? | Figure 2: data scale, source projection, variance, six medoids |
 | 3 Learning Executable Dexterous Skills | How does physical RL turn references into demonstrations? | Teacher, adaptation, success filtering; detailed recipes supplementary |
 | 4 Interface-Conditioned Skill Distillation | Which information does each command retain or omit? | Figure 3: final Cluster + phase student and mixed DAgger/PPO |
-| 5 An Extensible Toolkit for LLM Agents | How does the agent delegate finger control? | Figure 4: supported API flow + documented simulation sequences |
+| 5 Agentic Skill Execution and Management | How does the agent delegate finger control? | Figure 4: supported API flow + documented simulation sequences |
 | 6 Experiments and Key Findings | What do the main comparisons establish? | Table 1: matched HOI feature diagnostics; coverage and cross-hand context; short conditioning result; Table 2: four-interface student ablation |
 | 7 Discussion and Outlook | What remains between this pipeline and reusable dexterity? | Three insights and next experiments |
 
