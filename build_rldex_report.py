@@ -183,8 +183,8 @@ for key in ['santello1998','ross2011','chen2026dexx','schulman2017','pinto2018',
 # Optional exploration does not interrupt the four-figure main narrative.
 explorer='<section class="interactive-evidence" id="interactive-manifold"><h3>Explore the hand manifold</h3><p>Rotate the 3D view, color points by dataset source, and switch source filters to compare coverage. <b>OakInk (wrist-adapted)</b> contains 68 OakInk-v2 right-hand references with reconstructed pre-contact wrist motion.</p><iframe src="manifold.html" title="Interactive hand-object manifold by dataset source" loading="eager"></iframe><p><a href="manifold.html" target="_blank" rel="noopener">Open full-size 3D viewer</a> · <a href="pose_hoi_manifold.html">Pose and replay gallery</a> · <a href="data/wrist_adapted_source_audit.json">Source audit</a></p></section>'
 # Keep source exploration visible at the top, before the report abstract.
-tldr='<h2 id="tldr">TL;DR</h2><div class="tldr"><p>DexSkill explores how diverse human and robot hand motions can be organized into reusable representations and transformed into executable dexterous manipulation skills. We develop a framework combining motion manifold analysis, reinforcement learning, command-conditioned policy distillation, and agent-accessible skill interfaces.</p>\n<p>Our current implementation focuses on pose-based grasp skills and closed-loop execution, providing a foundation for extending dexterous agents toward continuous motion skills, in-context adaptation, and interaction-driven skill refinement.</p></div>'
-body=body.replace('<h2 id="abstract">',explorer+tldr+'<h2 id="abstract">')
+tldr='<h2 id="tldr">TL;DR</h2><div class="tldr"><p>DexSkill explores how diverse human and robot hand motions can be organized into reusable representations and transformed into executable dexterous manipulation skills. We develop a framework combining motion manifold analysis, reinforcement learning, command-conditioned policy distillation, and agent-accessible skill interfaces.</p><p>By connecting motion representations with closed-loop skill execution, DexSkill lays the foundation for learning a broader range of dexterous behaviors, from grasping and continuous manipulation to in-context skill adaptation and interaction-driven refinement.</p></div>'
+body=body.replace('<h2 id="abstract">',tldr+explorer+'<h2 id="abstract">')
 demos=read('data/cluster_teacher_demos.json');videos=''
 for d in demos:
  display=d.get('display_media',d)
@@ -192,7 +192,7 @@ for d in demos:
 player=f'<details id="teacher-demonstrations" class="demo-playback" open><summary>Cluster demonstrations · six Isaac Sim teacher rollouts</summary><p>Current C0–C5, one selected rollout each. Teacher controls fingers; wrist follows reference. Stable tail HOLD requires ≥2 cm lift and at least two target-contacting fingertips ≥0.5 N in ≥95% of the final 30 ticks. This is not a five-second HOLD or an agent success-rate test.</p><div class="video-grid">{videos}</div><p><a href="pose_hoi_manifold.html#demos">Snapshots, forces and manifold locations</a></p></details>'
 body=body.replace('<h2 id="6-experiments-and-key-findings">',player+'<h2 id="6-experiments-and-key-findings">')
 heads=re.findall(r'<h2 id="([^"]+)">(.*?)</h2>',body)
-nav='<li><a href="#interactive-manifold">Interactive Manifold</a></li>'+''.join(f'<li><a href="#{a}">{b}</a></li>' for a,b in heads)
+nav=''.join(f'<li><a href="#{a}">{b}</a></li>'+('<li><a href="#interactive-manifold">Interactive Manifold</a></li>' if a=='tldr' else '') for a,b in heads)
 # Reuse the DEX-X hero, quick links, section-label and media structure.
 body=re.sub(r'<h1.*?</h1>\s*<p>.*?</p>\s*<p>.*?</p>', '', body, count=1, flags=re.S)
 body=re.sub(r'<h2 id="([^"]+)">',r'<h2 class="tagline" id="\1">',body)
