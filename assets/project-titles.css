@@ -15,3 +15,8 @@
 }
 header:not(.hero):not(.report-hero) .project-subtitle { font-size: 16px; margin: 6px 0; }
 header:not(.hero):not(.report-hero) .project-description { font-size: 12px; margin: 0 0 10px; }
+
+/* Embedded visualizations share the parent page's project heading. */
+.embedded-view header h1,
+.embedded-view .project-subtitle,
+.embedded-view .project-description { display: none; }

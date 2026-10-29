@@ -29,4 +29,6 @@ def apply_project_titles(page):
     page = page.replace('RLDexAgents / Research Supplement', 'DexSkill / Research Supplement')
     if 'href="assets/project-titles.css"' not in page:
         page = page.replace('</head>', '<link rel="stylesheet" href="assets/project-titles.css"></head>', 1)
+    if 'data-embedded-view' not in page:
+        page = page.replace('</head>', '<script data-embedded-view>if (window.self !== window.top) document.documentElement.classList.add("embedded-view");</script></head>', 1)
     return page
